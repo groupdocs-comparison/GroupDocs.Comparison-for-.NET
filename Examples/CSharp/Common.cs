@@ -4,6 +4,7 @@ using System.IO;
 using System.Collections.Generic;
 using GroupDocs.Comparison.Common;
 using GroupDocs.Comparison.Common.License;
+using System.Reflection;
 
 namespace GroupDocs.Comparison.Examples.CSharp
 {
@@ -28,32 +29,13 @@ namespace GroupDocs.Comparison.Examples.CSharp
         // targetFile property to set input target file
         public static string targetFile = "target.docx";
 
-        // Create object of GroupDocs.Comparison Assembly.
-        public static Assembly assembly = null;
+        // targetFile property to set input target file
+        public static string resultFile = "result.doc";
 
         // Create object of GroupDocs.Comparison.Comparison
-        GroupDocs.Comparison.Comparison comparison = null;
+        public static GroupDocs.Comparison.Comparison comparison = new GroupDocs.Comparison.Comparison();
 
         //ExEnd:CommonProperties
-
-
-        //ExStart:getComparisonAssembly
-        /// <summary>
-        /// Get GroupDocs Assembly Object
-        /// </summary>
-        /// <returns>Assembly</returns>
-        public static Assembly getComparisonAssembly()
-        {
-            if (assembly == null)
-            {
-                // Creating Comparison Assembly class object
-                assembly = Assembly.GetExecutingAssembly();
-            }
-
-            // Returns the ConversionHandler static object
-            return assembly;
-        }
-        //ExEnd:getComparisonAssembly
 
         //ExStart:getComparison
         /// <summary>
@@ -80,7 +62,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static void ApplyLicense(string filepath)
         {
             // Instantiate GroupDocs.Comparison license
-            GroupDocs.Comparison.Common.License license = new GroupDocs.Comparison.Common.License();
+            GroupDocs.Comparison.Common.License.License license = new GroupDocs.Comparison.Common.License.License();
 
             // Apply GroupDocs.Comparison license using license path
             license.SetLicense(filepath);
@@ -92,7 +74,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static void ApplyLicense(Stream licenseStream)
         {
             // Instantiate GroupDocs.Comparison license
-            GroupDocs.Comparison.Common.License license = new GroupDocs.Comparison.Common.License();
+            GroupDocs.Comparison.Common.License.License license = new GroupDocs.Comparison.Common.License.License();
 
             // Apply GroupDocs.Comparison license using license file stream
             license.SetLicense(licenseStream);
