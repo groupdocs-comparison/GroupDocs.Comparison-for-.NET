@@ -18,7 +18,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
             // set source and target files to compare
             Common.sourceFile = "source.docx";
             Common.targetFile = "target.docx";
-            Common.resultFile = "result.doc";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
             // Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.comparison.lic");
@@ -29,7 +28,12 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //Common.ApplyLicense(licenseStream);
             //licenseStream.Close();
 
+            // *** Words Comparision Examples ***
 
+            // set source and target files to compare
+            Common.sourceFile = "source.docx";
+            Common.targetFile = "target.docx";
+            
             // Compare two word processing documents from streams with saving results into a file
             Common.resultFile = "result-CompareWordDcumentsFromStreamToFile.doc";
             WordDcumentsComparision.CompareWordDcumentsFromStreamToFile();
@@ -45,6 +49,29 @@ namespace GroupDocs.Comparison.Examples.CSharp
             // Compare two word processing documents from file path with saving results into a file with document settings
             Common.resultFile = "result-CompareWordDcumentsFromPathToFileWithSettings.doc";
             WordDcumentsComparision.CompareWordDcumentsFromPathToFileWithSettings();
+
+
+            // *** WorkBook Comparision Examples ***
+
+            // set source and target files to compare
+            Common.sourceFile = "source.xlsx";
+            Common.targetFile = "target.xlsx";
+
+            // Compare two WorkBooks from streams with saving results into a file
+            Common.resultFile = "result-CompareWorkBooksFromStreamToFile.xlsx";
+            WorkBookDcumentsComparision.CompareWorkBooksFromStreamToFile();
+
+            // Compare two WorkBooks from file path with saving results into a file
+            Common.resultFile = "result-CompareWorkBooksFromPathToFile.xlsx";
+            WorkBookDcumentsComparision.CompareWorkBooksFromPathToFile();
+
+            // Compare two WorkBooks from streams with saving results into a file with document settings
+            Common.resultFile = "result-CompareWorkBooksFromStreamToFileWithSettings.xlsx";
+            WorkBookDcumentsComparision.CompareWorkBooksFromStreamToFileWithSettings();
+
+            // Compare two WorkBooks from file path with saving results into a file with document settings
+            Common.resultFile = "result-CompareWorkBooksFromPathToFileWithSettings.xlsx";
+            WorkBookDcumentsComparision.CompareWorkBooksFromPathToFileWithSettings();
 
         }
     }
