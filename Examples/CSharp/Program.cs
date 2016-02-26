@@ -20,8 +20,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.targetFile = "target.docx";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            // Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.comparison.lic");
-            // Common.ApplyLicense(Common.licensePath);
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic");
+            Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
             //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.comparison.lic"), FileMode.Open, FileAccess.Read);
@@ -33,7 +33,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             // set source and target files to compare
             Common.sourceFile = "source.docx";
             Common.targetFile = "target.docx";
-            
+
             // Compare two word processing documents from streams with saving results into a file
             Common.resultFile = "result-CompareWordDcumentsFromStreamToFile.doc";
             WordDcumentsComparision.CompareWordDcumentsFromStreamToFile();
@@ -72,6 +72,72 @@ namespace GroupDocs.Comparison.Examples.CSharp
             // Compare two WorkBooks from file path with saving results into a file with document settings
             Common.resultFile = "result-CompareWorkBooksFromPathToFileWithSettings.xlsx";
             WorkBookDcumentsComparision.CompareWorkBooksFromPathToFileWithSettings();
+
+            // *** Presentation Comparision Examples ***
+
+            // set source and target files to compare
+            Common.sourceFile = "source.pptx";
+            Common.targetFile = "target.pptx";
+
+            // Compare two Presentation from streams with saving results into a file
+            Common.resultFile = "result-ComparePresentationFromStreamToFile.pptx";
+            PresentationDcumentsComparision.ComparePresentationFromStreamToFile();
+
+            // Compare two Presentation from file path with saving results into a file
+            Common.resultFile = "result-ComparePresentationFromPathToFile.pptx";
+            PresentationDcumentsComparision.ComparePresentationFromPathToFile();
+
+            // Compare two Presentation from streams with saving results into a file with document settings
+            Common.resultFile = "result-ComparePresentationFromStreamToFileWithSettings.pptx";
+            PresentationDcumentsComparision.ComparePresentationFromStreamToFileWithSettings();
+
+            // Compare two Presentation from file path with saving results into a file with document settings
+            Common.resultFile = "result-ComparePresentationFromPathToFileWithSettings.pptx";
+            PresentationDcumentsComparision.ComparePresentationFromPathToFileWithSettings();
+
+            // *** Pdf Comparision Examples ***
+
+            // set source and target files to compare
+            Common.sourceFile = "source.pdf";
+            Common.targetFile = "target.pdf";
+
+            // Compare two Pdf from streams with saving results into a file
+            Common.resultFile = "result-ComparePdfFromStreamToFile.pdf";
+            PdfDcumentsComparision.ComparePdfFromStreamToFile();
+
+            // Compare two Pdf from file path with saving results into a file
+            Common.resultFile = "result-ComparePdfFromPathToFile.pdf";
+            PdfDcumentsComparision.ComparePdfFromPathToFile();
+
+            // Compare two Pdf from streams with saving results into a file with document settings
+            Common.resultFile = "result-ComparePdfFromStreamToFileWithSettings.pdf";
+            PdfDcumentsComparision.ComparePdfFromStreamToFileWithSettings();
+
+            // Compare two Pdf from file path with saving results into a file with document settings
+            Common.resultFile = "result-ComparePdfFromPathToFileWithSettings.pdf";
+            PdfDcumentsComparision.ComparePdfFromPathToFileWithSettings();
+
+            // *** Text Comparision Examples ***
+
+            // set source and target files to compare
+            Common.sourceFile = "source.txt";
+            Common.targetFile = "target.txt";
+
+            // Compare two Text from streams with saving results into a file
+            Common.resultFile = "result-CompareTextDcumentsFromStreamToFile.txt";
+            TextDcumentsComparision.CompareTextDcumentsFromStreamToFile();
+
+            // Compare two Text from file path with saving results into a file
+            Common.resultFile = "result-CompareTextDcumentsFromPathToFile.txt";
+            TextDcumentsComparision.CompareTextDcumentsFromPathToFile();
+
+            // Compare two Text from streams with saving results into a file with document settings
+            Common.resultFile = "result-CompareTextDcumentsFromStreamToFileWithSettings.txt";
+            TextDcumentsComparision.CompareTextDcumentsFromStreamToFileWithSettings();
+
+            // Compare two Text from file path with saving results into a file with document settings
+            Common.resultFile = "result-CompareTextDcumentsFromPathToFileWithSettings.txt";
+            TextDcumentsComparision.CompareTextDcumentsFromPathToFileWithSettings();
 
         }
     }
