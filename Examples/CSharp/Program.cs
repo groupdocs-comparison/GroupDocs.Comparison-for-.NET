@@ -20,8 +20,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.targetFile = "target.docx";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic");
-            Common.ApplyLicense(Common.licensePath);
+            //Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.comparison.lic");
+            //Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
             //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.comparison.lic"), FileMode.Open, FileAccess.Read);
