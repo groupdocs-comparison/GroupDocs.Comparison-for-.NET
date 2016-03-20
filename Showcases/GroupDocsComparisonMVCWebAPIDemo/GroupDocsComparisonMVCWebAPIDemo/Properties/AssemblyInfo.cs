@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GroupDocs.Comparison Web Forms Demo")]
+[assembly: AssemblyTitle("GroupDocs.Comparison MVC Web API Demo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("GroupDocs")]

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsComparisonWebFormsDemo", "GroupDocsComparisonWebFormsDemo\GroupDocsComparisonWebFormsDemo.csproj", "{D64B7A2D-77B7-452C-B33F-D69E8EF1BC84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsComparisonMVCWebAPIDemo", "GroupDocsComparisonMVCWebAPIDemo\GroupDocsComparisonMVCWebAPIDemo.csproj", "{D64B7A2D-77B7-452C-B33F-D69E8EF1BC84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
