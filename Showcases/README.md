@@ -24,4 +24,4 @@ Open Source Project.
 
 + Upload Source file
 + Upload Target file
-+ Compare file and allow to download result output file from web browser
++ Compare files and allow to download result output file from web browser
