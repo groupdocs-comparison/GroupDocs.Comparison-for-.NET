@@ -1,0 +1,41 @@
+﻿<style>
+    div.thumbnailsContainer ul li img {
+        border: none;
+        box-shadow: none;
+    }
+    
+    div.thumbnail_wrapper{
+        width: 150px;height: 213px;
+        margin: 0 auto;
+        border: 1px solid #BCBCBC;
+        box-shadow: 3px 3px 6px #919191;
+    }
+    
+    div.thumbnailsContainer ul li {
+        min-height: 0;
+    }
+    ul.vertical-list2 li {
+        margin: 0;
+        position: relative;
+    }
+    
+    .progresspin {
+        z-index: -1;
+    }
+</style>
+<!-- ko stopBindings: true -->
+<div id="thumbnails-container" class="thumbnailsContainer" data-bind="event: { scroll: function (e) { scrollThumbnailsPanel(e); } }">
+    <ul id="selectable" class="vertical-list2 ui-selectable">
+        <!-- ko foreach: thumbnails -->
+        <li class="thumb-page ui-selectee" data-bind="attr: { id: 'thumb-' + ($index() + 1) }, css: { 'ui-selected': $index() + 1 == $parent.pageInd() }">
+            <a class="ui-selectee">
+                <div class="thumbnail_wrapper">
+                    <img class="ui-selectee" data-bind="click: function () { $parent.selectPage($index() + 1); }, attr: { src: (visible() ? url() : '') }" />
+                </div>
+                <span class="progresspin thumb_progress" data-bind="visible: busy()"></span>
+            </a>
+        </li>
+        <!-- /ko -->
+    </ul>
+</div>
+<!-- /ko -->

@@ -1,0 +1,63 @@
+.highlight-pane {
+    position: relative;
+    margin: 0px 37px;
+}
+.custom-pane{
+	position: relative;
+}
+.search-pane{
+	position: relative;
+    margin: 0px 34px;
+}
+.highlight {
+    border-style: none;
+    cursor: text;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    z-index: 24;
+}
+.selection-highlight {
+    background-color: #2288FF;
+    opacity: 0.3;
+    filter: alpha(opacity=20);
+    padding: 0 6px 6px 0;
+    margin: -3px 0 0 -3px;
+}
+.search-highlight {
+    background-color: green;
+    opacity: 0.4;
+    filter: alpha(opacity=50);
+}
+.template-selection-highlight {
+    background-color: #2288FF;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.selection-check{
+    background: url("../images/sprite1.png") no-repeat top left;
+    position:absolute;
+    background-position: -496px -127px;
+    height: 16px;
+    width: 16px;
+    cursor:pointer;
+}
+.selection-del{
+    background: url("../images/sprite1.png") no-repeat top left;
+    background-position: -480px -127px;
+    position:absolute;
+	height: 16px;
+    width: 16px;
+    cursor:pointer;
+}
+
+#selection-content
+{
+	height: 32px;
+    left: 0;
+    position: absolute;
+    top: -480px;
+    width: 32px;
+    display: none;
+}
