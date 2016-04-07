@@ -1,0 +1,175 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="GroupDocsComparisonWebFormsDemo.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>GroupDocs Comparison Demo</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="//jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" />
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#buttonConvert').on('click', function () {
+
+                // jquery Progress bar function. 
+                $("#progressbar").progressbar({ value: 0 });
+                var progressbar = $("#progressbar");
+
+                $("#progressbar").show();
+                $("#downloadLink").hide();
+                $("#labelFailed").hide();
+                $("#labelCompleted").hide();
+                document.getElementById('labelCompleted').innerHTML = "";
+                document.getElementById('labelFailed').innerHTML = "";
+                progressbar.progressbar({
+                    value: false,
+                    complete: function () {
+                        progressLabel.text("Complete!");
+                    }
+                });
+                var data = new FormData();
+
+                var sourcefiles = $("#fuSource").get(0).files;
+
+                // Add the uploaded image content to the form data collection
+                if (sourcefiles.length > 0) {
+                    data.append("UploadedSource", sourcefiles[0]);
+                }
+                else {
+                    document.getElementById('labelFailed').innerHTML = "Please select SOURCE FILE";
+                    $("#labelCompleted").hide();
+                    $("#labelFailed").show();
+                    $("#progressbar").hide();
+                    return;
+                }
+
+                var targetfiles = $("#fuTarget").get(0).files;
+
+                if (targetfiles.length > 0) {
+                    data.append("UploadedTarget", targetfiles[0]);
+                }
+                else {
+                    document.getElementById('labelFailed').innerHTML = "Please select TARGET FILE";
+                    $("#labelCompleted").hide();
+                    $("#labelFailed").show();
+                    $("#progressbar").hide();
+                    return;
+                }
+
+                // Make Ajax request with the contentType = false, and procesDate = false
+                var ajaxRequest = $.ajax({
+                    type: "POST",
+                    url: "http://localhost:5878/api/CompareAndDownload/CompareAndDownloadResults",
+                    contentType: false,
+                    processData: false,
+                    data: data
+                });
+
+                ajaxRequest.done(function (responseData, textStatus) {
+                    $("#progressbar").hide();
+                    $("#downloadLink").hide();
+                    if (textStatus == 'success') {
+                        if (responseData != null) {
+                            if (responseData.Value.includes("/UploadedFiles/")) {
+                                $("#labelCompleted").show();
+                                document.getElementById('labelCompleted').innerHTML = "Comparison completed";
+                                document.getElementById("downloadLink").href = responseData.Value;
+                                $('#downloadLink')[0].click();
+                                $("#labelFailed").hide();
+                                $("#progressbar").progressbar({ value: 100 });
+
+                            } else {
+                                document.getElementById('labelFailed').innerHTML = responseData.Value;
+                                $("#labelCompleted").hide();
+                                $("#labelFailed").show();
+                            }
+                        }
+                    } else {
+                        document.getElementById('labelFailed').innerHTML = responseData.Value;
+                        $("#labelCompleted").hide();
+                        $("#labelFailed").show();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="body">
+
+            <div style="padding: 20px 21px 0px 21px;">
+                <font size="5">GroupDocs.Comparison for .NET API Demo</font>&nbsp; Compare any
+        document
+        <hr />
+
+                <div style="padding: 20px 20px 20px 20px; text-align: left;">
+                    <div class="alert alert-danger" style="display: none;" id="labelFailed">
+                    </div>
+                    <div class="alert alert-success" style="display: none;" id="labelCompleted">
+                    </div>
+                    <div class="panel panel-primary" style="width: 100%;">
+                        <div class="panel-heading">
+                            <h4><b>[::] GroupDocs Comparison Demo</b></h4>
+                        </div>
+                        <div class="panel-body">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        <div style="padding: 20px;">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading" style="text-transform: uppercase;">
+                                                    <b>Source File</b>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="input-group">
+                                                        <input type="file" id="fuSource" width="100%" class="input" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="padding: 20px;">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading" style="text-transform: uppercase;">
+                                                    <b>Target File</b>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="input-group">
+                                                        <input type="file" id="fuTarget" width="100%" class="input" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="text-align: center;">
+                                <input type="button" id="buttonConvert" value="Compare & Download Results" class="btn btn-success" />
+                                &nbsp;
+                            <a id="downloadLink" style="display: none;" class="btn btn-warning">Download</a>
+                                <br />
+                                <br />
+                                <div style="width: 100%;" id="progressbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <b>Note: </b><i>This demo version currently only support (*.doc, *.docx) document comparison using GroupDocs.Comparison for .NET API.</i>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
