@@ -24,4 +24,4 @@ Open Source Project.
 
 + Upload Source file
 + Upload Target file
-+ Compare files and allow to download result output file from web browser
++ Compare files and allow to view results in viewer using GroupDocs.Viewer
