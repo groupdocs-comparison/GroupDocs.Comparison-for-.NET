@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocsComparisonMvcDemo", "GroupDocsComparisonMvcDemo\GroupDocsComparisonMvcDemo.csproj", "{23E75FCE-BD18-4BFA-AB82-5C255B54C352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		EC2|Any CPU = EC2|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseEU|Any CPU = ReleaseEU|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.EC2|Any CPU.ActiveCfg = Release|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.EC2|Any CPU.Build.0 = Release|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.ReleaseEU|Any CPU.ActiveCfg = Release|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.ReleaseEU|Any CPU.Build.0 = Release|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Staging|Any CPU.ActiveCfg = Release|Any CPU
+		{23E75FCE-BD18-4BFA-AB82-5C255B54C352}.Staging|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

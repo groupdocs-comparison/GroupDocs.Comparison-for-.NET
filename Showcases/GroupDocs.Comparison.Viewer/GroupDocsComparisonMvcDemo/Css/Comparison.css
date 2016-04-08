@@ -1,0 +1,105 @@
+﻿/* -- redline view -- toolbox -- */
+#redline-toolbox SPAN.file-name {
+    width: 80px;
+    display: block;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* -- redline view -- comparison change markers  -- */
+.active-change-marker {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAIEqHI06KJ1GNKFKNKFKOTX2xXIq7apbFeaLPgqrVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhwZ3pwAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwABMMAAATDAAchp+GcAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAADxJREFUGFc1ygkKgEAMQ9FGncXc/74x6eCnhUdpSYLXlQXbUxYJ3FBF5GDz7Uw/7BQKz3J9vWY611P49wGpcifkuNcGcAAAAABJRU5ErkJggg==') /*../images/comparison/change-marker.png*/;
+}
+.redline-change-marker {
+	opacity: 0.5;
+	/* IE opacity */
+	filter: alpha(opacity=50);
+	border: none;
+	position:absolute; 
+	cursor:pointer; 
+	padding: 0px;
+    z-index: 100;
+}
+
+
+
+header .wrapper {
+    white-space: nowrap;
+}
+
+.com_side_table .change_text {
+        width: 48%;
+        overflow: hidden;
+        -ms-text-overflow: clip;
+        -o-text-overflow: clip;
+        -moz-text-overflow: clip;
+        text-overflow: clip;
+        white-space: nowrap;
+    }
+
+    .comp_side_coll_text {
+        white-space: nowrap;
+        top: 165px;
+    }
+
+    .com_side_table li .col5 {
+        margin-top: 8px;
+    }
+
+    .com_side_table li.header .col4 {
+        width: 53%;
+    }
+
+    .com_side_table li.header .col5 {
+        margin-top: 0px;
+        height: 26px;
+        width: 10%;
+    }
+
+    .change_sublist .change_text {
+        width: auto;
+        -moz-min-width: 5%;
+        -ms-min-width: 5%;
+        -o-min-width: 5%;
+        -webkit-min-width: 5%;
+        min-width: 5%;
+        max-width: 68%;
+        overflow: hidden;
+        -ms-text-overflow: clip;
+        -o-text-overflow: clip;
+        -moz-text-overflow: clip;
+        text-overflow: clip;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .change_sublist p span {
+        display: inline-block;
+    }
+ 
+    .double-underlined {
+        text-decoration: underline;
+        color: green;
+    }
+    .dropdown {
+        z-index: auto;
+    }
+
+    .icon_reset {
+        width: 15px; 
+        height: 15px;
+        display: inline-block;
+    }
+
+    .new_head_tools_btn.text_tool {
+        line-height: 32px;
+    }
+
+    .new_head_of {
+        margin: 6px 2px;
+    }
+   
+    
