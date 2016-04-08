@@ -1,7 +1,7 @@
 ##GroupDocs.Comparison for .NET Example
 
-MVC Comparison Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Comparison for .NET.
-The MVC Comparison Example allows user to easily Compare Documnents: 
+MVC Comparison with Viewer Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Comparison for .NET.
+The MVC Comparison with Viewer Example allows user to easily Compare Documnents and view results in browser: 
 The UI of the application is kept very simple and developers can enhance the features as their own needs since it is an 
 Open Source Project.
 
