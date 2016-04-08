@@ -2,7 +2,15 @@
 
 This package contains [Examples](https://github.com/groupdocsComparison/GroupDocs_Comparison_NET/tree/master/Examples) for [GroupDocs.Comparison for .NET](#) that will help you understand API's working and write your own applications.
 
-GroupDocs.Comparison for .NET is a universal document Comparison library designed for easy integration into any .NET application. Allows you to convert back and forth between over 50 types of documents and images, including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP) and 
+GroupDocs.Comparison is a lightweight library that allows you to merge and diff two versions of a document. Supported file formats include: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, TXT, HTML.
+
+##GroupDocs.Comparison Structure
+
+The core of GroupDocs.Comparison library consists of five main components: Words, Pdf, Slides, Cells and Text and Common . Each main component is divided into Contracts, Domain, that implements it, and Core component which compares documents using features specific for certain document type.
+
+Common component contains algorithms, which are used by every main component, common objects and enumerations. All five main components have reference on Common.
+
+The Facade component gives an opportunity to simplify access to Comparison API and unites all comparison types into one API. Facade gives an ability to compare documents with all supported formats, and revise the changes from result document.
 
 <p align="center">
 
