@@ -23,6 +23,7 @@ Directory | Description
 --------- | -----------
 [Examples](https://github.com/groupdocsComparison/GroupDocs_Comparison_NET/tree/master/Examples)  | Contains the package of all .NET examples (C# & VB) and sample files that will help you learn how to use product features.
 [Showcases](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Showcases)  | Contains the MVC based Frontend Example to help you learn how to Implement product features.
+[Plugins](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Plugins)  | Contains the Visual Studio Plugins which will download Examples and GroupDocs.COmparison Library without any efforts.
 
 ## Resources
 
