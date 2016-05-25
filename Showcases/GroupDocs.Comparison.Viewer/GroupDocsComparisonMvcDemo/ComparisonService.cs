@@ -50,26 +50,26 @@ namespace GroupDocsComparisonMvcDemo
         /// Set the source file for comparison
         /// </summary>
         /// <param name="filePath">Absolute path to the source file for comparison</param>
-        public void SourceFileName(string filePath)
+        public void SourceFileName(string filePath, string documentPassword = "")
         {
             //Combine source file path
             var sourceFile = filePath.Replace("\\", "\\\\");
             sourceFile = Path.Combine(_settings.RootStoragePath, sourceFile);
             //Open source document
-            _source = new ComparingDocument(sourceFile);
+            _source = new ComparingDocument(sourceFile, documentPassword);
         }
 
         /// <summary>
         /// Set the target file for comparison
         /// </summary>
         /// <param name="filePath">Absolute path to the target file for comparison</param>
-        public void TargetFileName(string filePath)
+        public void TargetFileName(string filePath, string documentPassword = "")
         {
             //Combine target file path
             var targetFile = filePath.Replace("\\", "\\\\");
             targetFile = Path.Combine(_settings.RootStoragePath, targetFile);
             //Open target document
-            _target = new ComparingDocument(targetFile);
+            _target = new ComparingDocument(targetFile, documentPassword);
         }
 
 
@@ -105,7 +105,14 @@ namespace GroupDocsComparisonMvcDemo
             comparison = new GroupDocs.Comparison.Comparison();
             var resultName = Path.Combine(_settings.RootStoragePath, resultFileName);
             //Compare documents
-            Stream stream = comparison.Compare(_source.Content, _target.Content, resultName, _settings.ComparisonBehavior, _target.Extention);
+            if (!_source.DocumentPassword.Equals("") && !_target.DocumentPassword.Equals(""))
+            {
+                Stream stream = comparison.Compare(_source.Content, _source.DocumentPassword, _target.Content, _target.DocumentPassword, resultName, _settings.ComparisonBehavior, _target.Extention);
+            }
+            else
+            {
+                Stream stream = comparison.Compare(_source.Content, _target.Content, resultName, _settings.ComparisonBehavior, _target.Extention);
+            }
             //Get changes
             var changes = comparison.GetChanges();
 
