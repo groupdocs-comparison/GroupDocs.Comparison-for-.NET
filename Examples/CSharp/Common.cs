@@ -29,10 +29,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
         // targetFile property to set input target file
         public static string targetFile = "target.docx";
 
-        // sourceFile property to set input source file password
+        // sourceFilePassword property to set input source file password
         public static string sourceFilePassword = "pass";
 
-        // targetFile property to set input target file password
+        // targetFilePassword property to set input target file password
         public static string targetFilePassword = "pass";
 
         // targetFile property to set input target file
