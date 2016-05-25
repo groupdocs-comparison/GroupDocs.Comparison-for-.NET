@@ -13,11 +13,11 @@ namespace GroupDocsComparisonMvcDemo
     public class ClientHelper : IHtmlString
     {
         internal readonly ComparisonService _service;
-        
+
         private string _targetElementSelector;
         private bool _immediateCompare;
         private readonly ComparisonWidgetSettings _settings;
-        
+
         internal ClientHelper(ComparisonWidgetSettings settings, string targetElementSelector)
         {
             //Create comparison service
@@ -26,17 +26,17 @@ namespace GroupDocsComparisonMvcDemo
             _settings = settings;
             _targetElementSelector = targetElementSelector;
         }
-        
+
         /// <summary>
         /// Set the source file for comparison
         /// </summary>
         /// <param name="filePath">Absolute path to the source file for comparison</param>
         /// <param name="stream">Optional. If provided the stream is used as a source</param>
         /// <returns></returns>
-        public ClientHelper SourceFileName(string filePath)
+        public ClientHelper SourceFileName(string filePath, string filePassword = "")
         {
             //Set source file name
-            _service.SourceFileName(filePath);
+            _service.SourceFileName(filePath, filePassword);
             return this;
         }
 
@@ -46,10 +46,10 @@ namespace GroupDocsComparisonMvcDemo
         /// <param name="filePath">Absolute path to the target file for comparison</param>
         /// <param name="stream">Optional. If provided the stream is used as a target</param>
         /// <returns></returns>
-        public ClientHelper TargetFileName(string filePath)
+        public ClientHelper TargetFileName(string filePath, string filePassword = "")
         {
             //Set target file name
-            _service.TargetFileName(filePath);
+            _service.TargetFileName(filePath, filePassword);
             return this;
         }
 
@@ -103,14 +103,14 @@ namespace GroupDocsComparisonMvcDemo
 
         internal string GenerateClientCode()
         {
-            
+
             var changes = String.Empty;
             if (_immediateCompare)
             {
                 //Compare documents and get changes
                 var changesArray = _service.Compare();
                 //Serealize changes
-                changes=SerializeChanges(changesArray);
+                changes = SerializeChanges(changesArray);
             }
 
             var result = new StringBuilder();
@@ -129,9 +129,9 @@ namespace GroupDocsComparisonMvcDemo
                 _service.ContextName,
                 _service.resultFileName,
                 _immediateCompare.ToString().ToLower(),
-                String.IsNullOrEmpty(changes)?"[]":changes                                          
+                String.IsNullOrEmpty(changes) ? "[]" : changes
                 );
-            
+
             return result.ToString();
         }
 

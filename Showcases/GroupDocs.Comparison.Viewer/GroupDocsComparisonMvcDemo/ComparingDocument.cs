@@ -13,9 +13,10 @@ namespace GroupDocsComparisonMvcDemo
         /// Initializes a new instance of the <see cref="ComparingDocument"/> class.
         /// </summary>
         /// <param name="documentName">Name of the document.</param>
-        public ComparingDocument(string documentName)
+        public ComparingDocument(string documentName, string documentPassword = "")
         {
             DocumentName = documentName;
+            DocumentPassword = documentPassword;
             Extention = GetFileType(documentName);
             using (var fs = new FileStream(documentName, FileMode.Open, FileAccess.Read))
             {
@@ -30,7 +31,7 @@ namespace GroupDocsComparisonMvcDemo
                 Extention = FileType.Doc;
             }
         }
-        
+
         /// <summary>
         /// Gets the name of the document.
         /// </summary>
@@ -38,6 +39,13 @@ namespace GroupDocsComparisonMvcDemo
         /// The name of the document.
         /// </value>
         public string DocumentName { get; private set; }
+        /// <summary>
+        /// Gets the password of the document.
+        /// </summary>
+        /// <value>
+        /// The password of the document.
+        /// </value>
+        public string DocumentPassword { get; private set; }
         /// <summary>
         /// Gets the content.
         /// </summary>
