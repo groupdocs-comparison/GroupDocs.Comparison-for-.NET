@@ -51,8 +51,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GroupDocs.Comparison, Version=3.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\groupdocs-comparison-dotnet.3.1.0\lib\GroupDocs.Comparison.dll</HintPath>
+    <Reference Include="GroupDocs.Comparison, Version=3.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\groupdocs-comparison-dotnet.3.2.0\lib\GroupDocs.Comparison.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
