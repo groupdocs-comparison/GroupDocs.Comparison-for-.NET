@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="CommonComparisionOperations.cs" />
+    <Compile Include="HTMLDcumentsComparision.cs" />
     <Compile Include="TextDcumentsComparision.cs" />
     <Compile Include="WorkBookDcumentsComparision.cs" />
     <Compile Include="PdfDcumentsComparision.cs" />

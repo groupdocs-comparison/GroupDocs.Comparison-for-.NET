@@ -119,21 +119,44 @@ Namespace GroupDocsComparisonExamples.VisualBasic
             'Common.sourceFile = "source.txt"
             'Common.targetFile = "target.txt"
 
-            ' '''/ Compare two Text from streams with saving results into a file
+            ' '''/ Compare two Text documents from streams with saving results into a file
             'Common.resultFile = "result-CompareTextDcumentsFromStreamToFile.txt"
             'TextDcumentsComparision.CompareTextDcumentsFromStreamToFile()
 
-            ' '''/ Compare two Text from file path with saving results into a file
+            ' '''/ Compare two Text documents from file path with saving results into a file
             'Common.resultFile = "result-CompareTextDcumentsFromPathToFile.txt"
             'TextDcumentsComparision.CompareTextDcumentsFromPathToFile()
 
-            ' '''/ Compare two Text from streams with saving results into a file with document settings
+            ' '''/ Compare two Text documents from streams with saving results into a file with document settings
             'Common.resultFile = "result-CompareTextDcumentsFromStreamToFileWithSettings.txt"
             'TextDcumentsComparision.CompareTextDcumentsFromStreamToFileWithSettings()
 
-            ' '''/ Compare two Text from file path with saving results into a file with document settings
+            ' '''/ Compare two Text documents from file path with saving results into a file with document settings
             'Common.resultFile = "result-CompareTextDcumentsFromPathToFileWithSettings.txt"
             'TextDcumentsComparision.CompareTextDcumentsFromPathToFileWithSettings()
+
+
+            ' '''/ *** HTML Comparision Examples ***
+
+            ' '''/ set source and target files to compare
+            'Common.sourceFile = "source.html"
+            'Common.targetFile = "target.html"
+
+            ' '''/ Compare two HTML documents from streams with saving results into a file
+            'Common.resultFile = "result-CompareHTMLDcumentsFromStreamToFile.html"
+            'HTMLDcumentsComparision.CompareHTMLDcumentsFromStreamToFile()
+
+            ' '''/ Compare two HTML documents from file path with saving results into a file
+            'Common.resultFile = "result-CompareHTMLDcumentsFromPathToFile.html"
+            'HTMLDcumentsComparision.CompareHTMLDcumentsFromPathToFile()
+
+            ' '''/ Compare two HTML documents from streams with saving results into a file with document settings
+            'Common.resultFile = "result-CompareHTMLDcumentsFromStreamToFileWithSettings.html"
+            'HTMLDcumentsComparision.CompareHTMLDcumentsFromStreamToFileWithSettings()
+
+            ' '''/ Compare two HTML documents from file path with saving results into a file with document settings
+            'Common.resultFile = "result-CompareHTMLDcumentsFromPathToFileWithSettings.html"
+            'HTMLDcumentsComparision.CompareHTMLDcumentsFromPathToFileWithSettings()
 
 
             ' '''/ *** Comparision Common Operations with automatic file format detection ***

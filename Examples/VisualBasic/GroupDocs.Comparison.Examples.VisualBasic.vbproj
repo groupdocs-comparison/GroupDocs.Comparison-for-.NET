@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Common.vb" />
     <Compile Include="CommonComparisionOperations.vb" />
+    <Compile Include="HTMLDcumentsComparision.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

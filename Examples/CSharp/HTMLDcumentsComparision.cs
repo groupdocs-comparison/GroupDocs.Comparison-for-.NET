@@ -1,4 +1,4 @@
-﻿//ExStart:TextDcumentsComparisionClass
+﻿//ExStart:HTMLDcumentsComparisionClass
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -9,13 +9,13 @@ using GroupDocs.Comparison.Text.Contracts;
 
 namespace GroupDocs.Comparison.Examples.CSharp
 {
-    class TextDcumentsComparision
+    class HTMLDcumentsComparision
     {
-        //ExStart:CompareTextDcumentsFromStreamToFile
+        //ExStart:CompareHTMLDcumentsFromStreamToFile
         /// <summary>
-        /// Compare two Text documents from streams with saving results into a file
+        /// Compare two HTML documents from streams with saving results into a file
         /// </summary>
-        public static void CompareTextDcumentsFromStreamToFile()
+        public static void CompareHTMLDcumentsFromStreamToFile()
         {
             // Create two streams of documents
             Stream sourceStream = File.Open(Path.Combine(Common.sourcePath, Common.sourceFile), FileMode.Open, FileAccess.Read);
@@ -23,45 +23,44 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             // Get instance of GroupDocs.Comparison.Comparison and call method Compare.
             GroupDocs.Comparison.Comparison comparison = Common.getComparison();
-            Stream result = comparison.Compare(sourceStream, targetStream, Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Text);
+            Stream result = comparison.Compare(sourceStream, targetStream, Path.Combine(Common.resultPath, Common.resultFile));
 
             sourceStream.Close();
             targetStream.Close();
         }
-        //ExEnd:CompareTextDcumentsFromStreamToFile
+        //ExEnd:CompareHTMLDcumentsFromStreamToFile
 
-        //ExStart:CompareTextDcumentsFromPathToFile
+        //ExStart:CompareHTMLDcumentsFromPathToFile
         /// <summary>
-        /// Compare two Text documents from file path with saving results into a file
+        /// Compare two HTML documents from file path with saving results into a file
         /// </summary>
-        public static void CompareTextDcumentsFromPathToFile()
+        public static void CompareHTMLDcumentsFromPathToFile()
         {
             // Get instance of GroupDocs.Comparison.Comparison and call method Compare.
             GroupDocs.Comparison.Comparison comparison = Common.getComparison();
-            Stream result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Text);
+            Stream result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), Path.Combine(Common.resultPath, Common.resultFile));
 
             // get changes
             GroupDocs.Comparison.Common.Changes.ChangeInfo[] changeInfo = comparison.GetChanges();
 
             foreach (GroupDocs.Comparison.Common.Changes.ChangeInfo change in changeInfo)
             {
-                Console.WriteLine("Text: " + change.Text);
-                // update change with custom text
+                Console.WriteLine("Tex: " + change.Text);
+                // update change with custom HTML
                 change.Text = "Added text by update change.";
             }
 
             Console.WriteLine("apply changes and display updated stream with changes.");
             // update changes
-            result = comparison.UpdateChanges(changeInfo, FileType.Txt);
-
+            result = comparison.UpdateChanges(changeInfo, FileType.Html);
         }
-        //ExEnd:CompareTextDcumentsFromPathToFile
+        //ExEnd:CompareHTMLDcumentsFromPathToFile
 
-        //ExStart:CompareTextDcumentsFromStreamToFileWithSettings
+        //ExStart:CompareHTMLDcumentsFromStreamToFileWithSettings
         /// <summary>
-        /// Compare two Text documents from streams with saving results into a file with documen settings
+        /// Compare two HTML documents from streams with saving results into a file with documen settings
         /// </summary>
-        public static void CompareTextDcumentsFromStreamToFileWithSettings()
+        public static void CompareHTMLDcumentsFromStreamToFileWithSettings()
         {
             // Create two streams of documents
             Stream sourceStream = File.Open(Path.Combine(Common.sourcePath, Common.sourceFile), FileMode.Open, FileAccess.Read);
@@ -69,25 +68,25 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             // Get instance of GroupDocs.Comparison.Comparison and call method Compare.
             GroupDocs.Comparison.Comparison comparison = Common.getComparison();
-            Stream result = comparison.Compare(sourceStream, targetStream, Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Text, new TextComparisonSettings());
+            Stream result = comparison.Compare(sourceStream, targetStream, Path.Combine(Common.resultPath, Common.resultFile), new HtmlComparisonSettings());
 
             sourceStream.Close();
             targetStream.Close();
         }
-        //ExEnd:CompareTextDcumentsFromStreamToFileWithSettings
+        //ExEnd:CompareHTMLDcumentsFromStreamToFileWithSettings
 
-        //ExStart:CompareTextDcumentsFromPathToFileWithSettings
+        //ExStart:CompareHTMLDcumentsFromPathToFileWithSettings
         /// <summary>
-        /// Compare two Text documents from file path with saving results into a file with document settings
+        /// Compare two HTML documents from file path with saving results into a file with document settings
         /// </summary>
-        public static void CompareTextDcumentsFromPathToFileWithSettings()
+        public static void CompareHTMLDcumentsFromPathToFileWithSettings()
         {
             // Get instance of GroupDocs.Comparison.Comparison and call method Compare.
             GroupDocs.Comparison.Comparison comparison = Common.getComparison();
-            Stream result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Text, new TextComparisonSettings());
+            Stream result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), Path.Combine(Common.resultPath, Common.resultFile), new HtmlComparisonSettings());
         }
-        //ExEnd:CompareTextDcumentsFromPathToFileWithSettings
+        //ExEnd:CompareHTMLDcumentsFromPathToFileWithSettings
 
     }
 }
-//ExEnd:TextDcumentsComparisionClass
+//ExEnd:HTMLDcumentsComparisionClass
