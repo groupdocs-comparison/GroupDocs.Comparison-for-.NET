@@ -1,3 +1,1 @@
 ##GroupDocs.Comparison for .NET Plugins
-
-GroupDocs.Comparison for .NET Plugins are coming soon. Please stay tuned...
