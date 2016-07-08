@@ -1,0 +1,2 @@
+Z:\GroupDocsComparisonVSPlugin\out\Installer GroupDocs.Comparison for .NET API Examples.msi
+Z:\GroupDocsComparisonVSPlugin\out\Installer GroupDocs.Comparison for .NET API Examples.wixpdb
