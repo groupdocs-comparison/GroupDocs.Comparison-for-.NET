@@ -1,0 +1,8 @@
+Z:\groupdocsassemblyvs\out\Installer GroupDocs.Comparison for .NET API Examples.msi
+Z:\groupdocsassemblyvs\out\Installer GroupDocs.Comparison for .NET API Examples.wixpdb
+Z:\GroupDocsComparisonVSPlugin\out\Installer GroupDocs.Comparison for .NET API Examples.msi
+Z:\GroupDocsComparisonVSPlugin\out\Installer GroupDocs.Comparison for .NET API Examples.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\Installer.wixproj.BindContentsFileListnull.txt
+obj\Debug\Installer.wixproj.BindOutputsFileListnull.txt
+obj\Debug\Installer.wixproj.BindBuiltOutputsFileListnull.txt
