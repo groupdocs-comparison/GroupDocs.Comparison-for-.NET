@@ -1,1 +1,1 @@
-##GroupDocs.Comparison for .NET Plugins
+[Explore GroupDocs.Comparison API for .NET Examples using Visual Studio Plugin](https://github.com/groupdocs-Comparison/GroupDocs.Comparison-for-.NET/tree/master/Plugins/GroupDocs_Comparison_VSPlugin)
