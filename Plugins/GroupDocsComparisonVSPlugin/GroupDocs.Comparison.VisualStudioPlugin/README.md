@@ -1,1 +1,0 @@
-GroupDocs.Comparison VS Plugin
