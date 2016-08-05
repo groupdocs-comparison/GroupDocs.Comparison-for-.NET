@@ -54,9 +54,13 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Stream sourceStream = File.Open(Path.Combine(Common.sourcePath, Common.sourceFile), FileMode.Open, FileAccess.Read);
             Stream targetStream = File.Open(Path.Combine(Common.targetPath, Common.targetFile), FileMode.Open, FileAccess.Read);
 
+            WordsComparisonSettings objWordsComparisonSettings = new WordsComparisonSettings();
+            objWordsComparisonSettings.StyleChangedItemsStyle.Color = System.Drawing.Color.Yellow;
+            
+
             // Get instance of GroupDocs.Comparison.Comparison and call method Compare.
             GroupDocs.Comparison.Comparison comparison = Common.getComparison();
-            Stream result = comparison.Compare(sourceStream, targetStream, Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Words, new WordsComparisonSettings());
+            Stream result = comparison.Compare(sourceStream, targetStream, Path.Combine(Common.resultPath, Common.resultFile), objWordsComparisonSettings);
 
             sourceStream.Close();
             targetStream.Close();

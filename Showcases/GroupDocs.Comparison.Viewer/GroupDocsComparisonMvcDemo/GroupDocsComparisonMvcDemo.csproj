@@ -56,9 +56,9 @@
       <Private>True</Private>
       <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
-    <Reference Include="GroupDocs.Comparison, Version=3.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\groupdocs-comparison-dotnet.3.2.0\lib\GroupDocs.Comparison.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="GroupDocs.Comparison, Version=3.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GroupDocs.Comparison.dll</HintPath>
     </Reference>
     <Reference Include="GroupDocs.Viewer, Version=3.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\groupdocs-viewer-dotnet.3.4.0\lib\GroupDocs.Viewer.dll</HintPath>
@@ -327,7 +327,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
