@@ -43,8 +43,8 @@ Namespace GroupDocsComparisonExamples.VisualBasic
             'WordDcumentsComparision.CompareWordDcumentsFromStreamToFileWithSettings()
 
             '''/ Compare two word processing documents from file path with saving results into a file with document settings
-            Common.resultFile = "result-CompareWordDcumentsFromPathToFileWithSettings.doc"
-            WordDcumentsComparision.CompareWordDcumentsFromPathToFileWithSettings()
+            'Common.resultFile = "result-CompareWordDcumentsFromPathToFileWithSettings.doc"
+            'WordDcumentsComparision.CompareWordDcumentsFromPathToFileWithSettings()
 
 
             ' '''/ *** WorkBook Comparision Examples ***
@@ -68,6 +68,10 @@ Namespace GroupDocsComparisonExamples.VisualBasic
             ' '''/ Compare two WorkBooks from file path with saving results into a file with document settings
             'Common.resultFile = "result-CompareWorkBooksFromPathToFileWithSettings.xlsx"
             'WorkBookDcumentsComparision.CompareWorkBooksFromPathToFileWithSettings()
+
+            ' Compare multiple target  word processing documents using method MultiCompareWith from file path with saving results into a file with document settings
+            Common.resultFile = "result-CompareMultipleTargetWordDcumentsFromPathToFileWithSettings.Docx"
+            WordDcumentsComparision.CompareMultipleTargetWordDcumentsFromPathToFileWithSettings()
 
             ' '''/ *** Presentation Comparision Examples ***
 
