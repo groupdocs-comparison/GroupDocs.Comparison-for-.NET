@@ -20,13 +20,13 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.targetFile = "target.docx";
 
             ////// Uncomment following lines and specify the licence file to embed product licence using file path.
-            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic");
-            Common.ApplyLicense(Common.licensePath);
+            //Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"); //"D:/License/GroupDocs.Total.lic";
+            //Common.ApplyLicense(Common.licensePath);
 
             ////// Uncomment following lines and specify the licence file to embed product licence using stream.
             //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"), FileMode.Open, FileAccess.Read);
             //Common.ApplyLicense(licenseStream);
-           // licenseStream.Close();
+            // licenseStream.Close();
 
             ////// *** Words Comparision Examples ***
 
@@ -50,6 +50,9 @@ namespace GroupDocs.Comparison.Examples.CSharp
             ////Common.resultFile = "result-CompareWordDcumentsFromPathToFileWithSettings.doc";
             //WordDcumentsComparision.CompareWordDcumentsFromPathToFileWithSettings();
 
+            // Compare multiple target  word processing documents using method MultiCompareWith from file path with saving results into a file with document settings
+            Common.resultFile = "result-CompareMultipleTargetWordDcumentsFromPathToFileWithSettings.Docx";
+            WordDcumentsComparision.CompareMultipleTargetWordDcumentsFromPathToFileWithSettings();
 
             ////// *** WorkBook Comparision Examples ***
 
@@ -102,8 +105,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.targetFile = "SHMA E-Suit changed.pdf";
 
             ////// Compare two Pdf from streams with saving results into a file
-            Common.resultFile = "Esuit-Compare.pdf";
-            PdfDcumentsComparision.ComparePdfFromStreamToFile();
+            //Common.resultFile = "Esuit-Compare.pdf";
+            //PdfDcumentsComparision.ComparePdfFromStreamToFile();
 
             ////// Compare two Pdf from file path with saving results into a file
             ////Common.resultFile = "result-ComparePdfFromPathToFile.pdf";

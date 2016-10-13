@@ -8,6 +8,13 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Comparison f
   </a>
 </p>
 
+## Prerequisite
+
++ Visual Studio 2012 or later.
+
++ GroupDocs.Comparison 3.4.0.
+
+
 ## How to Run the Examples?
 
 The package contains two projects, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files and open the solution file in Visual Studio. For more details, visit  [How to Run Examples](http://groupdocs.com/docs/display/Comparisonnet/How+to+Run+Examples).

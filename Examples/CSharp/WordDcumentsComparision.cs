@@ -56,7 +56,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             WordsComparisonSettings objWordsComparisonSettings = new WordsComparisonSettings();
             objWordsComparisonSettings.StyleChangedItemsStyle.Color = System.Drawing.Color.Yellow;
-            
+
 
             // Get instance of GroupDocs.Comparison.Comparison and call method Compare.
             GroupDocs.Comparison.Comparison comparison = Common.getComparison();
@@ -78,6 +78,36 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Stream result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Words, new WordsComparisonSettings());
         }
         //ExEnd:CompareWordDcumentsFromPathToFileWithSettings
+
+        //ExStart:CompareMultipleTargetWordDcumentsFromPathToFileWithSettings
+        /// <summary>
+        /// Compare multiple target  word processing documents using method MultiCompareWith from file path with saving results into a file with document settings
+        /// </summary>
+        public static void CompareMultipleTargetWordDcumentsFromPathToFileWithSettings()
+        {
+            // Create list of targets documents
+            List<IComparisonDocument> ListOfTargetDocuments = new List<IComparisonDocument>();
+
+            // Open documents 
+            ComparisonDocument source = new ComparisonDocument(Path.Combine(Common.sourcePath, Common.sourceFile));
+            ComparisonDocument target1 = new ComparisonDocument(Path.Combine(Common.targetPath, "target.docx"));
+            ComparisonDocument target2 = new ComparisonDocument(Path.Combine(Common.targetPath, "target2.docx"));
+
+            // Add target documents in list
+            ListOfTargetDocuments.Add(target1);
+            ListOfTargetDocuments.Add(target2);
+
+            // Call method MultiCompareWith
+            IWordsCompareResult result = source.MultiCompareWith(ListOfTargetDocuments, new WordsComparisonSettings { StyleChangeDetection = true, ShowDeletedContent = true, IsMultipleComparison = true, GenerateSummaryPage = true });
+
+            // Call GetDocument() method
+            IComparisonDocument resultDocument = result.GetDocument();
+
+            // Call Save() method
+            resultDocument.Save(Path.Combine(Common.resultPath, Common.resultFile), ComparisonSaveFormat.Docx);
+
+        }
+        //ExEnd:CompareMultipleTargetWordDcumentsFromPathToFileWithSettings
     }
 }
 //ExEnd:WordDcumentsComparisionClass
