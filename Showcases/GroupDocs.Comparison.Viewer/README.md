@@ -27,12 +27,6 @@ Open Source Project.
 + Compare files and allow to view results in viewer using GroupDocs.Viewer
 
 
-## Prerequisite
-
-+ Visual Studio 2012 or later.
-
-+ GroupDocs.Comparison 3.5.0.
-
 
 ##How to Run the Examples?
 
