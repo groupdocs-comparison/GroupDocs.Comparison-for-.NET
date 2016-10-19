@@ -12,9 +12,17 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Comparison f
 
 + Visual Studio 2012 or later.
 
-+ GroupDocs.Comparison 3.4.0.
++ GroupDocs.Comparison 3.5.0.
 
 
-## How to Run the Examples?
+##How to Run the Examples?
 
-The package contains two projects, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files and open the solution file in Visual Studio. For more details, visit  [How to Run Examples](http://groupdocs.com/docs/display/Comparisonnet/How+to+Run+Examples).
+The package contains two projects, one for C# examples and other for Visual Basic examples. Follow the given steps to proceed with project build:
+
+* Extract the downloaded project and open the solution file in Visual Studio
+* Right click on solution and press "Enable NuGet package Restore"
+* Build the project.
+
+In other case, it is possible that Visual Studio is unable to automatically add APIs references due to Visual Studio version differences. In this case, please add references of missing APIs manually.
+
+For more details, visit  [How to Run Examples](http://groupdocs.com/docs/display/Comparisonnet/How+to+Run+Examples).
