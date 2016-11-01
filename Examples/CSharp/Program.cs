@@ -16,12 +16,12 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
 
             //// set source and target files to compare
-            Common.sourceFile = "source.docx";
-            Common.targetFile = "target.docx";
+          //  Common.sourceFile = "source.docx";
+          //  Common.targetFile = "target.docx";
 
             ////// Uncomment following lines and specify the licence file to embed product licence using file path.
             //Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"); //"D:/License/GroupDocs.Total.lic";
-            //Common.ApplyLicense(Common.licensePath);
+           // Common.ApplyLicense(Common.licensePath);
 
             ////// Uncomment following lines and specify the licence file to embed product licence using stream.
             //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"), FileMode.Open, FileAccess.Read);
@@ -51,8 +51,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //WordDcumentsComparision.CompareWordDcumentsFromPathToFileWithSettings();
 
             // Compare multiple target  word processing documents using method MultiCompareWith from file path with saving results into a file with document settings
-            Common.resultFile = "result-CompareMultipleTargetWordDcumentsFromPathToFileWithSettings.Docx";
-            WordDcumentsComparision.CompareMultipleTargetWordDcumentsFromPathToFileWithSettings();
+            //Common.resultFile = "result-CompareMultipleTargetWordDcumentsFromPathToFileWithSettings.Docx";
+            //WordDcumentsComparision.CompareMultipleTargetWordDcumentsFromPathToFileWithSettings();
 
             ////// *** WorkBook Comparision Examples ***
 
@@ -101,8 +101,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             ////// *** Pdf Comparision Examples ***
 
             ////// set source and target files to compare
-            Common.sourceFile = "SHMA E-Suit Orignal.pdf";
-            Common.targetFile = "SHMA E-Suit changed.pdf";
+            Common.sourceFile = "source.pdf";
+            Common.targetFile = "target.pdf";
 
             ////// Compare two Pdf from streams with saving results into a file
             //Common.resultFile = "Esuit-Compare.pdf";
@@ -117,8 +117,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             ////PdfDcumentsComparision.ComparePdfFromStreamToFileWithSettings();
 
             ////// Compare two Pdf from file path with saving results into a file with document settings
-            ////Common.resultFile = "result-ComparePdfFromPathToFileWithSettings.pdf";
-            ////PdfDcumentsComparision.ComparePdfFromPathToFileWithSettings();
+            Common.resultFile = "result-ComparePdfFromPathToFileWithSettings.pdf";
+            PdfDcumentsComparision.ComparePdfFromPathToFileWithSettings();
 
             ////// *** Text Comparision Examples ***
 

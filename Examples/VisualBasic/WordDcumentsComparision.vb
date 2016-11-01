@@ -70,6 +70,46 @@ Namespace GroupDocsComparisonExamples.VisualBasic
         End Sub
         'ExEnd:CompareWordDcumentsFromPathToFileWithSettings
 
+        'ExStart:CompareTwoTargetWordDcumentsFromPathToFileWithSettings
+        ''' <summary>
+        ''' Compare Two target  word processing documents using method MultiCompareWith from file path with saving results into a file with document settings
+        ''' </summary>
+        Public Shared Sub CompareTwoTargetWordDcumentsFromPathToFileWithSettings()
+
+            ' Create list of targets documents
+            Dim ListOfTargetDocuments As New List(Of IComparisonDocument)()
+
+            ' Open documents 
+            Dim source As New ComparisonDocument(Path.Combine(Common.sourcePath, Common.sourceFile))
+            Dim target1 As New ComparisonDocument(Path.Combine(Common.targetPath, "target.docx"))
+            Dim target2 As New ComparisonDocument(Path.Combine(Common.targetPath, "target2.docx"))
+
+
+            ' Add target documents in list
+            ListOfTargetDocuments.Add(target1)
+            ListOfTargetDocuments.Add(target2)
+
+
+            ' WordComparison Settings
+            Dim wordsComparisonSettings As New WordsComparisonSettings()
+
+            wordsComparisonSettings.StyleChangeDetection = True
+            wordsComparisonSettings.ShowDeletedContent = True
+            wordsComparisonSettings.IsMultipleComparison = True
+            wordsComparisonSettings.GenerateSummaryPage = True
+
+            ' Call method MultiCompareWith
+            Dim result As IWordsCompareResult = source.MultiCompareWith(ListOfTargetDocuments, wordsComparisonSettings)
+
+            ' Call GetDocument() method
+            Dim resultDocument As IComparisonDocument = result.GetDocument()
+
+            ' Call Save() method
+            resultDocument.Save(Path.Combine(Common.resultPath, Common.resultFile), ComparisonSaveFormat.Docx)
+
+        End Sub
+        'ExEnd:CompareTwoTargetWordDcumentsFromPathToFileWithSettings
+
         'ExStart:CompareMultipleTargetWordDcumentsFromPathToFileWithSettings
         ''' <summary>
         ''' Compare multiple target  word processing documents using method MultiCompareWith from file path with saving results into a file with document settings
@@ -83,10 +123,12 @@ Namespace GroupDocsComparisonExamples.VisualBasic
             Dim source As New ComparisonDocument(Path.Combine(Common.sourcePath, Common.sourceFile))
             Dim target1 As New ComparisonDocument(Path.Combine(Common.targetPath, "target.docx"))
             Dim target2 As New ComparisonDocument(Path.Combine(Common.targetPath, "target2.docx"))
+            Dim target3 As New ComparisonDocument(Path.Combine(Common.targetPath, "target3.docx"))
 
             ' Add target documents in list
             ListOfTargetDocuments.Add(target1)
             ListOfTargetDocuments.Add(target2)
+            ListOfTargetDocuments.Add(target3)
 
             ' WordComparison Settings
             Dim wordsComparisonSettings As New WordsComparisonSettings()
@@ -107,7 +149,6 @@ Namespace GroupDocsComparisonExamples.VisualBasic
 
         End Sub
         'ExEnd:CompareMultipleTargetWordDcumentsFromPathToFileWithSettings
-
     End Class
 End Namespace
 'ExEnd:WordDcumentsComparisionClass
