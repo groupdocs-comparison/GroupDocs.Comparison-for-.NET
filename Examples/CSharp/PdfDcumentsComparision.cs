@@ -69,7 +69,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         {
             // Get instance of GroupDocs.Comparison.Comparison and call method Compare.
             GroupDocs.Comparison.Comparison comparison = Common.getComparison();
-            Stream result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Pdf, new PdfComparisonSettings());
+            Stream result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), Path.Combine(Common.resultPath, Common.resultFile), ComparisonType.Pdf, new PdfComparisonSettings { StyleChangeDetection = true, ShowDeletedContent = true, GenerateSummaryPage = true, MovedContentDetection=true,  });
         }
         //ExEnd:ComparePdfFromPathToFileWithSettings
     }
