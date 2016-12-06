@@ -14,7 +14,7 @@ Open Source Project.
 
 + Any latest browsers (Firefox, Chrome, Safari etc. )
 
-+ GroupDocs.Comparison 16.10.0
++ GroupDocs.Comparison 16.11.0
 
 
 
