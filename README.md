@@ -28,9 +28,9 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Comparison for .NET](http://groupdocs.com/dot-net/document-Comparison-library)
-+ **Download:** [Download GroupDocs.Comparison for .NET](http://groupdocs.com/community/files/8/.net-libraries/default.aspx)
-+ **Documentation:** [GroupDocs.Comparison for .NET Documentation](http://groupdocs.com/docs/display/Comparisonnet/Home)
++ **Product Home:** [GroupDocs.Comparison for .NET](https://www.groupdocs.com/products/comparison/net)
++ **Download:** [Download GroupDocs.Comparison for .NET](https://downloads.groupdocs.com/comparison/net)
++ **Documentation:** [GroupDocs.Comparison for .NET Documentation](http://www.groupdocs.com/docs/display/comparisonnet/Home)
 + **API Reference:** [GroupDocs.Comparison for .NET API Reference](http://www.groupdocs.com/api/net/comparison)
 + **Forum:** [GroupDocs.Comparison for .NET Forum](http://groupdocs.com/Community/forums/groupdocs.Comparison-product-family/7/showforum.aspx)
 + **Blog:** [GroupDocs.Comparison for .NET Blog](http://groupdocs.com/blog/category/Comparison)
