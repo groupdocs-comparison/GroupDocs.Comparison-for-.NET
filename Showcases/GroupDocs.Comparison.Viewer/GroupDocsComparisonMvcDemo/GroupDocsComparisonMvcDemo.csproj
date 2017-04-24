@@ -57,7 +57,7 @@
       <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="GroupDocs.Comparison">
-      <HintPath>..\packages\groupdocs-comparison-dotnet.17.2.0\lib\GroupDocs.Comparison.dll</HintPath>
+      <HintPath>..\packages\groupdocs-comparison-dotnet.17.3.0\lib\GroupDocs.Comparison.dll</HintPath>
     </Reference>
     <Reference Include="GroupDocs.Viewer">
       <HintPath>..\packages\groupdocs-viewer-dotnet.16.12.0\lib\GroupDocs.Viewer.dll</HintPath>
