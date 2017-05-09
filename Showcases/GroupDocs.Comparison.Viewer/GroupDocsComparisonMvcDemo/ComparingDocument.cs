@@ -17,18 +17,12 @@ namespace GroupDocsComparisonMvcDemo
         {
             DocumentName = documentName;
             DocumentPassword = documentPassword;
-            Extention = GetFileType(documentName);
+            Extention = GetFileType(documentName).ToLower();
             using (var fs = new FileStream(documentName, FileMode.Open, FileAccess.Read))
             {
                 Content = new MemoryStream();
                 fs.CopyTo(Content);
                 Content.Seek(0, SeekOrigin.Begin);
-            }
-            if ((Extention == FileType.Txt) || (Extention == FileType.Xml) || (Extention == FileType.Htm) || (Extention == FileType.Html) || (Extention == FileType.Html5) ||
-                (Extention == FileType.Xhtml) || (Extention == FileType.Mhtml) || (Extention == FileType.Epub) || (Extention == FileType.Xps) || (Extention == FileType.Mht) || (Extention == FileType.Js) ||
-                (Extention == FileType.Undefined))
-            {
-                Extention = FileType.Doc;
             }
         }
 
@@ -59,13 +53,13 @@ namespace GroupDocsComparisonMvcDemo
         /// <value>
         /// The Extention.
         /// </value>
-        public FileType Extention { get; private set; }
+        public string Extention { get; private set; }
 
-        internal static FileType GetFileType(string filePath)
+        internal static string GetFileType(string filePath)
         {
             var extension = GetExtension(filePath);
 
-            if (string.IsNullOrWhiteSpace(extension)) return FileType.Undefined;
+            if (string.IsNullOrWhiteSpace(extension)) return "Undefined";
 
             return ExtToFileType(extension);
         }
@@ -79,12 +73,9 @@ namespace GroupDocsComparisonMvcDemo
             return (extension ?? "").Trim('.');
         }
 
-        public static FileType ExtToFileType(string extension)
+        public static string ExtToFileType(string extension)
         {
-            FileType fileType;
-            return Enum.TryParse(extension, true, out fileType)
-                       ? fileType
-                       : FileType.Undefined;
+            return extension;
         }
     }
 }
