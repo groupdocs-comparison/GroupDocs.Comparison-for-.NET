@@ -38,8 +38,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
         // targetFile property to set input target file
         public static string resultFile = "result.doc";
 
-        // Create object of GroupDocs.Comparison.Comparison
-        public static GroupDocs.Comparison.Comparison comparison = new GroupDocs.Comparison.Comparison();
+        // Create object of GroupDocs.Comparison.Comparer
+        public static GroupDocs.Comparison.Comparer comparison = new GroupDocs.Comparison.Comparer();
 
         //ExEnd:CommonProperties
 
@@ -48,12 +48,12 @@ namespace GroupDocs.Comparison.Examples.CSharp
         /// Get GroupDocs ConversionHandler Object
         /// </summary>
         /// <returns>ConversionHandler</returns>
-        public static Comparison getComparison()
+        public static Comparison.Comparer getComparison()
         {
             if (comparison == null)
             {
-                // Create instance of GroupDocs.Comparison.Comparison to call method Compare.
-                comparison = new GroupDocs.Comparison.Comparison();
+                // Create instance of GroupDocs.Comparison.Comparer to call method Compare.
+                comparison = new GroupDocs.Comparison.Comparer();
             }
 
             // Returns the ConversionHandler static object

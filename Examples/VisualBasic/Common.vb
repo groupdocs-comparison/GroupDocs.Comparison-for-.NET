@@ -9,6 +9,7 @@ Namespace GroupDocsComparisonExamples.VisualBasic
     Public NotInheritable Class Common
         Private Sub New()
         End Sub
+
         'ExStart:CommonProperties
         ' storagePath property to set source file/s directory
         Public Shared sourcePath As String = Path.Combine(Environment.CurrentDirectory, "../../../../Data/SourceFiles/")
@@ -37,8 +38,8 @@ Namespace GroupDocsComparisonExamples.VisualBasic
         ' targetFile property to set input target file
         Public Shared resultFile As String = "result.doc"
 
-        ' Create object of GroupDocs.Comparison.Comparison
-        Public Shared comparison As GroupDocs.Comparison.Comparison
+        ' Create object of GroupDocs.Comparison.Comparer
+        Public Shared comparison As New GroupDocs.Comparison.Comparer()
 
         'ExEnd:CommonProperties
 
@@ -47,10 +48,10 @@ Namespace GroupDocsComparisonExamples.VisualBasic
         ''' Get GroupDocs ConversionHandler Object
         ''' </summary>
         ''' <returns>ConversionHandler</returns>
-        Public Shared Function getComparison() As GroupDocs.Comparison.Comparison
+        Public Shared Function getComparison() As GroupDocs.Comparison.Comparer
             If comparison Is Nothing Then
-                ' Create instance of GroupDocs.Comparison.Comparison to call method Compare.
-                comparison = New GroupDocs.Comparison.Comparison()
+                ' Create instance of GroupDocs.Comparison.Comparer to call method Compare.
+                comparison = New GroupDocs.Comparison.Comparer()
             End If
 
             ' Returns the ConversionHandler static object

@@ -55,13 +55,14 @@
       <HintPath>..\packages\Aspose.Words.17.4.0\lib\net40\Aspose.Words.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GroupDocs.Comparison, Version=17.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\groupdocs-comparison-dotnet.17.3.0\lib\GroupDocs.Comparison.dll</HintPath>
+    <Reference Include="GroupDocs.Comparison, Version=17.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\groupdocs-comparison-dotnet.17.4.0\lib\GroupDocs.Comparison.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -79,8 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.vb" />
-    <Compile Include="CommonComparisionOperations.vb" />
-    <Compile Include="HTMLDcumentsComparision.vb" />
+    <Compile Include="CommonComparision.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -97,11 +97,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PdfDcumentsComparision.vb" />
-    <Compile Include="PresentationDcumentsComparision.vb" />
-    <Compile Include="TextDcumentsComparision.vb" />
-    <Compile Include="WordDcumentsComparision.vb" />
-    <Compile Include="WorkBookDcumentsComparision.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
