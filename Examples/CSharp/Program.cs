@@ -16,8 +16,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
 
             // set source and target files to compare
-            Common.sourceFile = "source.docx";
-            Common.targetFile = "target.docx";
+            Common.sourceFile = "Current.docx";
+            Common.targetFile = "OlderVersion.docx";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
             // Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"); //"D:/License/GroupDocs.Total.lic";

@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using GroupDocs.Comparison.Common.Changes;
 using GroupDocs.Viewer;
+using GroupDocs.Comparison.Common.ComparisonSettings;
 
 namespace GroupDocsComparisonMvcDemo
 {
@@ -87,7 +88,7 @@ namespace GroupDocsComparisonMvcDemo
             if (lastDotIndex != -1)
             {
                 name = resultFileName.Substring(0, lastDotIndex + 1);
-                resultFileName = name +_target.Extention;
+                resultFileName = name + _target.Extention;
             }
             else
             {
@@ -106,7 +107,7 @@ namespace GroupDocsComparisonMvcDemo
             comparison = new GroupDocs.Comparison.Comparer();
             var resultName = Path.Combine(_settings.RootStoragePath, resultFileName);
             //Compare documents
-            results = comparison.Compare(_source.Content, _source.DocumentPassword, _target.Content, _target.DocumentPassword, new GroupDocs.Comparison.Common.ComparisonSettings.ComparisonSettings());
+            results = comparison.Compare(_source.Content, _source.DocumentPassword, _target.Content, _target.DocumentPassword, new GroupDocs.Comparison.Common.ComparisonSettings.ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true }, GenerateSummaryPage = true });
 
             //Get changes
             var changes = results.GetChanges();
