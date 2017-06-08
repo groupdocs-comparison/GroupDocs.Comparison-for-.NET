@@ -1,8 +1,8 @@
-##GroupDocs.Comparison for .NET
+# GroupDocs.Comparison for .NET
 
 GroupDocs.Comparison is a lightweight library that allows you to merge and diff two versions of a document. Supported file formats include: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, TXT, HTML.
 
-##GroupDocs.Comparison Structure
+# GroupDocs.Comparison Structure
 
 The core of GroupDocs.Comparison library consists of five main components: Words, Pdf, Slides, Cells and Text and Common . Each main component is divided into Contracts, Domain, that implements it, and Core component which compares documents using features specific for certain document type.
 
