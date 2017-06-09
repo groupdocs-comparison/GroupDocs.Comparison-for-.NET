@@ -45,7 +45,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
         //ExStart:getComparison
         /// <summary>
-        /// Get GroupDocs ConversionHandler Object
+        /// Get GroupDocs ComparisonHandler Object
         /// </summary>
         /// <returns>ConversionHandler</returns>
         public static Comparison.Comparer getComparison()
@@ -56,7 +56,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
                 comparison = new GroupDocs.Comparison.Comparer();
             }
 
-            // Returns the ConversionHandler static object
+            // Returns the ComparisonHandler static object
             return comparison;
         }
         //ExEnd:getComparison
