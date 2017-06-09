@@ -45,7 +45,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             // Get instance of GroupDocs.Comparison.Comparer and call method Compare.
             GroupDocs.Comparison.Comparer comparison = Common.getComparison();
-            ICompareResult result = comparison.Compare(sourceStream, targetStream, new ComparisonSettings());
+            ICompareResult result = comparison.Compare(sourceStream, targetStream, new ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true }, GenerateSummaryPage = true, DetailLevel = DetailLevel.Hight });
 
             // save result document to a file.
             result.SaveDocument(Path.Combine(Common.resultPath, Common.resultFile));
@@ -63,7 +63,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         {
             // Get instance of GroupDocs.Comparison.Comparer and call method Compare.
             GroupDocs.Comparison.Comparer comparison = Common.getComparison();
-            ICompareResult result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), new ComparisonSettings());
+            ICompareResult result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), new ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true } });
 
             // get result document as stream.
             Stream stream = result.GetStream();

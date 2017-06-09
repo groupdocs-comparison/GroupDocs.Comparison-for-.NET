@@ -16,12 +16,12 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
 
             // set source and target files to compare
-            Common.sourceFile = "source.docx";
-            Common.targetFile = "target.docx";
+            Common.sourceFile = "linux-source.docx";
+            Common.targetFile = "linux-changes.docx";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            // Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"); //"D:/License/GroupDocs.Total.lic";
-            // Common.ApplyLicense(Common.licensePath);
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/Lic/GroupDocs.Total.lic"); //"D:/Lic/GroupDocs.Total.lic";
+            Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
             // Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"), FileMode.Open, FileAccess.Read);
