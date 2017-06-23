@@ -9,4 +9,4 @@ Open Source Project.
 ## Projects
 
 * [GroupDocs.Comparison MVC Application with Viewer](GroupDocs.Comparison.Viewer)
-* [GroupDocsComparison MVC Web API Demo](GroupDocsComparisonMVCWebAPIDemo)
+
