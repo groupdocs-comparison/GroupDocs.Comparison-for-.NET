@@ -1,4 +1,4 @@
-##GroupDocs.Comparison for .NET Examples
+# GroupDocs.Comparison for .NET Examples
 
 This package contains C# and VB.NET Example Projects for [GroupDocs.Comparison for .NET](#) and sample input templates used in the examples.
 
@@ -8,14 +8,14 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Comparison f
   </a>
 </p>
 
-## Prerequisite
+# Prerequisite
 
 + Visual Studio 2012 or later.
 
 + GroupDocs.Comparison 17.6.0.
 
 
-##How to Run the Examples?
+# How to Run the Examples?
 
 The package contains two projects, one for C# examples and other for Visual Basic examples. Follow the given steps to proceed with project build:
 

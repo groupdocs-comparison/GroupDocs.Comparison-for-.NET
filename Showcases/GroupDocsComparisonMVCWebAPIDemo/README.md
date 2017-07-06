@@ -1,4 +1,4 @@
-##GroupDocs.Comparison for .NET Example
+# GroupDocs.Comparison for .NET Example
 
 MVC Comparison Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Comparison for .NET.
 The MVC Comparison Example allows user to easily Compare Documnents: 
@@ -7,7 +7,7 @@ Open Source Project.
 
 
 
-## Prerequisite
+# Prerequisite
 
 + Visual Studio 2012 or later.
 
@@ -18,7 +18,7 @@ Open Source Project.
 
 
 
-## Features 
+# Features 
 
 
 
@@ -28,7 +28,7 @@ Open Source Project.
 
 
 
-##How to Run the Examples?
+# How to Run the Examples?
 
 The package contains two projects, one for C# examples and other for Visual Basic examples. Follow the given steps to proceed with project build:
 
