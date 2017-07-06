@@ -25,7 +25,7 @@ Directory | Description
 [Showcases](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Showcases)  | Contains the Frontend Examples to help you learn how to Implement product features in a Web-UI based application.
 [Plugins](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Plugins)  | Contains the Visual Studio Plugins which will download examples and GroupDocs.Comparison Library without any efforts.
 
-## Resources
+# Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Comparison for .NET](https://www.groupdocs.com/products/comparison/net)

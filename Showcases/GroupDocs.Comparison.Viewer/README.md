@@ -1,4 +1,4 @@
-##GroupDocs.Comparison for .NET Example
+# GroupDocs.Comparison for .NET Example
 
 MVC Comparison with Viewer Example is a MVC Web  Application that demonstrates the core functionalities provided by GroupDocs.Comparison for .NET.
 The MVC Comparison with Viewer Example allows user to easily Compare Documnents and view results in browser: 
@@ -7,18 +7,18 @@ Open Source Project.
 
 
 
-## Prerequisite
+# Prerequisite
 
 + Visual Studio 2012 or later.
 
 
 + Any latest browsers (Firefox, Chrome, Safari etc. )
 
-+ GroupDocs.Comparison 17.5.0
++ GroupDocs.Comparison 17.6.0
 
 + GroupDocs.Viewer 16.12.0.
 
-## Features 
+# Features 
 
 
 
@@ -28,7 +28,7 @@ Open Source Project.
 
 
 
-##How to Run the Examples?
+# How to Run the Examples?
 
 The package contains two projects, one for C# examples and other for Visual Basic examples. Follow the given steps to proceed with project build:
 
