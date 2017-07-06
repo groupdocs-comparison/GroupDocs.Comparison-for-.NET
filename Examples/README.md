@@ -12,7 +12,7 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Comparison f
 
 + Visual Studio 2012 or later.
 
-+ GroupDocs.Comparison 17.5.0.
++ GroupDocs.Comparison 17.6.0.
 
 
 ##How to Run the Examples?

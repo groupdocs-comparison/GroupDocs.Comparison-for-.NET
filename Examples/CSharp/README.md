@@ -6,5 +6,5 @@ This folder contains the source code for GroupDocs.Comparison for .NET CSharp (C
 
 + Visual Studio 2012 or later.
 
-+ GroupDocs.Comparison 17.5.0
++ GroupDocs.Comparison 17.6.0
 

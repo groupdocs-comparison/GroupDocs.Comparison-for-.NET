@@ -31,18 +31,18 @@ namespace GroupDocs.Comparison.Examples.CSharp
             ////// *** Documents Comparision Examples (Un-Comment to run each example demo methods) ***
 
             // Compare two documents from streams with saving results into a stream
-            CommonComparision.CompareDcumentsFromStreamToOutputStream();
+           // CommonComparision.CompareDcumentsFromStreamToOutputStream();
 
-            // Compare two documents from streams with saving results into a file.
-            Common.resultFile = "result-CompareDcumentsFromStreamToOutputFile.doc";
-            CommonComparision.CompareDcumentsFromStreamToOutputFile();
+           // Compare two documents from streams with saving results into a file.
+          // Common.resultFile = "Comapre-result.pdf";
+           //CommonComparision.CompareDcumentsFromStreamToOutputFile();
 
             // Compare two documents from file path with saving results into a stream
             //CommonComparision.CompareDcumentsFromPathToOutputStream();
 
             // Compare two documents from file path with saving results into a file
-            //Common.resultFile = "result-CompareDcumentsFromPathToOutputFile.doc";
-            //CommonComparision.CompareDcumentsFromPathToOutputFile();
+            Common.resultFile = "result-linux-changes.docx";
+            CommonComparision.CompareDcumentsFromPathToOutputFile();
 
             // Compare two documents from streams with saving results into a file with comparison settings
             //Common.resultFile = "result-CompareDcumentsFromStreamToOutputFileWithSettings.doc";
