@@ -4,7 +4,7 @@ This folder contains the source code for GroupDocs.Comparison for .NET VisualBas
 
 # Prerequisite
 
-+ Visual Studio 2012 or later.
++ Visual Studio 2012 or Higher.
 
-+ GroupDocs.Comparison 17.6.0.
++ GroupDocs.Comparison 17.7.0.
 

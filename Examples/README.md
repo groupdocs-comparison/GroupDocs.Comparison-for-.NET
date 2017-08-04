@@ -10,9 +10,9 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Comparison f
 
 # Prerequisite
 
-+ Visual Studio 2012 or later.
++ Visual Studio 2012 or Higher.
 
-+ GroupDocs.Comparison 17.6.0.
++ GroupDocs.Comparison 17.7.0.
 
 
 # How to Run the Examples?

@@ -107,7 +107,7 @@ namespace GroupDocsComparisonMvcDemo
             comparison = new GroupDocs.Comparison.Comparer();
             var resultName = Path.Combine(_settings.RootStoragePath, resultFileName);
             //Compare documents
-            results = comparison.Compare(_source.Content, _source.DocumentPassword, _target.Content, _target.DocumentPassword, new GroupDocs.Comparison.Common.ComparisonSettings.ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true }, GenerateSummaryPage = true });
+            results = comparison.Compare(_source.Content, _source.DocumentPassword, _target.Content, _target.DocumentPassword, new GroupDocs.Comparison.Common.ComparisonSettings.ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true }, GenerateSummaryPage = true, CalculateComponentCoordinates = true });
 
             //Get changes
             var changes = results.GetChanges();
