@@ -20,7 +20,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.targetFile = "linux-changes.docx";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/Lic/GroupDocs.Total.lic"); //"D:/Lic/GroupDocs.Total.lic";
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/Aspose Projects/License/GroupDocs.Total.lic"); //"D:/Lic/GroupDocs.Total.lic";
             Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
