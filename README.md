@@ -10,7 +10,7 @@ Common component contains algorithms, which are used by every main component, co
 
 The Facade component gives an opportunity to simplify access to Comparison API and unites all comparison types into one API. Facade gives an ability to compare documents with all supported formats, and revise the changes from result document.
 
-This package contains [Examples](https://github.com/groupdocsComparison/GroupDocs_Comparison_NET/tree/master/Examples) for [GroupDocs.Comparison for .NET](#) that will help you understand API's working and write your own applications.
+This package contains [Examples](https://github.com/groupdocsComparison/GroupDocs_Comparison_NET/tree/master/Examples) for [GroupDocs.Comparison for .NET](https://www.groupdocs.com/products/comparison/net) that will help you understand API's working and write your own applications.
 
 <p align="center">
 
