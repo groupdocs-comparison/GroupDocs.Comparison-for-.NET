@@ -1,6 +1,6 @@
 ## Visual Studio Plugin to Explore GroupDocs.Comparison Examples
 
-GroupDocs.Conversion for .NET plugin is providing an ease to compile Next Generation GroupDocs.Comparison for .NET  examples and to explore the examples. It has reduced the efforts to download examples and the DLL file from different resources (GitHub, NuGet). You can quickly run CSharp or Visual Basic project. So all the manual steps to explore the examples have been exempted.
+GroupDocs.Conversion for .NET plugin is providing an ease to compile Next Generation GroupDocs.Comparison for .NET  examples and to explore the examples. It has reduced the efforts to download examples and the DLL file from different resources (GitHub, NuGet). You can quickly run CSharp project. So all the manual steps to explore the examples have been exempted.
 
 ## Features
 
@@ -10,7 +10,7 @@ Following are the key features of the plugin
 + Downloads source code automatically.
 + Downloads *GroupDocs.Comparison* API automatically.
 + Adds GroupDocs.Comparison reference automatically.
-+ Provides both *C#* and *VB* examples.
++ Provides both *C#*.
 + Supports *Visual Studio 2010*, *2012* and *2013.*
 + Opens project in few steps.
 + Easy to download and install.
