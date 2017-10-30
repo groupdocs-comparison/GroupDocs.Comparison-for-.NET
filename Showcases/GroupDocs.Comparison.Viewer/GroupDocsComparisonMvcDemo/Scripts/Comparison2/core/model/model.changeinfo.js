@@ -40,8 +40,8 @@
 
         changeInfo.fromDto = function (dto) {
             var item = new changeInfo().id(dto.Id);
-            item.type(dto.TypeStr)
-                .action(dto.ActionStr)
+            item.type("Inserted")
+                .action("None")
                 .page(dto.Page)
                 .box(dto.Box)
                 .text(dto.Text);

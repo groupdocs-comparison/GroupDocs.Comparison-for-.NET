@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using GroupDocs.Comparison.Common.Changes;
 using GroupDocs.Viewer;
+using GroupDocs.Comparison.Common.ComparisonSettings;
 
 namespace GroupDocsComparisonMvcDemo
 {
@@ -17,7 +18,8 @@ namespace GroupDocsComparisonMvcDemo
         internal string resultFileName;
         private readonly string _contextName;
         private readonly ComparisonWidgetSettings _settings;
-        private GroupDocs.Comparison.Comparison comparison;
+        private GroupDocs.Comparison.Comparer comparison;
+        private static GroupDocs.Comparison.Common.ICompareResult results;
 
         internal string ContextName
         {
@@ -102,19 +104,15 @@ namespace GroupDocsComparisonMvcDemo
         public ChangeInfo[] Compare()
         {
             //Create new comparison
-            comparison = new GroupDocs.Comparison.Comparison();
+            comparison = new GroupDocs.Comparison.Comparer();
             var resultName = Path.Combine(_settings.RootStoragePath, resultFileName);
             //Compare documents
-            if (!_source.DocumentPassword.Equals("") && !_target.DocumentPassword.Equals(""))
-            {
-                Stream stream = comparison.Compare(_source.Content, _source.DocumentPassword, _target.Content, _target.DocumentPassword, resultName, _settings.ComparisonBehavior, _target.Extention);
-            }
-            else
-            {
-                Stream stream = comparison.Compare(_source.Content, _target.Content, resultName, _settings.ComparisonBehavior, _target.Extention);
-            }
+            results = comparison.Compare(_source.Content, _source.DocumentPassword, _target.Content, _target.DocumentPassword, new GroupDocs.Comparison.Common.ComparisonSettings.ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true }, GenerateSummaryPage = true, CalculateComponentCoordinates = true });
+
             //Get changes
-            var changes = comparison.GetChanges();
+            var changes = results.GetChanges();
+
+            results.SaveDocument(resultName);
 
             //Cut changes and return
             return changes.ToArray();
@@ -127,10 +125,10 @@ namespace GroupDocsComparisonMvcDemo
         public void UpdateChanges(ChangeInfo[] changesToUpdate)
         {
             //Combine result file name
-            resultFileName = name + Guid.NewGuid() + "." + _target.Extention;
+            resultFileName = Guid.NewGuid() + name;
             var resultFile = Path.Combine(_settings.RootStoragePath, resultFileName);
             //Updete changes
-            comparison.UpdateChanges(changesToUpdate, resultFile);
+            results.UpdateChanges(changesToUpdate);
         }
 
         public ChangeInfo[] Changes
@@ -138,7 +136,7 @@ namespace GroupDocsComparisonMvcDemo
             get
             {
                 //Return changes
-                return comparison.GetChanges();
+                return results.GetChanges();
             }
         }
     }

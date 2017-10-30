@@ -1,10 +1,10 @@
-##GroupDocs.Comparison for .NET CSharp (C#) Example
+# GroupDocs.Comparison for .NET CSharp (C#) Example
 
 This folder contains the source code for GroupDocs.Comparison for .NET CSharp (C#) Example
 
-## Prerequisite
+# Prerequisite
 
-+ Visual Studio 2012 or later.
++ Visual Studio 2012 or higher.
 
-+ GroupDocs.Comparison 3.4.0.
++ GroupDocs.Comparison 17.7.0
 
