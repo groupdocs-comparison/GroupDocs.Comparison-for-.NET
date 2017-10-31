@@ -25,4 +25,4 @@ Visual Studio must be installed before installing the plugin. It supports follow
 + Visual Studio 2012
 + Visual Studio 2013
 
-For More details Please click [Here](http://www.groupdocs.com/docs/display/comparisonnet/Visual+Studio+Plugin+to+Explore+GroupDocs.Comparison+Examples)
+For More details Please click [Here](https://docs.groupdocs.com/display/comparisonnet/Visual+Studio+Plugin+to+Explore+GroupDocs.Comparison+Examples)
