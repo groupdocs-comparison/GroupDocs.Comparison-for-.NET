@@ -10,7 +10,7 @@ Following are the key features of the plugin
 + Downloads source code automatically.
 + Downloads *GroupDocs.Comparison* API automatically.
 + Adds GroupDocs.Comparison reference automatically.
-+ Provides both *C#*.
++ Provides *C#* Examples.
 + Supports *Visual Studio 2010*, *2012* and *2013.*
 + Opens project in few steps.
 + Easy to download and install.

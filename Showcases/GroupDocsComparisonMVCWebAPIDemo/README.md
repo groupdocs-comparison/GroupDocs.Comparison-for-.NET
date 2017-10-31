@@ -32,7 +32,7 @@ Open Source Project. This example project explain working of GroupDoc.Comparison
 
 ## How to Run the Examples?
 
-The package contains two projects, one for C# examples and other for Visual Basic examples. Follow the given steps to proceed with project build:
+The package contains two projects, one for C# examples. Follow the given steps to proceed with project build:
 
 * Extract the downloaded project and open the solution file in Visual Studio
 * Right click on solution and press "Enable NuGet package Restore"

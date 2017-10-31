@@ -32,7 +32,7 @@ Directory | Description
 + **Download:** [Download GroupDocs.Comparison for .NET](https://downloads.groupdocs.com/comparison/net)
 + **Documentation:** [GroupDocs.Comparison for .NET Documentation](https://docs.groupdocs.com/display/comparisonnet/Home)
 + **API Reference:** [GroupDocs.Comparison for .NET API Reference](https://apireference.groupdocs.com/net/comparison)
-+ **Forum:** [GroupDocs.Comparison for .NET Forum](https://forum.groupdocs.com/c/conversion)
++ **Forum:** [GroupDocs.Comparison for .NET Forum](https://forum.groupdocs.com/c/comparison)
 + **Blog:** [GroupDocs.Comparison for .NET Blog](https://blog.groupdocs.com/category/groupdocs-comparison-product-family/)
 
 
