@@ -1,6 +1,6 @@
 # GroupDocs.Comparison for .NET Examples
 
-This package contains C# Example Projects for [GroupDocs.Comparison for .NET](https://www.groupdocs.com/) and sample input templates used in the examples.
+This package contains C# Example Projects for [GroupDocs.Comparison for .NET](https://products.groupdocs.com/comparison/net) and sample input templates used in the examples.
 
 <p align="center">
   <a title="Download complete GroupDocs.Comparison for .NET Example source code" href="https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/archive/master.zip">
