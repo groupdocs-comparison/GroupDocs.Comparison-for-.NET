@@ -16,12 +16,12 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
 
             // set source and target files to compare
-            Common.sourceFile = "linux-source.docx";
-            Common.targetFile = "linux-changes.docx";
+            Common.sourceFile = "source.docx";
+            Common.targetFile = "target.docx";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/Aspose Projects/License/GroupDocs.Total.lic"); //"D:/Lic/GroupDocs.Total.lic";
-            Common.ApplyLicense(Common.licensePath);
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/GroupDocs.Total.lic"); 
+            //Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
             // Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.Total.lic"), FileMode.Open, FileAccess.Read);
@@ -41,8 +41,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //CommonComparision.CompareDcumentsFromPathToOutputStream();
 
             // Compare two documents from file path with saving results into a file
-            Common.resultFile = "result-linux-changes.docx";
-            CommonComparision.CompareDcumentsFromPathToOutputFile();
+            //Common.resultFile = "result-changes.docx";
+            //CommonComparision.CompareDcumentsFromPathToOutputFile();
 
             // Compare two documents from streams with saving results into a file with comparison settings
             //Common.resultFile = "result-CompareDcumentsFromStreamToOutputFileWithSettings.doc";
