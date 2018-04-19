@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GroupDocs.Comparison">
-      <HintPath>..\packages\GroupDocs.Comparison.18.2.0\lib\GroupDocs.Comparison.dll</HintPath>
+      <HintPath>..\packages\GroupDocs.Comparison.18.4.0\lib\GroupDocs.Comparison.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
