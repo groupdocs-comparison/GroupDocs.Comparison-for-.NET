@@ -28,10 +28,11 @@ Directory | Description
 # Resources
 
 + **Website:** [www.groupdocs.com](https://www.groupdocs.com/)
-+ **Product Home:** [GroupDocs.Comparison for .NET](https://products.groupdocs.com/comparison/net)
-+ **Download:** [Download GroupDocs.Comparison for .NET](https://downloads.groupdocs.com/comparison/net)
++ **Product Home:** [GroupDocs.Comparison for .NET](https://products.groupdocs.com/comparison/net) 
 + **Documentation:** [GroupDocs.Comparison for .NET Documentation](https://docs.groupdocs.com/display/comparisonnet/Home)
-+ **Forum:** [GroupDocs.Comparison for .NET Forum](https://forum.groupdocs.com/c/comparison)
++ **Installation:** [GroupDocs.Comparison for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Comparison/)
++ **Free Support:** [GroupDocs.Comparison for .NET Free Support Forum](https://forum.groupdocs.com/c/comparison)
++ **Paid Support:** [GroupDocs.Comparison for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
 + **Blog:** [GroupDocs.Comparison for .NET Blog](https://blog.groupdocs.com/category/groupdocs-comparison-product-family/)
 
 
