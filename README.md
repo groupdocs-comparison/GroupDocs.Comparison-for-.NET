@@ -29,6 +29,7 @@ Directory | Description
 
 + **Website:** [www.groupdocs.com](https://www.groupdocs.com/)
 + **Product Home:** [GroupDocs.Comparison for .NET](https://products.groupdocs.com/comparison/net) 
++ **API Reference:** [GroupDocs.Comparison for .NET API Reference](https://apireference.groupdocs.com/net/comparison)
 + **Documentation:** [GroupDocs.Comparison for .NET Documentation](https://docs.groupdocs.com/display/comparisonnet/Home)
 + **Installation:** [GroupDocs.Comparison for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Comparison/)
 + **Free Support:** [GroupDocs.Comparison for .NET Free Support Forum](https://forum.groupdocs.com/c/comparison)
