@@ -17,7 +17,7 @@ This package contains C# Example Projects for [GroupDocs.Comparison for .NET](ht
 
 # How to Run the Examples?
 
-The package contains two projects, one for C# examples. Follow the given steps to proceed with project build:
+The package contains C# examples. Follow the given steps to proceed with project build:
 
 * Extract the downloaded project and open the solution file in Visual Studio
 * Right click on solution and press "Enable NuGet package Restore"
