@@ -86,6 +86,13 @@ namespace GroupDocs.Comparison.Examples.CSharp
             license.SetLicense(licenseStream);
         }
         //ExEnd:ApplyLicense
+        //ExStart:MeteredLicense
+        public static void MeteredLicense()
+        {
+            Metered metered = new Metered();
+            metered.SetMeteredKey("****", "****");
+        }
+        //ExEnd:MeteredLicense
     }
 
 }
