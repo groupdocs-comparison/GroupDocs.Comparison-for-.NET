@@ -1,14 +1,14 @@
 
-# GroupDocs.Comparison for .NET Example
+# GroupDocs.Comparison for .NET Showcases
 
 
-The MVC Comparison Examples allows user to easily Compare Documnents: 
-The UI of the applications are kept very simple and developers can enhance the features as their own needs since it is an 
-Open Source Project.
+The showcases provided in this section are open-source. You can explore them in order to learn how GroupDocs.Comparison for .NET can be utilized for the front-end projects developmemnt. These projects are easy to manage and can be enhanced as per your requriements.
 
 
 
 # Projects
 
-* [GroupDocs.Comparison MVC Application with Viewer](GroupDocs.Comparison.Viewer)
+* [GroupDocs.Comparison-for-.NET-MVC](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC)
+* [GroupDocs.Comparison-for-.NET-WebForms](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms)
+
 
