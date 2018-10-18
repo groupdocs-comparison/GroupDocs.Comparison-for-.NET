@@ -2,7 +2,7 @@
 # Showcases
 
 
-The showcases provided in this section are open-source. You can explore them in order to learn how GroupDocs.Comparison for .NET can be utilized for the front-end projects developmemnt. These projects are easy to manage and can be enhanced as per your requriements.
+The showcases provided in this section are open-source. You can explore them in order to learn how can GroupDocs.Comparison for .NET be utilized for the front-end projects developmemnt. These projects are easy to manage and can be enhanced as per your requriements.
 
 Directory | Description
 --------- | -----------
