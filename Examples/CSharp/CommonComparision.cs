@@ -99,7 +99,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             // define and set comparison settings and properties.
             ComparisonSettings objComparisonSettings = new ComparisonSettings();
-            objComparisonSettings.StyleChangedItemsStyle.Color = System.Drawing.Color.Yellow;
+            objComparisonSettings.StyleChangedItemsStyle.FontColor = System.Drawing.Color.Yellow;
 
 
             // Get instance of GroupDocs.Comparison.Comparer and call method Compare.
@@ -122,7 +122,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         {
             // define and set comparison settings and properties.
             ComparisonSettings objComparisonSettings = new ComparisonSettings();
-            objComparisonSettings.StyleChangedItemsStyle.Color = System.Drawing.Color.Yellow;
+            objComparisonSettings.StyleChangedItemsStyle.FontColor = System.Drawing.Color.Yellow; 
 
 
             // Get instance of GroupDocs.Comparison.Comparer and call method Compare.
@@ -143,7 +143,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         {
             // define and set comparison settings and properties.
             ComparisonSettings objComparisonSettings = new ComparisonSettings();
-            objComparisonSettings.StyleChangedItemsStyle.Color = System.Drawing.Color.Yellow;
+            objComparisonSettings.StyleChangedItemsStyle.FontColor = System.Drawing.Color.Yellow;
 
 
             // Get instance of GroupDocs.Comparison.Comparer and call method Compare.
@@ -163,7 +163,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         {
             // define and set comparison settings and properties.
             ComparisonSettings objComparisonSettings = new ComparisonSettings();
-            objComparisonSettings.StyleChangedItemsStyle.Color = System.Drawing.Color.Yellow;
+            objComparisonSettings.StyleChangedItemsStyle.FontColor = System.Drawing.Color.Yellow;
 
             // source file to compare.
             string source = Path.Combine(Common.sourcePath, Common.sourceFile);
@@ -193,7 +193,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         {
             // define and set comparison settings and properties.
             ComparisonSettings objComparisonSettings = new ComparisonSettings();
-            objComparisonSettings.StyleChangedItemsStyle.Color = System.Drawing.Color.Yellow;
+            objComparisonSettings.StyleChangedItemsStyle.FontColor = System.Drawing.Color.Yellow;
 
             // source file to compare.
             string source = Path.Combine(Common.sourcePath, Common.sourceFile);
