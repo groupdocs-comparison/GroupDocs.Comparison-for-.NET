@@ -20,7 +20,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             Common.targetFile = "target.pdf";
 
             // Uncomment following lines and specify the licence file to embed product licence using file path.
-            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"D:/GroupDocs.Total.lic"); 
+            Common.licensePath = Path.Combine(Environment.CurrentDirectory, @"E:/GroupDocs.Total.lic");
             //Common.ApplyLicense(Common.licensePath);
 
             // Uncomment following lines and specify the licence file to embed product licence using stream.
@@ -31,11 +31,11 @@ namespace GroupDocs.Comparison.Examples.CSharp
             ////// *** Documents Comparision Examples (Un-Comment to run each example demo methods) ***
 
             // Compare two documents from streams with saving results into a stream
-           // CommonComparision.CompareDcumentsFromStreamToOutputStream();
+            // CommonComparision.CompareDcumentsFromStreamToOutputStream();
 
-           // Compare two documents from streams with saving results into a file.
-          // Common.resultFile = "Comapre-result.pdf";
-           //CommonComparision.CompareDcumentsFromStreamToOutputFile();
+            // Compare two documents from streams with saving results into a file.
+            // Common.resultFile = "Comapre-result.pdf";
+            //CommonComparision.CompareDcumentsFromStreamToOutputFile();
 
             // Compare two documents from file path with saving results into a stream
             //CommonComparision.CompareDcumentsFromPathToOutputStream();
@@ -82,6 +82,11 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //Common.resultFile = "result-CompareDcumentsToGetDocumentImagesInFolder.doc";
             //Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
             //CommonComparision.CompareDcumentsToGetDocumentImagesInFolder();
+
+            // Compare two documents from file path with saving results into a file with document settings and get result images into a folder.
+            //Common.resultFile = "result-ImageRepresentationOfDocumentPages.pdf";
+            //Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
+            //CommonComparision.GetImageRepresentationOfDocumentPages();
 
         }
     }

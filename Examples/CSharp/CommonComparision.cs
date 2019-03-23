@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using GroupDocs.Comparison.Common;
 using GroupDocs.Comparison.Common.ComparisonSettings;
 using GroupDocs.Comparison.Common.Changes;
+using System.Drawing;
 
 namespace GroupDocs.Comparison.Examples.CSharp
 {
@@ -283,6 +284,35 @@ namespace GroupDocs.Comparison.Examples.CSharp
             result.SaveImages(Common.resultPath);
         }
         //ExEnd:CompareDcumentsToGetDocumentImagesInFolder
+
+
+        /// <summary>
+        /// Shows How to Get Image Representation of Document Pages
+        /// </summary>
+        public static void GetImageRepresentationOfDocumentPages()
+        {
+            //ExStart:GetImageRepresentationOfDocumentPages
+
+            Comparer comparer = new Comparer();          
+            //compare document
+            ICompareResult result = comparer.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), new ComparisonSettings { StyleChangeDetection = true, ShowDeletedContent = true, GenerateSummaryPage = true });
+            result.SaveDocument(Path.Combine(Common.resultPath, Common.resultFile));
+
+            //get list of pages
+            List<PageImage> resultImages = comparer.ConvertToImages(Path.Combine(Common.resultPath, Common.resultFile));
+
+            //save them as bitmap to separate folder
+            if (!Directory.Exists(Common.resultPath + @"/Result Pages"))
+                Directory.CreateDirectory(Common.resultPath + @"/Result Pages");
+
+            foreach (PageImage image in resultImages)
+            {
+                Bitmap bitmap = new Bitmap(image.PageStream);
+                bitmap.Save(Common.resultPath + @"/Result Pages/result_" + image.PageNumber + ".png");
+                bitmap.Dispose();
+            }
+        }
+        //ExEnd:GetImageRepresentationOfDocumentPages
     }
 }
 //ExEnd:CommonComparisionClass
