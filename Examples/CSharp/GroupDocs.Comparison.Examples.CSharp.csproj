@@ -37,8 +37,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GroupDocs.Comparison, Version=19.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\GroupDocs.Comparison.19.1.0\lib\GroupDocs.Comparison.dll</HintPath>
+    <Reference Include="GroupDocs.Comparison, Version=19.3.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\GroupDocs.Comparison.19.3.1\lib\GroupDocs.Comparison.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
