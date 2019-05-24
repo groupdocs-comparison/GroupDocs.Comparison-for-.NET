@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using GroupDocs.Comparison.Common;
 using GroupDocs.Comparison.Common.License;
 using System.Reflection;
+using GroupDocs.Comparison.Common.DocumentInfo;
 
 namespace GroupDocs.Comparison.Examples.CSharp
 {
@@ -93,6 +94,16 @@ namespace GroupDocs.Comparison.Examples.CSharp
             metered.SetMeteredKey("****", "****");
         }
         //ExEnd:MeteredLicense
+
+        public static void GetDocumentInfo(string path, string fileName)
+        {
+            //ExStart:GetDocumentInfo
+            Informer informer = new Informer();
+            //get information about document from filePath
+            DocumentInfo documentInfo = informer.GetDocumentInfo(Path.Combine(path, fileName));
+            //ExEnd:GetDocumentInfo
+        }
+
     }
 
 }

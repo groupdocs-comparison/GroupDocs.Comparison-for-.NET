@@ -46,7 +46,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             // Get instance of GroupDocs.Comparison.Comparer and call method Compare.
             GroupDocs.Comparison.Comparer comparison = Common.getComparison();
-            ICompareResult result = comparison.Compare(sourceStream, targetStream, new ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true }, GenerateSummaryPage = true, DetailLevel = DetailLevel.Hight });
+            ICompareResult result = comparison.Compare(sourceStream, targetStream, new ComparisonSettings { DeletedItemsStyle = new StyleSettings { StrikeThrough = true }, GenerateSummaryPage = true, DetailLevel = DetailLevel.High });
 
             // save result document to a file.
             result.SaveDocument(Path.Combine(Common.resultPath, Common.resultFile));
@@ -313,6 +313,89 @@ namespace GroupDocs.Comparison.Examples.CSharp
             }
         }
         //ExEnd:GetImageRepresentationOfDocumentPages
+        /// <summary>
+        /// Shows How to Get Image Representation of Document Pages with Extended Option
+        /// </summary>
+        public static void GetImageRepresentationWithExtendedPageImageOptions()
+        {
+            //ExStart:GetImageRepresentationWithExtendedPageImageOptions
+
+            Comparer comparer = new Comparer();
+            //compare document
+            ICompareResult result = comparer.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), new ComparisonSettings { StyleChangeDetection = true, ShowDeletedContent = true, GenerateSummaryPage = true });
+            result.SaveDocument(Path.Combine(Common.resultPath, Common.resultFile));
+
+            //get list of pages
+            List<PageImage> resultImages = comparer.ConvertToImages(Path.Combine(Common.resultPath, Common.resultFile));
+            
+            // getting sizes of first page
+            int h = resultImages[0].Height;
+            int w = resultImages[0].Width;
+
+            //save them as bitmap to separate folder
+            if (!Directory.Exists(Common.resultPath + @"/Result Pages"))
+                Directory.CreateDirectory(Common.resultPath + @"/Result Pages");
+
+            foreach (PageImage image in resultImages)
+            {
+                Bitmap bitmap = new Bitmap(image.PageStream);
+                bitmap.Save(Common.resultPath + @"/Result Pages/result_" + image.PageNumber + ".png");
+                bitmap.Dispose();
+            }
+            //ExEnd:GetImageRepresentationWithExtendedPageImageOptions
+        }
+
+        /// <summary>
+        /// Shows How to Get Coordinates of Specific Changes in Result Document
+        /// </summary>
+        public static void GetCoordinatesOfSpecificChangesInResultDocument()
+        {
+            //ExStart:GetCoordinatesOfSpecificChangesInResultDocument
+
+            Comparer comparer = new Comparer();
+
+            ComparisonSettings comparisonsettings = new ComparisonSettings();
+            comparisonsettings.StyleChangeDetection = true;
+            //this setting specify that we want to have change coordinates
+            comparisonsettings.CalculateComponentCoordinates = true;
+            comparisonsettings.DetailLevel = DetailLevel.High;
+
+            //compare document
+            ICompareResult result = comparer.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), comparisonsettings);
+            result.SaveDocument(Path.Combine(Common.resultPath, Common.resultFile));
+
+            //get list of pages
+            List<PageImage> resultImages = comparer.ConvertToImages(Path.Combine(Common.resultPath, Common.resultFile));
+            List<ChangeInfo> changes = new List<ChangeInfo>(result.GetChanges());
+
+
+            //save them as bitmap to separate folder
+            if (!Directory.Exists(Common.resultPath + @"/Result Pages"))
+                Directory.CreateDirectory(Common.resultPath + @"/Result Pages");
+
+            foreach (PageImage image in resultImages)
+            {
+                Bitmap bitmap = new Bitmap(image.PageStream);
+                using (Graphics graphics = Graphics.FromImage(bitmap))
+                {
+                    foreach (ChangeInfo changeInfo in changes)
+                    {
+                        //if something was Inserted draw a Blue rectange
+                        if (changeInfo.Type == TypeChanged.Inserted)
+                            graphics.DrawRectangle(new Pen(Color.Blue), changeInfo.Box.X, changeInfo.Box.Y, changeInfo.Box.Width, changeInfo.Box.Height);
+                        //if something was Deleted draw a Red rectange
+                        if (changeInfo.Type == TypeChanged.Deleted)
+                            graphics.DrawRectangle(new Pen(Color.Red), changeInfo.Box.X, changeInfo.Box.Y, changeInfo.Box.Width, changeInfo.Box.Height);
+                        //if something was Changes draw a Green rectange
+                        if (changeInfo.Type == TypeChanged.StyleChanged)
+                            graphics.DrawRectangle(new Pen(Color.Green), changeInfo.Box.X, changeInfo.Box.Y, changeInfo.Box.Width, changeInfo.Box.Height);
+                    }
+                }
+                bitmap.Save(Common.resultPath + @"/Result Pages/result_" + image.PageNumber + ".png");
+                bitmap.Dispose();
+            }
+            //ExEnd:GetCoordinatesOfSpecificChangesInResultDocument
+        }
     }
 }
 //ExEnd:CommonComparisionClass
