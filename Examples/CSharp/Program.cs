@@ -88,6 +88,16 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
             //CommonComparision.GetImageRepresentationOfDocumentPages();
 
+            // Compare two documents from file path with saving results into a file with extended PageImage Properties.
+            //Common.resultFile = "result-ImageRepresentationWithExtendedPageImageOptions.pdf";
+            //Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
+            //CommonComparision.GetImageRepresentationWithExtendedPageImageOptions();
+
+            // Compare two documents from file path and get coordinates of specific chnages in result document.
+            //Common.resultFile = "result-CoordinatesOfSpecificChangesInResultDocument.pdf";
+            //Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
+            //CommonComparision.GetCoordinatesOfSpecificChangesInResultDocument();
+            
         }
     }
 }
