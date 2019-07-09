@@ -1,10 +1,6 @@
 ﻿//ExStart:CommonClass
 using System;
 using System.IO;
-using System.Collections.Generic;
-using GroupDocs.Comparison.Common;
-using GroupDocs.Comparison.Common.License;
-using System.Reflection;
 using GroupDocs.Comparison.Common.DocumentInfo;
 
 namespace GroupDocs.Comparison.Examples.CSharp
@@ -69,7 +65,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static void ApplyLicense(string filepath)
         {
             // Instantiate GroupDocs.Comparison license
-            GroupDocs.Comparison.Common.License.License license = new GroupDocs.Comparison.Common.License.License();
+            License license = new License();
 
             // Apply GroupDocs.Comparison license using license path
             license.SetLicense(filepath);
@@ -81,7 +77,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static void ApplyLicense(Stream licenseStream)
         {
             // Instantiate GroupDocs.Comparison license
-            GroupDocs.Comparison.Common.License.License license = new GroupDocs.Comparison.Common.License.License();
+            License license = new License();
 
             // Apply GroupDocs.Comparison license using license file stream
             license.SetLicense(licenseStream);
@@ -94,7 +90,23 @@ namespace GroupDocs.Comparison.Examples.CSharp
             metered.SetMeteredKey("****", "****");
         }
         //ExEnd:MeteredLicense
+        
+        /// <summary>
+        /// Number of already used credits
+        /// </summary>
+        //ExStart:GetAlreadyUsedCredit
+        public static decimal GetAlreadyUsedCredit()
+        {
+            string PublicKey = ""; // Your public license key
+            string PrivateKey = ""; // Your private license key
+            Metered metered = new Metered();
+            metered.SetMeteredKey(PublicKey, PrivateKey);
+            //Retrieves amount of already used credits
+            return Metered.GetConsumptionCredit();
+        }
+        //ExEnd:GetAlreadyUsedCredit
 
+        
         public static void GetDocumentInfo(string path, string fileName)
         {
             //ExStart:GetDocumentInfo

@@ -97,7 +97,14 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //Common.resultFile = "result-CoordinatesOfSpecificChangesInResultDocument.pdf";
             //Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
             //CommonComparision.GetCoordinatesOfSpecificChangesInResultDocument();
-            
+
+            // How to check current consumption quantity
+            //Common.resultFile = "result-CoordinatesOfSpecificChangesInResultDocument.pdf";
+            //Common.resultPath = Path.Combine(Environment.CurrentDirectory, @"../../../Data/OutputFiles");
+            //CommonComparision.CheckCurrentConsumptionQuantity();
+
+
+
         }
     }
 }

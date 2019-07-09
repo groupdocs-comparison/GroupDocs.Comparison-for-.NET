@@ -2,10 +2,9 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
-using GroupDocs.Comparison.Common;
-using GroupDocs.Comparison.Common.ComparisonSettings;
-using GroupDocs.Comparison.Common.Changes;
 using System.Drawing;
+using GroupDocs.Comparison.Changes;
+using GroupDocs.Comparison.Options;
 
 namespace GroupDocs.Comparison.Examples.CSharp
 {
@@ -396,6 +395,26 @@ namespace GroupDocs.Comparison.Examples.CSharp
             }
             //ExEnd:GetCoordinatesOfSpecificChangesInResultDocument
         }
+
+        /// <summary>
+        /// Shows How to check current consumption quantity
+        /// </summary>
+
+        public static void CheckCurrentConsumptionQuantity()
+        {
+            //ExStart:GetAlreadyUsedCredit
+            // Get consumption quantity from metered
+            decimal amountBefor = Metered.GetConsumptionQuantity();
+
+            // Call comparison
+            Comparer comparer = new Comparer();
+            comparer.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), new ComparisonSettings());
+
+            // Get consumption quantity from metered after several calls of comparison
+            decimal amountAfter = Metered.GetConsumptionQuantity();
+            //ExEnd:GetAlreadyUsedCredit
+        }
+
     }
 }
 //ExEnd:CommonComparisionClass
