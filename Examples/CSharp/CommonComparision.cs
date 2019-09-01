@@ -415,6 +415,29 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //ExEnd:GetAlreadyUsedCredit
         }
 
+        
+        /// <summary>
+        /// Compare two documents from file path with saving results into a file
+        /// </summary>
+        public static void SensitiveComparisonOfDocuments()
+        {
+            //ExStart:SensitiveComparisonOfDocuments
+            // Get instance of GroupDocs.Comparison.Comparer and call method Compare.
+            Comparer comparison = Common.getComparison();
+
+            ComparisonSettings comparisonSettings = new ComparisonSettings();
+            //Minimal value - 0
+            //Value by default - 75
+            //Maximum value - 100
+           comparisonSettings.SensitivityOfComparison = 75;
+
+            ICompareResult result = comparison.Compare(Path.Combine(Common.sourcePath, Common.sourceFile), Path.Combine(Common.targetPath, Common.targetFile), comparisonSettings);
+
+            // save result document to a file.
+            result.SaveDocument(Path.Combine(Common.resultPath, Common.resultFile));
+        }
+        //ExEnd:SensitiveComparisonOfDocuments
+
     }
 }
 //ExEnd:CommonComparisionClass
