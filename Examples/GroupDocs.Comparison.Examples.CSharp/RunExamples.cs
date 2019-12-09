@@ -3,6 +3,8 @@ using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading;
 using GroupDocs.Comparison.Examples.CSharp.BasicUsage;
 using GroupDocs.Comparison.Examples.CSharp.QuickStart;
 using System;
+using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison;
+
 namespace GroupDocs.Comparison.Examples.CSharp
 {
     class RunExamples
@@ -41,11 +43,11 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Compare documents from path with customized change styles from path
-            //CustomizeChangesStylesPath.Run();
+            //UseCompareOptions.CustomizeChangesStylesPath();
             #endregion
 
             #region Compare documents from path with customized change styles from stream
-            //CustomizeChangesStylesStream.Run();
+            //UseCompareOptions.CustomizeChangesStylesStream();
             #endregion
 
             #region Compare documents from stream with some settings 
@@ -77,7 +79,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Multicompare documents from path
-            //CompareMultipleDocumentsPath.Run();
+            //CompareMultipleDocumentsPath.CompareMultipleWordsDocuments();
             #endregion
 
             #region Multicompare documents from stream
@@ -133,7 +135,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Using sensitivity option
-            //AdjustingCcomparisonSensitivity.Run();
+            //UseCompareOptions.AdjustComparisonSensitivity();
             #endregion
 
             #region Using SaveOptions target metadata
@@ -158,6 +160,22 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             #region Load documents from path
             //LoadDocumentFromStream.Run();
+            #endregion
+
+            #region Multi compare for txt
+            //CompareMultipleDocumentsPath.CompareMultipleTxtDocuments();
+            #endregion
+
+            #region Multi compare for email
+            //CompareMultipleDocumentsPath.CompareMultipleEmailDocuments();
+            #endregion
+
+            #region Ignore Header/Footer
+            //UseCompareOptions.IgnoreHeaderFooter();
+            #endregion
+
+            #region Set output paper size
+            //UseCompareOptions.SetOutputPaperSize();
             #endregion
 
             Console.WriteLine();

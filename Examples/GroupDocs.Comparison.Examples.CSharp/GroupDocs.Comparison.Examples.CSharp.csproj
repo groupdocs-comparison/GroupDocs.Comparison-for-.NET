@@ -50,8 +50,8 @@
     <Compile Include="AdvancedUsage\Comparison\CompareMultipleDocumentsSettingsStream.cs" />
     <Compile Include="AdvancedUsage\Comparison\CompareMultipleDocumentsStream.cs" />
     <Compile Include="AdvancedUsage\Comparison\CompareMultipleDocumentsProtectedPath.cs" />
-    <Compile Include="AdvancedUsage\Comparison\CustomizeChangesStylesStream.cs" />
     <Compile Include="AdvancedUsage\Comparison\GetListOfChangesStream.cs" />
+    <Compile Include="AdvancedUsage\Comparison\UseCompareOptions.cs" />
     <Compile Include="AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForSourceDocument.cs" />
     <Compile Include="AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForTargetDocument.cs" />
     <Compile Include="AdvancedUsage\GeneratePagePreviews\SetSpecificImagesSize.cs" />
@@ -71,10 +71,8 @@
     <Compile Include="BasicUsage\CompareDocumentsFromStream.cs" />
     <Compile Include="BasicUsage\CompareDocumentsProtectedPath.cs" />
     <Compile Include="BasicUsage\CompareDocumentsProtectedStream.cs" />
-    <Compile Include="AdvancedUsage\Comparison\CustomizeChangesStylesPath.cs" />
     <Compile Include="AdvancedUsage\Comparison\CompareDocumentsSettingsStream.cs" />
     <Compile Include="BasicUsage\GetDocumentInfoStream.cs" />
-    <Compile Include="AdvancedUsage\Comparison\AdjustingCcomparisonSensitivity.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForResultantDocument.cs" />
     <Compile Include="BasicUsage\GetSupportedFormats.cs" />

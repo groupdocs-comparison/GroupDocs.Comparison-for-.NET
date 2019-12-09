@@ -1,0 +1,12 @@
+X-Unsent: 1
+Message-ID: <35454c7e11a948e7bbbcb12dde84bbe5>
+Subject: Hello World! Subject
+From: "Source Sender Name" <sourceFrom@domain.com>
+To: "Source Name" <sourceTo@domain.com>
+Date: Thu, 1 Jun 2017 12:45:43 +0000
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<b>Hello World! Bold</b> <br/> <br/><font color=3Dblue>Goodbye world!</font=
+>
