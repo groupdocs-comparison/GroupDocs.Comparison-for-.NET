@@ -11,6 +11,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
             {
                 comparer.Add(File.OpenRead(Constants.TARGET_WORD));
@@ -23,7 +26,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
                         IsUnderline = true
                     }
                 };
-                comparer.Compare(File.Create(Constants.RESULT_WORD), compareOptions);
+                comparer.Compare(File.Create(outputFileName), compareOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }

@@ -11,11 +11,15 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
-                comparer.Compare(File.Create(Constants.RESULT_WORD));
-                Document document = new Document(File.OpenRead(Constants.RESULT_WORD));
+                comparer.Compare(File.Create(outputFileName));
+
+                Document document = new Document(File.OpenRead(outputFileName));
                 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
                 {
                     var pagePath = Path.Combine(Constants.SamplesPath, $"result_{pageNumber}.png");

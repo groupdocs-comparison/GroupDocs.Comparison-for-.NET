@@ -11,6 +11,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
@@ -24,7 +27,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                         LastSaveBy = "Jack"
                     }
                 };
-                comparer.Compare(Constants.RESULT_WORD, saveOptions);
+                comparer.Compare(outputFileName, saveOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }

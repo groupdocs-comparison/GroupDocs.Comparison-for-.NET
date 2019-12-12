@@ -11,6 +11,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
@@ -22,7 +25,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 {
                     Password = "3333"
                 };
-                comparer.Compare(Constants.RESULT_WORD, sOptions, cOptions);
+                comparer.Compare(outputFileName, sOptions, cOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }

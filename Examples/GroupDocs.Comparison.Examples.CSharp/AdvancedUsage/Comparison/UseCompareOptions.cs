@@ -14,13 +14,16 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void IgnoreHeaderFooter()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WITH_FOOTER))
             {
                 CompareOptions compareOptions = new CompareOptions();
                 compareOptions.HeaderFootersComparison = false;
 
                 comparer.Add(Constants.TARGET_WITH_FOOTER);
-                comparer.Compare(File.Create(Constants.RESULT_WORD), new SaveOptions(), compareOptions);
+                comparer.Compare(File.Create(outputFileName), new SaveOptions(), compareOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
@@ -30,10 +33,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void SetOutputPaperSize()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
-                comparer.Compare(File.Create(Constants.RESULT_WORD), new CompareOptions() { PaperSize = PaperSize.A6 });
+                comparer.Compare(File.Create(outputFileName), new CompareOptions() { PaperSize = PaperSize.A6 });
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
@@ -43,10 +49,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void AdjustComparisonSensitivity()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
-                comparer.Compare(File.Create(Constants.RESULT_WORD), new CompareOptions() { SensitivityOfComparison = 100 });
+                comparer.Compare(File.Create(outputFileName), new CompareOptions() { SensitivityOfComparison = 100 });
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
@@ -56,6 +65,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void CustomizeChangesStylesStream()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
             {
                 comparer.Add(File.OpenRead(Constants.TARGET_WORD));
@@ -89,7 +101,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                         IsItalic = true
                     }
                 };
-                comparer.Compare(File.Create(Constants.RESULT_WORD), compareOptions);
+                comparer.Compare(File.Create(outputFileName), compareOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
@@ -99,6 +111,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void CustomizeChangesStylesPath()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
@@ -132,7 +147,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                         IsItalic = true
                     }
                 };
-                comparer.Compare(Constants.RESULT_WORD, compareOptions);
+                comparer.Compare(outputFileName, compareOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
