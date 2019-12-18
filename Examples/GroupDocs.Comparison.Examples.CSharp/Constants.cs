@@ -6,9 +6,9 @@ namespace GroupDocs.Comparison.Examples.CSharp
     internal static class Constants
     {
         public const string LicensePath = "C://licenses//GroupDocs.Comparison.lic";
-       
+               
         public const string SamplesPath = "./Resources/SampleFiles";
-        public const string OutputPath = "./Output/";
+        public const string OutputPath = "./Results/Output";
 
         public static string SOURCE_WORD => GetSampleFilePath("source.docx");
         public static string TARGET_WORD => GetSampleFilePath("target.docx");

@@ -1,5 +1,5 @@
 # to build image run in PS - `docker build --pull -t comparison:examples .`
-# to run tests run in PS - `docker run --rm -it -v ${PWD}/Output:/examples/Output  comparison:examples`
+# to run tests run in PS - `docker run --rm -it -v ${PWD}:/examples/Results  comparison:examples`
 
  
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1 AS buid_env
