@@ -10,10 +10,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
-                comparer.Compare(Constants.RESULT_WORD);
+                comparer.Compare(outputFileName);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }

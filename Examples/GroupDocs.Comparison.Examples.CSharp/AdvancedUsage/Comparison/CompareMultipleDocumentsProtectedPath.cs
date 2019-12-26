@@ -11,12 +11,15 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            string outputDirectory = Constants.GetOutputDirectoryPath();
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD, new LoadOptions() { Password = "1234" }))
             {
                 comparer.Add(Constants.TARGET_WORD_PROTECTED, new LoadOptions() { Password = "5678" });
                 comparer.Add(Constants.TARGET2_WORD_PROTECTED, new LoadOptions() { Password = "5678" });
                 comparer.Add(Constants.TARGET3_WORD_PROTECTED, new LoadOptions() { Password = "5678" });
-                comparer.Compare(Constants.RESULT_WORD);
+                comparer.Compare(outputFileName);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }

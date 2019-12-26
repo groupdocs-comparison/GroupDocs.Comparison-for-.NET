@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>371f7b30-27e3-4832-856d-4a89f06472a8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GroupDocs.Comparison.Examples.CSharp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\AcceptRejectDetectedChangesPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\AcceptRejectDetectedChangesStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareDocumentsSettingsStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsProtectedPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsProtectedStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsSettingsPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsSettingsStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetChangesCoordinates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetListOfChangesPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetListOfChangesStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\UseCompareOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForResultantDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForSourceDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForTargetDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsResouresCleaning.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\SetSpecificImagesSize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GetMeteredCreditsLimit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadDocumentFromLocalDisc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadDocumentFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataTarget.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataUserDefined.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetPasswordForResultantDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsFromPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsProtectedPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsProtectedStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentInfoPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentInfoStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetSupportedFormats.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetMeteredLicense.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\source.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\source.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\source.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\sourceWithFooter.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\source_protected.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target2.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target2.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target2_protected.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target3.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target3.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target3_protected.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\targetWithFooter.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target_protected.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\source.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\SampleFiles\target3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

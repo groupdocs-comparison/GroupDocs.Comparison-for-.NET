@@ -23,107 +23,107 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Get supported file formats
-            //GetSupportedFormats.Run();
+            GetSupportedFormats.Run();
             #endregion
 
             #region Get document info
-            //GetDocumentInfoPath.Run();
+            GetDocumentInfoPath.Run();
             #endregion
 
             #region Get document info
-            //GetDocumentInfoStream.Run();
+            GetDocumentInfoStream.Run();
             #endregion
 
             #region Compare documents from path
-            //CompareDocumentsFromPath.Run();
+            CompareDocumentsFromPath.Run();
             #endregion
 
             #region Compare documents from stream
-            //CompareDocumentsFromStream.Run();
+            CompareDocumentsFromStream.Run();
             #endregion
 
             #region Compare documents from path with customized change styles from path
-            //UseCompareOptions.CustomizeChangesStylesPath();
+            UseCompareOptions.CustomizeChangesStylesPath();
             #endregion
 
             #region Compare documents from path with customized change styles from stream
-            //UseCompareOptions.CustomizeChangesStylesStream();
+            UseCompareOptions.CustomizeChangesStylesStream();
             #endregion
 
             #region Compare documents from stream with some settings 
-            //CompareDocumentsSettingsStream.Run();
+            CompareDocumentsSettingsStream.Run();
             #endregion
 
             #region Compare documents with passwords from path
-            //CompareDocumentsProtectedPath.Run();
+            CompareDocumentsProtectedPath.Run();
             #endregion
 
             #region Compare documents with passwords from stream
-            //CompareDocumentsProtectedPath.Run();
+            CompareDocumentsProtectedPath.Run();
             #endregion
 
             #region Get list of changes from path
-            //GetListOfChangesPath.Run();
+            GetListOfChangesPath.Run();
             #endregion
 
             #region Get list of changes from stream
-            //GetListOfChangesStream.Run();
+            GetListOfChangesStream.Run();
             #endregion
 
             #region Update changes from path
-            //AcceptRejectDetectedChangesPath.Run();
+            AcceptRejectDetectedChangesPath.Run();
             #endregion
 
             #region Update changes from stream
-            //AcceptRejectDetectedChangesStream.Run();
+            AcceptRejectDetectedChangesStream.Run();
             #endregion
 
             #region Multicompare documents from path
-            //CompareMultipleDocumentsPath.CompareMultipleWordsDocuments();
+            CompareMultipleDocumentsPath.CompareMultipleWordsDocuments();
             #endregion
 
             #region Multicompare documents from stream
-            //CompareMultipleDocumentsStream.Run();
+            CompareMultipleDocumentsStream.Run();
             #endregion
 
             #region Multicompare protected documents from path
-            //CompareMultipleDocumentsProtectedPath.Run();
+            CompareMultipleDocumentsProtectedPath.Run();
             #endregion
 
             #region Multicompare protected documents from stream
-            //CompareMultipleDocumentsProtectedStream.Run();
+            CompareMultipleDocumentsProtectedStream.Run();
             #endregion
 
             #region Multicompare documents with settings
-            //CompareMultipleDocumentsSettingsStream.Run();
+            CompareMultipleDocumentsSettingsStream.Run();
             #endregion
 
             #region Multicompare documents with settings from stream
-            //CompareMultipleDocumentsSettingsStream.Run();
+            CompareMultipleDocumentsSettingsStream.Run();
             #endregion
 
             #region Multicompare documents with settings from path
-            //CompareMultipleDocumentsSettingsPath.Run();
+            CompareMultipleDocumentsSettingsPath.Run();
             #endregion
 
             #region Preview document pages for source document
-            //GetPagePreviewsForSourceDocument.Run();
+            GetPagePreviewsForSourceDocument.Run();
             #endregion
 
             #region Preview document pages for target document
-            //GetPagePreviewsForTargetDocument.Run();
+            GetPagePreviewsForTargetDocument.Run();
             #endregion
 
             #region Preview document pages for resultant document
-            //GetPagePreviewsForResultantDocument.Run();
+            GetPagePreviewsForResultantDocument.Run();
             #endregion
 
             #region Preview document page specific image size
-            //SetSpecificImagesSize.Run();
+            SetSpecificImagesSize.Run();
             #endregion
 
             #region Calculate coordinates
-            //GetChangesCoordinates.Run();
+            GetChangesCoordinates.Run();
             #endregion
 
             #region Metered credits
@@ -131,51 +131,51 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Using page preview release stream delegate
-            //GetPagePreviewsResouresCleaning.Run();
+            GetPagePreviewsResouresCleaning.Run();
             #endregion
 
             #region Using sensitivity option
-            //UseCompareOptions.AdjustComparisonSensitivity();
+            UseCompareOptions.AdjustComparisonSensitivity();
             #endregion
 
             #region Using SaveOptions target metadata
-            //SetDocumentMetadataTarget.Run();
+            SetDocumentMetadataTarget.Run();
             #endregion
 
             #region Using SaveOptions source metadata
-            //SetDocumentMetadataSource.Run();
+            SetDocumentMetadataSource.Run();
             #endregion
 
             #region Using SaveOptions user metadata
-            //SetDocumentMetadataUserDefined.Run();
+            SetDocumentMetadataUserDefined.Run();
             #endregion
 
             #region Protect result document
-            //SetPasswordForResultantDocument.Run();
+            SetPasswordForResultantDocument.Run();
             #endregion
 
             #region Load documents from stream
-            //LoadDocumentFromLocalDisc.Run();
+            LoadDocumentFromLocalDisc.Run();
             #endregion
 
             #region Load documents from path
-            //LoadDocumentFromStream.Run();
+            LoadDocumentFromStream.Run();
             #endregion
 
             #region Multi compare for txt
-            //CompareMultipleDocumentsPath.CompareMultipleTxtDocuments();
+            CompareMultipleDocumentsPath.CompareMultipleTxtDocuments();
             #endregion
 
             #region Multi compare for email
-            //CompareMultipleDocumentsPath.CompareMultipleEmailDocuments();
+            CompareMultipleDocumentsPath.CompareMultipleEmailDocuments();
             #endregion
 
             #region Ignore Header/Footer
-            //UseCompareOptions.IgnoreHeaderFooter();
+            UseCompareOptions.IgnoreHeaderFooter();
             #endregion
 
             #region Set output paper size
-            //UseCompareOptions.SetOutputPaperSize();
+            UseCompareOptions.SetOutputPaperSize();
             #endregion
 
             Console.WriteLine();
