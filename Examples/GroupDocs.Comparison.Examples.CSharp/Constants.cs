@@ -32,6 +32,16 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string TARGET2_EMAIL => GetSampleFilePath("target2.eml");
         public static string TARGET3_EMAIL => GetSampleFilePath("target3.eml");
 
+        public static string SOURCE_PDF => GetSampleFilePath("source.pdf");
+        public static string TARGET_PDF => GetSampleFilePath("target.pdf");
+        public static string TARGET2_PDF => GetSampleFilePath("target2.pdf");
+        public static string TARGET3_PDF => GetSampleFilePath("target3.pdf");
+
+        public static string SOURCE_DIAGRAM => GetSampleFilePath("source.vsdx");
+        public static string TARGET_DIAGRAM => GetSampleFilePath("target.vsdx");
+        public static string TARGET2_DIAGRAM => GetSampleFilePath("target2.vsdx");
+        public static string TARGET3_DIAGRAM => GetSampleFilePath("target3.vsdx");
+
         public static string SOURCE_WITH_FOOTER => GetSampleFilePath("sourceWithFooter.docx");
         public static string TARGET_WITH_FOOTER => GetSampleFilePath("targetWithFooter.docx");
 
@@ -39,7 +49,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string RESULT_SLIDES => "result.pptx";
         public static string RESULT_TXT => "result.txt";
         public static string RESULT_EMAIL => "result.eml";
-        
+        public static string RESULT_PDF => "result.pdf";
+        public static string RESULT_DIAGRAM => "result.vsdx";
+
+        public static string DIAGRAM_SETTINGS => GetSampleFilePath("basicShapes.vssx");
 
         private static string GetSampleFilePath(string filePath) => Path.Combine(SamplesPath, filePath);
 

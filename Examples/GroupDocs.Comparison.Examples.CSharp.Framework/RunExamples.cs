@@ -170,6 +170,14 @@ namespace GroupDocs.Comparison.Examples.CSharp
             CompareMultipleDocumentsPath.CompareMultipleEmailDocuments();
             #endregion
 
+            #region Multi compare for pdf
+            CompareMultipleDocumentsPath.CompareMultiplePdfDocuments();
+            #endregion
+
+            #region Multi compare for diagram
+            CompareMultipleDocumentsPath.CompareMultipleDiagramDocuments();
+            #endregion
+
             #region Ignore Header/Footer
             UseCompareOptions.IgnoreHeaderFooter();
             #endregion
