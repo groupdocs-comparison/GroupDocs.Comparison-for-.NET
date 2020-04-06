@@ -34,6 +34,14 @@ namespace GroupDocs.Comparison.Examples.CSharp
             GetDocumentInfoStream.Run();
             #endregion
 
+            #region Compare cells files from path
+            CompareCellsFromPath.Run();
+            #endregion
+
+            #region Compare cells files from stream
+            CompareCellsFromStream.Run();
+            #endregion
+
             #region Compare documents from path
             CompareDocumentsFromPath.Run();
             #endregion
@@ -63,11 +71,11 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Get list of changes from path
-            GetListOfChangesPath.Run();
+            GetChanges.GetListOfChangesPath();
             #endregion
 
             #region Get list of changes from stream
-            GetListOfChangesStream.Run();
+            GetChanges.GetListOfChangesStream();
             #endregion
 
             #region Update changes from path
@@ -123,7 +131,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Calculate coordinates
-            GetChangesCoordinates.Run();
+            GetChanges.GetChangesCoordinates();
             #endregion
 
             #region Metered credits
@@ -184,6 +192,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             #region Set output paper size
             UseCompareOptions.SetOutputPaperSize();
+            #endregion
+
+            #region Get target text from changed range
+            GetChanges.GetTargetText();
             #endregion
 
             Console.WriteLine();

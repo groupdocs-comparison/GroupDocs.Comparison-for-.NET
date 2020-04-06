@@ -5,10 +5,13 @@ namespace GroupDocs.Comparison.Examples.CSharp
 {
     internal static class Constants
     {
-        public const string LicensePath = "C://licenses//GroupDocs.Comparison.lic";
+        public const string LicensePath = "D:\\GroupDocs.Comparison.NET.lic";
                
         public const string SamplesPath = "./Resources/SampleFiles";
         public const string OutputPath = "./Results/Output";
+
+        public static string SOURCE_CELLS => GetSampleFilePath("source.xlsx");
+        public static string TARGET_CELLS => GetSampleFilePath("target.xlsx");
 
         public static string SOURCE_WORD => GetSampleFilePath("source.docx");
         public static string TARGET_WORD => GetSampleFilePath("target.docx");
@@ -46,6 +49,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string TARGET_WITH_FOOTER => GetSampleFilePath("targetWithFooter.docx");
 
         public static string RESULT_WORD => "result.docx";
+        public static string RESULT_CELLS => "result.xlsx";
         public static string RESULT_SLIDES => "result.pptx";
         public static string RESULT_TXT => "result.txt";
         public static string RESULT_EMAIL => "result.eml";

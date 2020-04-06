@@ -18,9 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsSettingsPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsSettingsStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetChangesCoordinates.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetListOfChangesPath.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetListOfChangesStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetChanges.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\UseCompareOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForResultantDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForSourceDocument.cs" />
@@ -34,6 +32,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataTarget.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataUserDefined.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetPasswordForResultantDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareCellsFromPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareCellsFromStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsFromPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsFromStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsProtectedPath.cs" />
