@@ -102,10 +102,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
             CompareMultipleDocumentsProtectedStream.Run();
             #endregion
 
-            #region Multicompare documents with settings
-            CompareMultipleDocumentsSettingsStream.Run();
-            #endregion
-
             #region Multicompare documents with settings from stream
             CompareMultipleDocumentsSettingsStream.Run();
             #endregion
@@ -113,7 +109,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #region Multicompare documents with settings from path
             CompareMultipleDocumentsSettingsPath.Run();
             #endregion
-
             #region Preview document pages for source document
             GetPagePreviewsForSourceDocument.Run();
             #endregion
