@@ -1,4 +1,4 @@
-# Document Difference Checker API
+# .NET Document Comparison API
 
 On-premise library to [compare documents](https://products.groupdocs.com/comparison/net) in applications based on .NET platform. Retrieve list of changes with line-by-line comparison of content, paragraphs, characters, styles, shapes and position.
 
@@ -29,29 +29,29 @@ Directory | Description
 
 ## Supported Microsoft Office Formats
 
-**Microsoft Word:** DOC, DOCM, DOCX, DOT, DOTM, DOTX, RTX/
-**Microsoft Excel:** XLS, XLT, XLSX, XLTM, XLSB, XLSM, XLSX/
-**Microsoft PowerPoint:** POT, POTX, PPS, PPSX, PPTX, PPT/
-**Microsoft OneNote:** ONE/
-**Microsoft Visio:** VSDX, VSD, VSS, VST, VDX/
+**Microsoft Word:** DOC, DOCM, DOCX, DOT, DOTM, DOTX, RTX\
+**Microsoft Excel:** XLS, XLT, XLSX, XLTM, XLSB, XLSM, XLSX\
+**Microsoft PowerPoint:** POT, POTX, PPS, PPSX, PPTX, PPT\
+**Microsoft OneNote:** ONE\
+**Microsoft Visio:** VSDX, VSD, VSS, VST, VDX
 
 ## Other Supported Formats
 
-**OpenDocument:** ODT, ODP, OTP, ODS, OTT/
-**Portable:** PDF/
-**AutoCAD:** DWG, DXF/
-**Email:** EML, EMLX, MSG/
-**Images:** BMP, GIF, JPG, JPEG, PNG, DICOM/
-**Web:** HTM, HTML, MHT, MHTML/
-**Text:** TXT, CSV/
+**OpenDocument:** ODT, ODP, OTP, ODS, OTT\
+**Portable:** PDF\
+**AutoCAD:** DWG, DXF\
+**Email:** EML, EMLX, MSG\
+**Images:** BMP, GIF, JPG, JPEG, PNG, DICOM\
+**Web:** HTM, HTML, MHT, MHTML\
+**Text:** TXT, CSV\
 **eBook:** MOBI, DJVU
 
 ## Develop & Deploy GroupDocs.Comparison Anywhere
 
-**Microsoft Windows:** Windows Azure, Microsoft Windows Desktop (x86, x64), Microsoft Windows Server (x86, x64)/
-**macOS:** Mac OS X/
-**Linux:** Ubuntu, OpenSUSE, CentOS and others/
-**Development Environments:** Microsoft Visual Studio (2010 & up), Xamarin.Android, Xamarin.IOS, Xamarin.Mac, MonoDevelop 2.4 and later/
+**Microsoft Windows:** Windows Azure, Microsoft Windows Desktop (x86, x64), Microsoft Windows Server (x86, x64)\
+**macOS:** Mac OS X\
+**Linux:** Ubuntu, OpenSUSE, CentOS, and others\
+**Development Environments:** Microsoft Visual Studio (2010 & up), Xamarin.Android, Xamarin.IOS, Xamarin.Mac, MonoDevelop 2.4 and later\
 **Supported Frameworks:** .NET Standard 2.0, .NET Framework 2.0 or higher, .NET Core 2.0 or higher, Mono Framework 1.2 or higher
 
 ## Getting Started with GroupDocs.Comparison for .NET
