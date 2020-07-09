@@ -1,6 +1,6 @@
 # .NET Document Comparison API
 
-On-premise library to [compare documents](https://products.groupdocs.com/comparison/net) in applications based on .NET platform. Retrieve list of changes with line-by-line comparison of content, paragraphs, characters, styles, shapes and position.
+On-premise library to [compare documents](https://products.groupdocs.com/comparison/net) in applications based on .NET platform. Retrieve list of changes in desired format with line-by-line comparison of content, paragraphs, characters, styles, shapes and position.
 
 <p align="center">
 
