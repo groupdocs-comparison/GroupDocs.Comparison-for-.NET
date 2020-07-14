@@ -8,4 +8,6 @@ keywords: GroupDocs.Comparison Developer Guide, GroupDocs.Comparison .NET Develo
 productName: GroupDocs.Comparison for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This section describes some basic and advanced use cases of GroupDocs.Comparison for .NET. Please refer to GitHub repository for more examples and samples.{{< /alert >}}
+{{< alert style="info" >}}
+This section describes some basic and advanced use cases of **[GroupDocs.Comparison for .NET](https://products.groupdocs.com/comparison/net)**. Please refer to [GitHub repository](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET) for more examples and samples.
+{{< /alert >}}

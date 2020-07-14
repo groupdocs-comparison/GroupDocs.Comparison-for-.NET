@@ -21,7 +21,7 @@ The following are the steps to generate document preview with GroupDocs.Compari
     *   image preview format - PNG / JPG / BMP;
     *   page numbers to process;
     *   custom size of preview images (if needed).
-        {{< alert style="info" >}}Stream that were created by CreatePageStream delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument ReleasePageStream to clean up resources.{{< /alert >}}
+    {{< alert style="info" >}}Stream that were created by [CreatePageStream](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison.options/previewoptions/fields/createpagestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleasePageStream](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison.options/previewoptions/fields/releasepagestream) to clean up resources.{{< /alert >}}
 *   Call [GeneratePreview](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/document/methods/generatepreview) method of [Source](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/properties/source) and [Targets](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/properties/targets)document and pass [PreviewOptions](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison.options/previewoptions) to it.
 
 Here a [PreviewOptions](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison.options/previewoptions) class main properties:
