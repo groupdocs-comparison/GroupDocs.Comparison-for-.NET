@@ -12,7 +12,7 @@ hideChildren: False
 The following are the steps to apply/reject changes to resultant document.
 
 *   Instantiate [Comparer](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer) object with source document path or stream;
-*   Call *[A](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/add/index)*[dd](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/add/index) method  and specify path target document path or stream;
+*   Call [Add](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/add/index) method  and specify path target document path or stream;
 *   Call [Compare](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/compare/index) method;
 *   Call [GetChanges](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/getchanges/index) method and obtain detected changes list;
 *   Set [ComparisonAction](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison.result/changeinfo/properties/comparisonaction) of needed change object to [ComparisonAction.Accept](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison.result/comparisonaction) or [ComparisonAction.Reject](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison.result/comparisonaction) value;
