@@ -22,7 +22,7 @@ For better understanding about how comparison algorithms work let's suppose we 
 | `1``. It is our equity poetry` |
 | `2``. Jack is a glad calf` |
 
-We will highlight removed text parts with **red** and inserted parts with **blue** color. So, these strings have two common sub-sequences: "**is**" word and 4 space symbols.   
+We will highlight removed text parts with <font color="red">**red**</font> and inserted parts with <font color="blue">**blue**</font> color. So, these strings have two common sub-sequences: "**is**" word and 4 space symbols.   
 **  
 Common sub-sequence is - " **is**   " and its length is 6 symbols (there are 4 space symbols in it).  
 Length of inserted sub-sequence is 13 symbols - **Jackagladcalf**  

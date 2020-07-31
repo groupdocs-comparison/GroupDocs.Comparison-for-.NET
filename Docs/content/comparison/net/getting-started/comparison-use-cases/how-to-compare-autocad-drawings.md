@@ -12,9 +12,9 @@ It becomes increasingly difficult to remember what has been changed from one rev
 
 Three colors in the comparison drawing highlight the common objects and the differences. You can specify colors to identify the following:
 
-*   Objects that exist only in the first drawing – **green**, by default
-*   Objects that exist only in the second drawing – **red**, by default
-*   Objects that are unchanged or common to both drawings – **gray**, by default
+*   Objects that exist only in the first drawing – <font color="green">**green**</font>, by default
+*   Objects that exist only in the second drawing – <font color="red">**red**</font>, by default
+*   Objects that are unchanged or common to both drawings – <font color="gray">**gray**</font>, by default
 
 To compare drawings with DWG Compare you should:
 
@@ -52,7 +52,7 @@ using (Comparer comparer = new Comparer(@"source.dwg"))
 }
 ```
 
-As a result, we get a DWG file where the deleted elements are marked in **red**, the added – in **blue**, and the modified – in **green**.
+As a result, we get a DWG file where the deleted elements are marked in <font color="red">**red**</font>, the added – in <font color="blue">**blue**</font>, and the modified – in <font color="green">**green**</font>.
 
 ![](comparison/net/images/how-to-compare-autocad-drawings_2.png)
 

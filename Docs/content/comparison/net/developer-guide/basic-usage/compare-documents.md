@@ -19,10 +19,10 @@ Changes detection algorithms used by **[GroupDocs.Comparison](https://products.g
     
 For better visual separation of detected changes added, modified or deleted document parts are highlighted with different colors:
 
-*   Added – **blue** 
-*   Modified – **green**
-*   Style – **green**
-*   Deleted – **red**
+*   Added – <font color="blue">**blue** </font>
+*   Modified – <font color="green">**green**</font>
+*   Style – <font color="green">**green**</font>
+*   Deleted – <font color="red">**red**</font>
 
 Changes styling coloring scheme can be customized if needed, changed text blocks can be marked with different formatting - italic, bold, underlined, strikethrough etc.
 

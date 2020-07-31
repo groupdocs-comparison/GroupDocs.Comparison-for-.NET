@@ -55,7 +55,7 @@ using (Comparer comparer = new Comparer(sourceDocumentPath))
 }
 ```
 
-As a result, we get a PPTX file where the deleted elements are marked in **red**, the added – in **blue**, and the modified – in **green**
+As a result, we get a PPTX file where the deleted elements are marked in <font color="red">**red**</font>, the added – in <font color="blue">**blue**</font>, and the modified – in <font color="green">**green**</font>
 
 | Result Slide |
 | --- |
