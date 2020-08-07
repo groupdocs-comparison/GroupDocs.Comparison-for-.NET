@@ -10,8 +10,8 @@ hideChildren: False
 ---
 **[GroupDocs.Comparison](https://products.groupdocs.com/comparison/net)** allows to get the list of all [supported file formats]({{< ref "comparison/net/getting-started/supported-document-formats.md" >}}) by following the below steps:
 
-*   Call [GetSupportedFileTypes](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/filetype/methods/getsupportedfiletypes) of [FileType](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) class;
-*   Enumerate through the collection of [FileType](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) objects.
+*   Call [GetSupportedFileTypes](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.result/filetype/methods/getsupportedfiletypes) of [FileType](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.result/filetype) class;
+*   Enumerate through the collection of [FileType](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.result/filetype) objects.
 
 The following code sample demonstrates how to get supported file formats list.
 
