@@ -58,16 +58,14 @@ Directory | Description
 
 Are you ready to give GroupDocs.Comparison for .NET a try? Simply execute `Install-Package GroupDocs.Comparison` from Package Manager Console in Visual Studio to fetch & reference GroupDocs.Comparison assembly in your project. If you already have GroupDocs.Comparison for .NET and want to upgrade it, please execute `Update-Package GroupDocs.Comparison` to get the latest version.
 
-## Compare Password Protected Files
+## Compare Microsoft Word Documents
 
 ```csharp
-using (Comparer comparer = new Comparer("source.docx", new LoadOptions() { Password = "1234" }))
+using (Comparer comparer = new Comparer("source.docx"))
 {
-	comparer.Add("target1.docx", new LoadOptions() { Password = "5678" });
-    comparer.Add("target2.docx", new LoadOptions() { Password = "5678" });
-    comparer.Add("target3.docx", new LoadOptions() { Password = "5678" });
-    comparer.Compare("result.docx");
+	comparer.Add("target.docx");
+	comparer.Compare("result.docx");
 }
 ```
 
-[Product Page](https://products.groupdocs.com/comparison/net) | [Documentation](https://docs.groupdocs.com/comparison/net/) | [Demo](https://products.groupdocs.app/comparison/family) | [API Reference](https://docs.groupdocs.com/display/comparisonnet/home) | [Examples](https://docs.groupdocs.com/comparison/net) | [Blog](https://blog.groupdocs.com/category/comparison/) | [Free Support](https://blog.groupdocs.com/category/comparison/) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/comparison/net) | [Documentation](https://docs.groupdocs.com/comparison/net/) | [Demo](https://products.groupdocs.app/comparison/family) | [API Reference](https://apireference.groupdocs.com/comparison/java) | [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/comparison/) | [Free Support](https://blog.groupdocs.com/category/comparison/) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
