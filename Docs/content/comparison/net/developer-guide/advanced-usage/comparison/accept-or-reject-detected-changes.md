@@ -21,6 +21,7 @@ The following are the steps to apply/reject changes to resultant document.
 [ApplyChangeOptions](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/applychangeoptions) class:
 
 *   [Changes](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/applychangeoptions/properties/changes) - List of changes that must be applied (or not) to the resulting document;
+*   [SaveOriginalState](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/applychangeoptions/properties/saveoriginalstate) - Keep the original state of the compared result after applying changes.
 
 The following code sample shows how to accept/reject detected changes.
 
@@ -47,6 +48,22 @@ using (Comparer comparer = new Comparer(File.OpenRead("source.docx")))
     ChangeInfo[] changes = comparer.GetChanges(new GetChangeOptions());
     changes[0].ComparisonAction = ComparisonAction.Reject;
     comparer.ApplyChanges(File.Create("result.docx"), new SaveOptions(), new ApplyChangeOptions() { Changes = changes });
+}
+```
+
+## The following code sample shows how to accept/reject detected changes using SaveOriginalState option
+
+```csharp
+using (Comparer comparer = new Comparer("source.docx"))
+{
+	comparer.Add("target.docx");
+    comparer.Compare();
+    ChangeInfo[] changes = comparer.GetChanges();
+    changes[0].ComparisonAction = ComparisonAction.Reject;
+    comparer.ApplyChanges("resultWithRejectedChange.docx", new ApplyChangeOptions() { Changes = changes, SaveOriginalState = true });
+    changes = comparer.GetChanges();
+    changes[0].ComparisonAction = ComparisonAction.Accept;
+    comparer.ApplyChanges("resultWithAcceptedChange.docx", new ApplyChangeOptions() { Changes = changes });
 }
 ```
 
