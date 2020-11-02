@@ -45,16 +45,29 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string TARGET2_DIAGRAM => GetSampleFilePath("target2.vsdx");
         public static string TARGET3_DIAGRAM => GetSampleFilePath("target3.vsdx");
 
+        public static string SOURCE_IMAGE => GetSampleFilePath("source.png");
+        public static string TARGET_IMAGE => GetSampleFilePath("target.png");
+
         public static string SOURCE_WITH_FOOTER => GetSampleFilePath("sourceWithFooter.docx");
         public static string TARGET_WITH_FOOTER => GetSampleFilePath("targetWithFooter.docx");
 
+        public static string SOURCE_REVISIONS => GetSampleFilePath("revision.docx");
+
         public static string RESULT_WORD => "result.docx";
+        public static string RESULT_WITH_ACCEPTED_CHANGE_WORD => "resultWithAcceptedChange.docx";
+        public static string RESULT_WITH_REJECTED_CHANGE_WORD => "resultWithRejectedChange.docx";
+        public static string RESULT_WORD_ONLY_SUMMARYPAGE => "resultOnlySummaryPage.docx";
+        public static string RESULT_WORD_EXTENDED_SUMMARYPAGE => "resultExtendedSummaryPage.docx";
+
         public static string RESULT_CELLS => "result.xlsx";
         public static string RESULT_SLIDES => "result.pptx";
         public static string RESULT_TXT => "result.txt";
         public static string RESULT_EMAIL => "result.eml";
         public static string RESULT_PDF => "result.pdf";
         public static string RESULT_DIAGRAM => "result.vsdx";
+        public static string RESULT_IMAGE => "result.png";
+        public static string RESULT_REVISIONS_ACCEPTED => "revisionsResultAccepted.docx";
+        public static string RESULT_REVISIONS_REJECTED => "revisionsResultRejected.docx";
 
         public static string DIAGRAM_SETTINGS => GetSampleFilePath("basicShapes.vssx");
 

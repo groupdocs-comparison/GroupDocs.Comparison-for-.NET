@@ -50,6 +50,14 @@ namespace GroupDocs.Comparison.Examples.CSharp
             CompareDocumentsFromStream.Run();
             #endregion
 
+            #region Compare image from path without SummaryPage
+            CompareImageFromPath.Run();
+            #endregion
+
+            #region Compare image from stream without SummaryPage
+            CompareImageFromStream.Run();
+            #endregion
+
             #region Compare documents from path with customized change styles from path
             UseCompareOptions.CustomizeChangesStylesPath();
             #endregion
@@ -68,6 +76,22 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             #region Compare documents with passwords from stream
             CompareDocumentsProtectedPath.Run();
+            #endregion
+
+            #region Compare documents with setting - ShowOnlySummaryPage
+            CompareDocumentsGetOnlySummaryPage.Run();
+            #endregion
+
+            #region Compare documents with setting - ExtendedSummaryPage
+            CompareDocumentsGetExtendedSummaryPage.Run();
+            #endregion
+
+            #region Accept or Reject detected revisions from path
+            AcceptRejectDetectedRevisionsFromPath.Run();
+            #endregion
+
+            #region Accept or Reject detected revisions from stream
+            AcceptRejectDetectedRevisionsFromStream.Run();
             #endregion
 
             #region Get list of changes from path
