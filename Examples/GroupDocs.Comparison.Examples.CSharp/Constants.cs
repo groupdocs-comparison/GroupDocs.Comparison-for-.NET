@@ -5,10 +5,26 @@ namespace GroupDocs.Comparison.Examples.CSharp
 {
     internal static class Constants
     {
+        static Constants()
+        {
+            SamplesPath = LocalSamplesPath;
+            string coreSamplesPath = "../../../../GroupDocs.Comparison.Examples.CSharp/" + LocalSamplesPath;
+            string frameworkSamplesPath = "../../../GroupDocs.Comparison.Examples.CSharp/" + LocalSamplesPath;
+            if (Directory.Exists(coreSamplesPath))
+                SamplesPath = coreSamplesPath;
+            else if (Directory.Exists(frameworkSamplesPath))
+                SamplesPath = frameworkSamplesPath;
+            else if (!Directory.Exists(SamplesPath))
+                throw new DirectoryNotFoundException("Could not find samples directory");
+        }
+
         public const string LicensePath = "D:\\GroupDocs.Comparison.NET.lic";
-               
-        public const string SamplesPath = "./Resources/SampleFiles";
-        public const string OutputPath = "./Results/Output";
+
+        public const string OutputPath = "Results/Output";
+
+        public const string LocalSamplesPath = "Resources/SampleFiles";
+
+        public static string SamplesPath { get; private set; }
 
         public static string SOURCE_CELLS => GetSampleFilePath("source.xlsx");
         public static string TARGET_CELLS => GetSampleFilePath("target.xlsx");
@@ -24,7 +40,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
         public static string SOURCE_SLIDES => GetSampleFilePath("source.pptx");
         public static string TARGET_SLIDES => GetSampleFilePath("target.pptx");
-        
+
         public static string SOURCE_TXT => GetSampleFilePath("source.txt");
         public static string TARGET_TXT => GetSampleFilePath("target.txt");
         public static string TARGET2_TXT => GetSampleFilePath("target2.txt");
