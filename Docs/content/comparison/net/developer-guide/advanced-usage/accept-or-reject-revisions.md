@@ -11,15 +11,15 @@ hideChildren: False
 **[GroupDocs.Comparison](https://products.groupdocs.com/comparison/net)** provides the ability to get revisions from a Docx file format, process and save the processing result.
 Below are the steps to *take* revisions from a document, *accept / reject* revisions, and *write* the processing result to a final file.
 
-*   Instantiate **RevisionHandler** object with source document path or stream;
-*   Call **GetRevisions** method and obtain detected revision list;
-*   Set **Action** of needed change object to **RevisionAction.Accept** or **RevisionAction.Reject** value;
-*   Call the **ApplyRevisionChanges** method and pass it: the path or stream of the result document, collection of changes in revisions.
+*   Instantiate [RevisionHandler](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler) object with source document path or stream;
+*   Call [GetRevisions](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/getrevisions) method and obtain detected revision list;
+*   Set [Action](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisioninfo/properties/action) of needed change object to [RevisionAction.Accept](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionaction) or [RevisionAction.Reject](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionaction) value;
+*   Call the [ApplyRevisionChanges](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/applyrevisionchanges/index) method and pass it: the path or stream of the result document, collection of changes in revisions.
 
-**ApplyRevisionOptions** class:
-*   **Changes** - List of revision changes that need to be applied to the final document.
+[ApplyRevisionOptions](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/applyrevisionoptions) class:
+*   [Changes](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/applyrevisionoptions/properties/changes) - List of revision changes that need to be applied to the final document.
 
-If you do not pass the path or file to the resulting document to the **ApplyRevisionChanges** method, the changes will be written to the same file from which the revisions were taken.
+If you do not pass the path or file to the resulting document to the [ApplyRevisionChanges](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/applyrevisionchanges) method, the changes will be written to the same file from which the revisions were taken.
 
 The following code example demonstrates how to get revisions from a document, accept / reject detected revisions and save changes to the resulting document.
 

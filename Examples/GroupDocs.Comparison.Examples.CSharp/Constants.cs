@@ -91,7 +91,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string RESULT_REVISIONS_REJECTED => "revisionsResultRejected.docx";
 
         public static string DIAGRAM_SETTINGS => GetSampleFilePath("basicShapes.vssx");
-
+        public static string CUSTOM_FONT => GetSampleFilePath("");
         private static string GetSampleFilePath(string filePath) => Path.Combine(SamplesPath, filePath);
 
         public static string GetOutputDirectoryPath([CallerFilePath] string callerFilePath = null)

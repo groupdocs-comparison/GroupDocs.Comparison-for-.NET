@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using GroupDocs.Comparison.Options;
 
@@ -16,7 +17,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
 		{
 			List<string> fontDirectories = new List<string>();
 			// Need to set the directory of the file with the font
-			fontDirectories.Add("./");
+			fontDirectories.Add(Constants.CUSTOM_FONT);
 
 			// Instantiate the LoadOptions object and pass in a list of directories with custom fonts
 			LoadOptions loadOptions = new LoadOptions();
@@ -27,6 +28,8 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
 				comparer.Add(File.OpenRead(Constants.TARGET_WORD_FONT));
 				comparer.Compare(File.Create(Path.Combine(Constants.GetOutputDirectoryPath(), Constants.RESULT_WORD_FONT)));
 			}
+
+			Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
 		}
 	}
 }
