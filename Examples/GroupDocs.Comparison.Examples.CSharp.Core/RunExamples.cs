@@ -78,22 +78,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
             CompareDocumentsProtectedPath.Run();
             #endregion
 
-            #region Compare documents with setting - ShowOnlySummaryPage
-            CompareDocumentsGetOnlySummaryPage.Run();
-            #endregion
-
-            #region Compare documents with setting - ExtendedSummaryPage
-            CompareDocumentsGetExtendedSummaryPage.Run();
-            #endregion
-
-            #region Accept or Reject detected revisions from path
-            AcceptRejectDetectedRevisionsFromPath.Run();
-            #endregion
-
-            #region Accept or Reject detected revisions from stream
-            AcceptRejectDetectedRevisionsFromStream.Run();
-            #endregion
-
             #region Get list of changes from path
             GetChanges.GetListOfChangesPath();
             #endregion
@@ -133,6 +117,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #region Multicompare documents with settings from path
             CompareMultipleDocumentsSettingsPath.Run();
             #endregion
+
             #region Preview document pages for source document
             GetPagePreviewsForSourceDocument.Run();
             #endregion
@@ -215,6 +200,34 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             #region Get target text from changed range
             GetChanges.GetTargetText();
+            #endregion
+
+            #region Compare document properties
+            UseCompareOptions.CompareDocumentProperties();
+            #endregion
+
+            #region Compare bookmarks
+            UseCompareOptions.CompareBookmarks();
+            #endregion
+
+            #region Compare documents with setting - ShowOnlySummaryPage
+            UseCompareOptions.GetOnlySummaryPage();
+            #endregion
+
+            #region Compare documents with setting - ExtendedSummaryPage
+            UseCompareOptions.GetExtendedSummaryPage();
+            #endregion
+
+            #region Accept or Reject detected revisions from path
+            AcceptRejectRevisions.AcceptRejectRevisionsFromPath();
+            #endregion
+
+            #region Accept or Reject detected revisions from stream
+            AcceptRejectRevisions.AcceptRejectRevisionsFromStream();
+            #endregion
+
+            #region Load custom font for comparison
+            UseLoadOptions.LoadCustomFonts();
             #endregion
 
             Console.WriteLine();

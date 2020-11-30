@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using GroupDocs.Comparison.Options;
 
@@ -150,6 +151,95 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                 comparer.Compare(outputFileName, compareOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+        }
+
+        /// <summary>
+        /// This example demonstrates how to get only one page of comparison summary information.
+        /// </summary>
+        public static void GetOnlySummaryPage()
+        {
+	        string outputDirectory = Constants.GetOutputDirectoryPath();
+	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD_ONLY_SUMMARYPAGE);
+
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+	        {
+		        comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+
+		        //To get only the SummaryPage, the GenerateSummaryPage property must be set to true
+		        CompareOptions compareOptions = new CompareOptions()
+		        {
+			        GenerateSummaryPage = true,
+			        ShowOnlySummaryPage = true
+		        };
+		        comparer.Compare(File.Create(outputFileName), compareOptions);
+	        }
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+        }
+
+        /// <summary>
+        /// This example demonstrates how to get extended comparison information
+        /// </summary>
+        public static void GetExtendedSummaryPage()
+        {
+	        string outputDirectory = Constants.GetOutputDirectoryPath();
+	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD_EXTENDED_SUMMARYPAGE);
+
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+	        {
+		        comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+
+		        //To get extended information about comparison, the GenerateSummaryPage property must be set to true
+		        CompareOptions compareOptions = new CompareOptions()
+		        {
+			        GenerateSummaryPage = true,
+			        ExtendedSummaryPage = true
+		        };
+		        comparer.Compare(File.Create(outputFileName), compareOptions);
+	        }
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+        }
+        
+        /// <summary>
+        /// This example demonstrates how to activate compare Variable, Built and Custom properties 
+        /// </summary>
+        public static void CompareDocumentProperties()
+        {
+	        string outputDirectory = Constants.GetOutputDirectoryPath();
+	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD_DOCUMENT_PROPERTIES);
+
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+	        {
+		        comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+
+		        CompareOptions compareOptions = new CompareOptions()
+		        {
+			        CompareVariableProperty = true,
+			        CompareDocumentProperty = true
+		        };
+		        comparer.Compare(File.Create(outputFileName), compareOptions);
+	        }
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+        }
+
+        /// <summary>
+        /// This example demonstrates how to activate compare Bookmarks
+        /// </summary>
+        public static void CompareBookmarks()
+        {
+	        string outputDirectory = Constants.GetOutputDirectoryPath();
+	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD_BOOKMARKS);
+
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+	        {
+		        comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+
+		        CompareOptions compareOptions = new CompareOptions()
+		        {
+			        CompareBookmarks = true
+		        };
+		        comparer.Compare(File.Create(outputFileName), compareOptions);
+	        }
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
     }
 }

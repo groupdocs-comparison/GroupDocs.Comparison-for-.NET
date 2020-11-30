@@ -9,12 +9,9 @@
     <Import_RootNamespace>GroupDocs.Comparison.Examples.CSharp</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\AcceptRejectDetectedRevisionsPath.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\AcceptRejectDetectedRevisionsStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\AcceptRejectRevisions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\AcceptRejectDetectedChangesPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\AcceptRejectDetectedChangesStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareDocumentsGetExtendedSummaryPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareDocumentsGetOnlySummaryPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareDocumentsSettingsStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsProtectedPath.cs" />
@@ -32,6 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GetMeteredCreditsLimit.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadDocumentFromLocalDisc.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\LoadDocumentFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Loading\UseLoadOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataTarget.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataUserDefined.cs" />

@@ -30,7 +30,9 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string TARGET_CELLS => GetSampleFilePath("target.xlsx");
 
         public static string SOURCE_WORD => GetSampleFilePath("source.docx");
+        public static string SOURCE_WORD_FONT => GetSampleFilePath("source_font.docx");
         public static string TARGET_WORD => GetSampleFilePath("target.docx");
+        public static string TARGET_WORD_FONT => GetSampleFilePath("target_font.docx");
         public static string TARGET2_WORD => GetSampleFilePath("target2.docx");
         public static string TARGET3_WORD => GetSampleFilePath("target3.docx");
         public static string SOURCE_WORD_PROTECTED => GetSampleFilePath("source_protected.docx");
@@ -74,6 +76,9 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string RESULT_WITH_REJECTED_CHANGE_WORD => "resultWithRejectedChange.docx";
         public static string RESULT_WORD_ONLY_SUMMARYPAGE => "resultOnlySummaryPage.docx";
         public static string RESULT_WORD_EXTENDED_SUMMARYPAGE => "resultExtendedSummaryPage.docx";
+        public static string RESULT_WORD_DOCUMENT_PROPERTIES => "resultDocumentProperties.docx";
+        public static string RESULT_WORD_BOOKMARKS => "resultBookmarks.docx";
+        public static string RESULT_WORD_FONT => "result_font.docx";
 
         public static string RESULT_CELLS => "result.xlsx";
         public static string RESULT_SLIDES => "result.pptx";
