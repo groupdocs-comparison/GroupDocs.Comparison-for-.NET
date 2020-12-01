@@ -32,6 +32,7 @@ Below the list of changes in release of GroupDocs.Comparison for .NET 20.11:
 | COMPARISONNET-2100 | Pen results comparison issue | Bug |
 | COMPARISONNET-2146 | Comparison crashes for particular Word files | Bug |
 | COMPARISONNET-2151 | Error getting revisions | Bug |
+| COMPARISONNET-2513 | Comparison crashes for particular Word files| Bug |
 
 
 ## Public API and Backward Incompatible Changes
