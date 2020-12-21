@@ -27,5 +27,9 @@ Here are the list of settings that can be customized during comparison process:
 *   [ShowDeletedContent](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/showdeletedcontent) - Indicates whether to show deleted components in resultant document or not;
 *   [ShowInsertedContent](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/showinsertedcontent "ShowInsertedContent Property ") - Indicates whether to show inserted components in resultant document or not;
 *   [WordsSeparatorChars](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/wordsseparatorchars) - Sets an array of delimiters to split text into words;
+*   [CompareBookmarks](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparebookmarks) - Activate the comparison of bookmarks;
+*   [CompareVariableProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparevariableproperty) - Activate the comparison of variable properties;
+*   [CompareDocumentProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparedocumentproperty) - Activate the comparison of built and custom properties;
+*   [ShowRevisions](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/showrevisions) - Show others revisions in the resultant document.
 
 For more details about described options please refer to the following guides:

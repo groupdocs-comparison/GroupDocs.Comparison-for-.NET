@@ -15,14 +15,14 @@ hideChildren: False
 
 The following fields of the CompareOptions class are used to enable comparison functions for document properties:
 
-*   **CompareVariableProperty** - to activate the comparison of *variable* properties;
-*   **CompareDocumentProperty** - to activate the comparison of *built* and *custom* properties.
+*   [CompareVariableProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparevariableproperty) - to activate the comparison of *variable* properties;
+*   [CompareDocumentProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparedocumentproperty) - to activate the comparison of *built* and *custom* properties.
 
 Following are the steps to activate compare document properties:
 
 *   Instantiate [Comparer](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer) object with source file path or stream;
 *   Call [Add](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer/methods/add/index) method and specify target file path or stream;
-*   Instantiate [CompareOptions](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions) object and set **CompareVariableProperty** property to *true* (**CompareDocumentProperty** to *true* for *built* and *custom* properties);
+*   Instantiate [CompareOptions](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions) object and set [CompareVariableProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparevariableproperty) property to *true* ([CompareDocumentProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparedocumentproperty) to *true* for *built* and *custom* properties);
 *   Call [Comparer](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer) method and pass [CompareOptions](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions) object from previous step.
 
 ## Example code block to activate comparison of Variable, Built and Custom properties

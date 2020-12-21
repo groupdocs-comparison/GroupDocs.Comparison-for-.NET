@@ -14,10 +14,15 @@ Below are the steps to *take* revisions from a document, *accept / reject* revis
 *   Instantiate [RevisionHandler](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler) object with source document path or stream;
 *   Call [GetRevisions](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/getrevisions) method and obtain detected revision list;
 *   Set [Action](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisioninfo/properties/action) of needed change object to [RevisionAction.Accept](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionaction) or [RevisionAction.Reject](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionaction) value;
-*   Call the [ApplyRevisionChanges](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/applyrevisionchanges/index) method and pass it: the path or stream of the result document, collection of changes in revisions.
+*   Call the [ApplyRevisionChanges](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/applyrevisionchanges/index)  method, to which you need to pass the newly created instance of the [ApplyRevisionOptions](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/applyrevisionoptions) object and pass to it path or stream of the resulting document, collecting changes in the revisions.
+
+It is also possible to process all changes together, applying one action for all changes. Below are the steps to handle all changes:
+*   Instantiate [RevisionHandler](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler) object with source document path or stream;
+*   Call the [ApplyRevisionChanges](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/applyrevisionchanges/index) method, to which you need to pass the newly created instance of the [ApplyRevisionOptions](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/applyrevisionoptions) object and pass to it action ([RevisionAction.Accept](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionaction), [RevisionAction.Reject](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionaction) or [RevisionAction.None](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionaction)) that will apply to all revisions.
 
 [ApplyRevisionOptions](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/applyrevisionoptions) class:
 *   [Changes](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/applyrevisionoptions/properties/changes) - List of revision changes that need to be applied to the final document.
+*   [CommonHandler](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/applyrevisionoptions/properties/commonhandler) - Property that allows you to define one action to handle all revision.
 
 If you do not pass the path or file to the resulting document to the [ApplyRevisionChanges](https://apireference-qa.groupdocs.com/comparison/net/groupdocs.comparison.words.revision/revisionhandler/methods/applyrevisionchanges) method, the changes will be written to the same file from which the revisions were taken.
 
@@ -48,6 +53,15 @@ using (RevisionHandler revisionHandler = new RevisionHandler(File.OpenRead("Docu
         if (revision.Type == RevisionType.Insertion) revision.Action = RevisionAction.Accept;
     }
     revisionHandler.ApplyRevisionChanges(pathRevision + "result.docx", new ApplyRevisionOptions() { Changes = revisionList });
+}
+```
+
+## Accept or Reject all revisions
+
+```csharp
+using (RevisionHandler revisionHandler = new RevisionHandler(pathRevision + "Document_with_revision.docx"))
+{
+	revisionHandler.ApplyRevisionChanges(pathRevision + "result.docx", new ApplyRevisionOptions() { CommonHandler = RevisionAction.Accept });
 }
 ```
 
