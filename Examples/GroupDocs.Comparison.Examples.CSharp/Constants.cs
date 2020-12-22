@@ -74,10 +74,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string RESULT_WORD => "result.docx";
         public static string RESULT_WITH_ACCEPTED_CHANGE_WORD => "resultWithAcceptedChange.docx";
         public static string RESULT_WITH_REJECTED_CHANGE_WORD => "resultWithRejectedChange.docx";
-        public static string RESULT_WORD_ONLY_SUMMARYPAGE => "resultOnlySummaryPage.docx";
-        public static string RESULT_WORD_EXTENDED_SUMMARYPAGE => "resultExtendedSummaryPage.docx";
-        public static string RESULT_WORD_DOCUMENT_PROPERTIES => "resultDocumentProperties.docx";
-        public static string RESULT_WORD_BOOKMARKS => "resultBookmarks.docx";
         public static string RESULT_WORD_FONT => "result_font.docx";
 
         public static string RESULT_CELLS => "result.xlsx";
@@ -87,16 +83,18 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string RESULT_PDF => "result.pdf";
         public static string RESULT_DIAGRAM => "result.vsdx";
         public static string RESULT_IMAGE => "result.png";
-        public static string RESULT_REVISIONS_ACCEPTED => "revisionsResultAccepted.docx";
-        public static string RESULT_REVISIONS_REJECTED => "revisionsResultRejected.docx";
+        public static string RESULT_REVISIONS => "result.docx";
 
         public static string DIAGRAM_SETTINGS => GetSampleFilePath("basicShapes.vssx");
         public static string CUSTOM_FONT => GetSampleFilePath("");
         private static string GetSampleFilePath(string filePath) => Path.Combine(SamplesPath, filePath);
 
-        public static string GetOutputDirectoryPath([CallerFilePath] string callerFilePath = null)
+        public static string GetOutputDirectoryPath([CallerFilePath] string callerFilePath = null, string nameChildFolder = null)
         {
             string outputDirectory = Path.Combine(OutputPath, Path.GetFileNameWithoutExtension(callerFilePath));
+
+            if (nameChildFolder != null) outputDirectory = Path.Combine(outputDirectory, nameChildFolder);
+
             if (!Directory.Exists(outputDirectory))
                 Directory.CreateDirectory(outputDirectory);
 

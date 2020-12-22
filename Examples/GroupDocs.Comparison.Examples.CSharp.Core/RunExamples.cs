@@ -226,8 +226,16 @@ namespace GroupDocs.Comparison.Examples.CSharp
             AcceptRejectRevisions.AcceptRejectRevisionsFromStream();
             #endregion
 
+            #region Accept or Reject all detected revisions
+            AcceptRejectRevisions.AcceptRejectAllRevisions();
+            #endregion
+
             #region Load custom font for comparison
             UseLoadOptions.LoadCustomFonts();
+            #endregion
+
+            #region Disable show revision
+            UseCompareOptions.DisableShowRevisions();
             #endregion
 
             Console.WriteLine();
