@@ -1,37 +1,38 @@
 ---
-id: get-target-text-from-file
-url: comparison/net/get-target-text-from-file
-title: Get target text from file
+id: get-source-and-target-text-from-files
+url: comparison/net/get-source-and-target-text-from-files
+title: Get source and target text from files
 weight: 7
-description: "This article explains how to get target text of specific changes using GroupDocs.Comparison for .NET."
-keywords: Get target txt, documents diff, compare documents, compare files
+description: "This article explains how to get source and target texts of specific changes using GroupDocs.Comparison for .NET."
+keywords: Get target txt, Get source txt, documents diff, compare documents, compare files
 productName: GroupDocs.Comparison for .NET
 hideChildren: False
 ---
-[**GroupDocs.Comparison**](https://products.groupdocs.com/comparison/net) allows to getting target text of specific changes in result file.
+[**GroupDocs.Comparison**](https://products.groupdocs.com/comparison/net) allows to getting source and target texts of specific changes in result file.
 
-The following are the steps to obtain get a list of changed target text.
+The following are the steps to get a list of changed source and target texts:
 
 *   Instantiate [Comparer](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer) object with source document path or stream;
 *   Call [Add](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/add/index) method and specify target document path or stream;
 *   Call [Compare](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/compare) method;
 *   Call [GetChanges](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/getchanges) method.
 
-The following code sample demonstrates how to get target text from file.
+The following code example demonstrates how to get specified texts from a file.
 
 ## Get target text from local disk
 
 ```csharp
 using (Comparer comparer = new Comparer(sourceDocumentPath))
 {
-     comparer.Add(targetDocumentPath);
-     comparer.Compare(outputPath);
-     ChangeInfo[] changes = comparer.GetChanges();
-     foreach (var change in changes)
-     {
-         var targetText = change.TargetText;
-         Console.WriteLine(targetText);
-     }
+    comparer.Add(targetDocumentPath);
+    comparer.Compare(outputPath);
+    ChangeInfo[] changes = comparer.GetChanges();
+    foreach (ChangeInfo change in changes)
+    {
+        Console.WriteLine("");
+        Console.WriteLine("Source text: " + change.SourceText);
+        Console.WriteLine("Target text: " + change.TargetText);
+    }
 }
 ```
 
@@ -40,14 +41,15 @@ using (Comparer comparer = new Comparer(sourceDocumentPath))
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("source.docx")))
 {
-     comparer.Add(File.OpenRead("target.docx));
-     comparer.Compare(outputPath);
-     ChangeInfo[] changes = comparer.GetChanges();
-     foreach (var change in changes)
-     {
-         var targetText = change.TargetText;
-         Console.WriteLine(targetText);
-     }
+    comparer.Add(File.OpenRead("target.docx"));
+    comparer.Compare(outputPath);
+    ChangeInfo[] changes = comparer.GetChanges();
+    foreach (ChangeInfo change in changes)
+    {
+        Console.WriteLine("");
+        Console.WriteLine("Source text: " + change.SourceText);
+        Console.WriteLine("Target text: " + change.TargetText);
+    }
 }
 ```
 
