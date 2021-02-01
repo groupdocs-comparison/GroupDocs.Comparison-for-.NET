@@ -56,22 +56,24 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         }
 
         /// <summary>
-        /// This example demonstrates how to get target text 
+        /// This example demonstrates how to get source and target texts 
         /// </summary>
-        public static void GetTargetText()
+        public static void GetSourceAndTargetTexts()
         {
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 comparer.Add(Constants.TARGET_WORD);
                 comparer.Compare();
+
                 ChangeInfo[] changes = comparer.GetChanges();
-                foreach (var change in changes)
+                foreach (ChangeInfo change in changes)
                 {
-                    var targetText = change.TargetText;
-                    Console.WriteLine(targetText);
-                }
+	                Console.WriteLine("");
+                    Console.WriteLine("Source text: " + change.SourceText);
+	                Console.WriteLine("Target text: " + change.TargetText);
+	            }
             }
-            Console.WriteLine($"\nGet Target Text received successfully.");
+            Console.WriteLine($"\nGet Source and Target Texts received successfully.");
         }
 
     }

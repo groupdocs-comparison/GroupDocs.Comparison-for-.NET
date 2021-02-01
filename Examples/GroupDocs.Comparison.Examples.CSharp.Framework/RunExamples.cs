@@ -202,8 +202,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             UseCompareOptions.SetOutputPaperSize();
             #endregion
 
-            #region Get target text from changed range
-            GetChanges.GetTargetText();
+            #region Get source and target texts from changed range
+            GetChanges.GetSourceAndTargetTexts();
             #endregion
 
             #region Compare document properties
