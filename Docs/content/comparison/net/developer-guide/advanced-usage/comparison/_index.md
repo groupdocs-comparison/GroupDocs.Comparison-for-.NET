@@ -30,6 +30,7 @@ Here are the list of settings that can be customized during comparison process:
 *   [CompareBookmarks](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparebookmarks) - Activate the comparison of bookmarks;
 *   [CompareVariableProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparevariableproperty) - Activate the comparison of variable properties;
 *   [CompareDocumentProperty](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparedocumentproperty) - Activate the comparison of built and custom properties;
-*   [ShowRevisions](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/showrevisions) - Show others revisions in the resultant document.
+*   [ShowRevisions](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/showrevisions) - Show others revisions in the resultant document;
+*   [LeaveGaps](https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/leavegaps) - Show empty lines instead of inserted / deleted components in the final document.
 
 For more details about described options please refer to the following guides:
