@@ -69,6 +69,9 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string SOURCE_WITH_FOOTER => GetSampleFilePath("sourceWithFooter.docx");
         public static string TARGET_WITH_FOOTER => GetSampleFilePath("targetWithFooter.docx");
 
+        public static string SOURCE_COMPARE_OPTIONS => GetSampleFilePath("source_compare_options.docx");
+        public static string TARGET_COMPARE_OPTIONS => GetSampleFilePath("target_compare_options.docx");
+
         public static string SOURCE_REVISIONS => GetSampleFilePath("revision.docx");
 
         public static string RESULT_WORD => "result.docx";

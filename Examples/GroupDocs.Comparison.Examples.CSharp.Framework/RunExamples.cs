@@ -242,6 +242,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
             UseCompareOptions.DisableShowRevisions();
             #endregion
 
+            #region Replace changed content with empty lines 
+            UseCompareOptions.LeaveGaps();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("All done.");
             Console.ReadKey();
