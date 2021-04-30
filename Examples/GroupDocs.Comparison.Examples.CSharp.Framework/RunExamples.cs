@@ -178,6 +178,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
             LoadDocumentFromStream.Run();
             #endregion
 
+            #region Load texts from string variable
+            LoadTextFromString.Run();
+            #endregion
+
             #region Multi compare for txt
             CompareMultipleDocumentsPath.CompareMultipleTxtDocuments();
             #endregion
