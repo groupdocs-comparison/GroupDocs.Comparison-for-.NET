@@ -63,8 +63,8 @@ Are you ready to give GroupDocs.Comparison for .NET a try? Simply execute `Insta
 ```csharp
 using (Comparer comparer = new Comparer("source.docx"))
 {
-	comparer.Add("target.docx");
-	comparer.Compare("result.docx");
+   comparer.Add("target.docx");
+   comparer.Compare("result.docx");
 }
 ```
 
