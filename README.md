@@ -3,7 +3,6 @@
 On-premise library to [compare documents](https://products.groupdocs.com/comparison/net) in applications based on .NET platform. Retrieve list of changes in desired format with line-by-line comparison of content, paragraphs, characters, styles, shapes and position.
 
 <p align="center">
-
   <a title="Download complete GroupDocs.Comparison for .NET source code" href="https://codeload.github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/zip/master">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
@@ -11,7 +10,6 @@ On-premise library to [compare documents](https://products.groupdocs.com/compari
 
 Directory | Description
 --------- | -----------
-[Docs](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Docs) | Product documentation containing Developer's Guide, Release Notes & more.
 [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Examples)  | C# based source code examples and sample files to quickly get started.
 [Showcases](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Showcases)  | Frontend examples to helps in implementing different product features in a Web-UI based application.
 [Plugins](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Plugins)  | Visual Studio Plugins which will download examples and GroupDocs.Comparison Library without any efforts.
