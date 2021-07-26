@@ -12,7 +12,6 @@ Directory | Description
 --------- | -----------
 [Demos](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Demos)  | Contains demo projects that demonstrate product features.
 [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Examples)  | C# based source code examples and sample files to quickly get started.
-[Showcases](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Showcases)  | Frontend examples to helps in implementing different product features in a Web-UI based application.
 [Plugins](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Plugins)  | Visual Studio Plugins which will download examples and GroupDocs.Comparison Library without any efforts.
 
 ## Document Comparison Features
