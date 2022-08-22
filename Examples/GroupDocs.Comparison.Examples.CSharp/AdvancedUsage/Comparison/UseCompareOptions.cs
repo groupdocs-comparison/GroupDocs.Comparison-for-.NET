@@ -285,5 +285,26 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 	        }
 	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
+
+        /// <summary>
+        /// This example demonstrates how to use the Microsoft Word "Track Changes" comparing as a built in feature in GroupDocs.Comparison for .NET. 
+        /// </summary>
+        public static void WordTrackChanges()
+        {
+	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "WordTrackChanges");
+	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        {
+		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+
+		        CompareOptions compareOptions = new CompareOptions()
+		        {
+			        WordTrackChanges = true,
+		        };
+		        comparer.Compare(File.Create(outputFileName), compareOptions);
+	        }
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+        }
     }
 }
