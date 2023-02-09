@@ -12,6 +12,6 @@ namespace GroupDocs.Comparison.MVC.Products.Comparison.Model.Request
         /// </summary>
         public List<CompareFileDataRequest> guids { get; set; }
 
-        public List<ComparisonAction> ListOfActions { get; set; }
+        public int[] changes { get; set; }
     }
 }

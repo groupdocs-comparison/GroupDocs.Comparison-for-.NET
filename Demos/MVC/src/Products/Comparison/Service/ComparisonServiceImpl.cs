@@ -137,9 +137,22 @@ namespace GroupDocs.Comparison.MVC.Products.Comparison.Service
             }
             ChangeInfo[] changes = compareResult.GetChanges();
 
-            for (int i = 0; i < setChangesRequest.ListOfActions.Count; i++)
+            for (int i = 0; i < setChangesRequest.changes.Length; i++)
             {
-                changes[i].ComparisonAction = setChangesRequest.ListOfActions[i];
+                ComparisonAction action = ComparisonAction.None;
+                switch (setChangesRequest.changes[i])
+                {
+                    case 1:
+                        action = ComparisonAction.Accept;
+                        break;
+                    case 2:
+                        action = ComparisonAction.Reject;
+                        break;
+                    case 3:
+                        action = ComparisonAction.None;
+                        break;
+                }
+                changes[i].ComparisonAction = action;
             }
 
             compareResult.ApplyChanges(resultGuid, new SaveOptions(), new ApplyChangeOptions() { Changes = changes });
