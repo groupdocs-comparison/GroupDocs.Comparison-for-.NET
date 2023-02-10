@@ -8,6 +8,7 @@ using GroupDocs.Comparison.MVC.Products.Comparison.Model.Response;
 using GroupDocs.Comparison.MVC.Products.Comparison.Service;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -15,6 +16,7 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using GroupDocs.Comparison.Result;
 
 namespace GroupDocs.Comparison.MVC.Products.Comparison.Controllers
 {
@@ -180,6 +182,30 @@ namespace GroupDocs.Comparison.MVC.Products.Comparison.Controllers
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, new Resources().GenerateException(new Exception("Document types are different")));
                 }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new Resources().GenerateException(ex));
+            }
+        }
+
+        /// Set new changes in result file
+        /// </summary>
+        /// <param name="compareRequest"></param>
+        /// <param name="listOfChanges"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("changes")]
+        public HttpResponseMessage Changes(SetChangesRequest setChangesRequest)
+        {
+            try
+            {
+                CompareResultResponse result = comparisonService.SetChanges(setChangesRequest);
+                JsonSerializerSettings settings = new JsonSerializerSettings();
+                settings.ContractResolver = new LowercaseContractResolver();
+                string json = JsonConvert.SerializeObject(result, Formatting.Indented, settings);
+                var compareResult = JsonConvert.DeserializeObject(json);
+                return Request.CreateResponse(HttpStatusCode.OK, compareResult);
             }
             catch (Exception ex)
             {

@@ -96,9 +96,70 @@ namespace GroupDocs.Comparison.MVC.Products.Comparison.Service
             return true;
         }
 
+        public ChangeInfo[] RejectChange(Comparer comparer, ChangeInfo[] changes, int changeNumber)
+        {
+            changes[changeNumber].ComparisonAction = ComparisonAction.Reject;
+            return changes;
+        }
+
+        public ChangeInfo[] AcceptChange(Comparer comparer, ChangeInfo[] changes, int changeNumber)
+        {
+            changes[changeNumber].ComparisonAction = ComparisonAction.Accept;
+            return changes;
+        }
+
         public CompareResultResponse Compare(CompareRequest compareRequest)
         {
             CompareResultResponse compareResultResponse = CompareTwoDocuments(compareRequest);
+            return compareResultResponse;
+        }
+
+        public CompareResultResponse SetChanges(SetChangesRequest setChangesRequest)
+        {
+            string extension = Path.GetExtension(setChangesRequest.guids[0].GetGuid());
+            string guid = Guid.NewGuid().ToString();
+            string resultGuid = Path.Combine(globalConfiguration.Comparison.GetResultDirectory(), guid + extension);
+            
+            string firstPath = setChangesRequest.guids[0].GetGuid();
+            string secondPath = setChangesRequest.guids[1].GetGuid();
+
+            Comparer compareResult = new Comparer(firstPath, GetLoadOptions(setChangesRequest.guids[0].GetPassword()));
+
+            compareResult.Add(secondPath, GetLoadOptions(setChangesRequest.guids[1].GetPassword()));
+            CompareOptions compareOptions = new CompareOptions { CalculateCoordinates = true };
+            if (Path.GetExtension(resultGuid) == ".pdf")
+            {
+                compareOptions.DetalisationLevel = DetalisationLevel.High;
+            }
+            using (FileStream outputStream = File.Create(Path.Combine(resultGuid)))
+            {
+                compareResult.Compare(outputStream, compareOptions);
+            }
+            ChangeInfo[] changes = compareResult.GetChanges();
+
+            for (int i = 0; i < setChangesRequest.changes.Length; i++)
+            {
+                ComparisonAction action = ComparisonAction.None;
+                switch (setChangesRequest.changes[i])
+                {
+                    case 1:
+                        action = ComparisonAction.Accept;
+                        break;
+                    case 2:
+                        action = ComparisonAction.Reject;
+                        break;
+                    case 3:
+                        action = ComparisonAction.None;
+                        break;
+                }
+                changes[i].ComparisonAction = action;
+            }
+
+            compareResult.ApplyChanges(resultGuid, new SaveOptions(), new ApplyChangeOptions() { Changes = changes });
+
+            CompareResultResponse compareResultResponse = GetCompareResultResponse(changes, resultGuid);
+            compareResultResponse.SetExtension(extension);
+
             return compareResultResponse;
         }
 
@@ -255,7 +316,7 @@ namespace GroupDocs.Comparison.MVC.Products.Comparison.Service
             {
                 comparer.Compare(outputStream, compareOptions);
             }
-
+            
             return comparer;
         }
 
