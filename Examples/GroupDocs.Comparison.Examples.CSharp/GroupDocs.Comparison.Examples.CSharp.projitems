@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\AcceptRejectRevisions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\SetAuthorOfChanges.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\AcceptRejectDetectedChangesPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\AcceptRejectDetectedChangesStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareDocumentsSettingsStream.cs" />

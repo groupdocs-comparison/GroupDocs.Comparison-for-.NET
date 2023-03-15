@@ -8,7 +8,7 @@
   <Import Project="..\GroupDocs.Comparison.Examples.CSharp\GroupDocs.Comparison.Examples.CSharp.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="GroupDocs.Comparison" Version="23.1.0" />
+    <PackageReference Include="GroupDocs.Comparison" Version="23.3.0" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 

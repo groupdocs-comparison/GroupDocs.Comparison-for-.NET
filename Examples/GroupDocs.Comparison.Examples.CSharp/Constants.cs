@@ -75,6 +75,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string SOURCE_REVISIONS => GetSampleFilePath("revision.docx");
 
         public static string RESULT_WORD => "result.docx";
+        public static string RESULT_WITH_NEW_AUTHOR_WORD => "resultWithNewAuthor.docx";
         public static string RESULT_WITH_ACCEPTED_CHANGE_WORD => "resultWithAcceptedChange.docx";
         public static string RESULT_WITH_REJECTED_CHANGE_WORD => "resultWithRejectedChange.docx";
         public static string RESULT_WORD_FONT => "result_font.docx";

@@ -70,6 +70,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
             CompareDocumentsSettingsStream.Run();
             #endregion
 
+            #region Set author of changes name
+            SetAuthorOfChanges.Run();
+            #endregion
+
             #region Compare documents with passwords from path
             CompareDocumentsProtectedPath.Run();
             #endregion
