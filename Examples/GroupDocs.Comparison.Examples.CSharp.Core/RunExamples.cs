@@ -230,6 +230,14 @@ namespace GroupDocs.Comparison.Examples.CSharp
             AcceptRejectRevisions.AcceptRejectRevisionsFromPath();
             #endregion
 
+            #region Compare Folders and save result in HTML file
+            CompareFolders.CompareFolderSaveAsHtml();
+            #endregion
+
+            #region Compare Folders and save result in TXT file
+            CompareFolders.CompareFolderSaveAsTxt();
+            #endregion
+
             #region Accept or Reject detected revisions from stream
             AcceptRejectRevisions.AcceptRejectRevisionsFromStream();
             #endregion

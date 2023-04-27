@@ -74,6 +74,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
         public static string SOURCE_REVISIONS => GetSampleFilePath("revision.docx");
 
+        public static string SOURCE_FOLDER => GetSampleFilePath("SourceFolder");
+        public static string TARGET_FOLDER => GetSampleFilePath("TargetFolder");
+
+
         public static string RESULT_WORD => "result.docx";
         public static string RESULT_WITH_NEW_AUTHOR_WORD => "resultWithNewAuthor.docx";
         public static string RESULT_WITH_ACCEPTED_CHANGE_WORD => "resultWithAcceptedChange.docx";
@@ -88,6 +92,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string RESULT_DIAGRAM => "result.vsdx";
         public static string RESULT_IMAGE => "result.png";
         public static string RESULT_REVISIONS => "result.docx";
+        public static string RESULT_FOLDER => "ResultFolderCompare";
 
         public static string DIAGRAM_SETTINGS => GetSampleFilePath("basicShapes.vssx");
         public static string CUSTOM_FONT => GetSampleFilePath("");
