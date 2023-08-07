@@ -1,0 +1,6 @@
+Welcome! This website is (quite obviously) a small text generator.
+It's fairly self-explanatory - you put some text in the first box, and it'll convert it into three different small text "fonts" for you.
+To be clear, they're not actually fonts. 
+You can tell they're not fonts because it's possible to copy and paste the small text generated into other websites (like your Instagram bio, a Tumblr post, etc.). 
+You wouldn't be able to do that if it was just a font. So how is this copy and paste stuff possible?
+Well, to answer that question, we need to learn a little bit about Unicode.
