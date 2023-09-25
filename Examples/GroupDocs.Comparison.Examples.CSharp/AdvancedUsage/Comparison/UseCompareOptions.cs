@@ -191,7 +191,8 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        //To get extended information about comparison, the GenerateSummaryPage property must be set to true
 		        CompareOptions compareOptions = new CompareOptions()
 		        {
-			        GenerateSummaryPage = true,
+                    //Added Extended information about words and sybols count. For diagrams also showing count of shapes. For HTML count of Tags.
+                    GenerateSummaryPage = true,
 			        ExtendedSummaryPage = true
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
