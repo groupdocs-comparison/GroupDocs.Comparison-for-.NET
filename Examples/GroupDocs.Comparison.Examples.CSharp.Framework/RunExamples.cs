@@ -34,6 +34,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
             GetDocumentInfoStream.Run();
             #endregion
 
+            #region Get info from result document object
+            GetDocumentInfoFromResultDocument.Run();
+            #endregion
+
             #region Compare cells files from path
             CompareCellsFromPath.Run();
             #endregion
