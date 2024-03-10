@@ -3,6 +3,7 @@ using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
     using GroupDocs.Comparison.Result;
     using GroupDocs.Comparison.Options;
     
@@ -14,7 +15,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         public static void Run()
         {
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Basic Usage] # AcceptRejectDetectedChangesStream : How to update changes from stream\n");
+            Console.WriteLine("[Example Advanced Usage] # AcceptRejectDetectedChangesStream : How to update changes from stream\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileNameWithAcceptedChange = Path.Combine(outputDirectory, Constants.RESULT_WITH_ACCEPTED_CHANGE_WORD);
@@ -32,7 +33,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 changes[0].ComparisonAction = ComparisonAction.Accept;
                 comparer.ApplyChanges(outputFileNameWithAcceptedChange, new ApplyChangeOptions { Changes = changes });
             }
-            Console.WriteLine($"\nChanges updated successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nChanges updated successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

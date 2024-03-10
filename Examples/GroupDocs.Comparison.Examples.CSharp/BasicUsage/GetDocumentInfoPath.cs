@@ -1,8 +1,8 @@
-﻿using GroupDocs.Comparison.Interfaces;
-using System;
+﻿using System;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
 {
+    using GroupDocs.Comparison.Interfaces;
     /// <summary>
     /// This example demonstrates document info extraction
     /// </summary>

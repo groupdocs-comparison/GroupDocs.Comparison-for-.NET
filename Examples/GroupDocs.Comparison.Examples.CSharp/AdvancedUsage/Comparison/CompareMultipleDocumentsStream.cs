@@ -3,6 +3,7 @@ using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
     /// <summary>
     /// This example demonstrates comparing of multi documents
     /// </summary>
@@ -10,6 +11,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsStream : comparing of multi documents\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -20,7 +24,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 comparer.Add(File.OpenRead(Constants.TARGET3_WORD));
                 comparer.Compare(File.Create(outputFileName));
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

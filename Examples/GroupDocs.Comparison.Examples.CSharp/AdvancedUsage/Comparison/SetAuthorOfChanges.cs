@@ -1,10 +1,10 @@
-﻿using GroupDocs.Comparison.Options;
-using GroupDocs.Comparison.Result;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
     /// <summary>
     /// This example demonstrates how to set author of changes
     /// </summary>
@@ -12,6 +12,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # SetAuthorOfChanges : how to set author of changes\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
 
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))

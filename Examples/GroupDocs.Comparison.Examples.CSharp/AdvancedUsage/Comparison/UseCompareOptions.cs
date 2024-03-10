@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using GroupDocs.Comparison.Options;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This class demonstrates how to use CompareOptions
     /// </summary>
@@ -15,6 +16,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void IgnoreHeaderFooter()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # IgnoreHeaderFooter : how to ignore Header/Footer\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "IgnoreHeaderFooter");
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -26,7 +30,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                 comparer.Add(Constants.TARGET_WITH_FOOTER);
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), compareOptions);
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -34,6 +38,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void SetOutputPaperSize()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # SetOutputPaperSize : how to set output paper size\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "SetOutputPaperSize");
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -42,7 +49,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                 comparer.Add(Constants.TARGET_COMPARE_OPTIONS);
                 comparer.Compare(File.Create(outputFileName), new CompareOptions() { PaperSize = PaperSize.A6 });
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -50,6 +57,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void AdjustComparisonSensitivity()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # AdjustComparisonSensitivity : comparing of two documents using sensitivity option\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "AdjustComparisonSensitivity");
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -58,7 +68,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                 comparer.Add(Constants.TARGET_COMPARE_OPTIONS);
                 comparer.Compare(File.Create(outputFileName), new CompareOptions() { SensitivityOfComparison = 100 });
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -66,6 +76,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void CustomizeChangesStylesStream()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # CustomizeChangesStylesStream : how to customized change styles from path\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CustomizeChangesStylesStream");
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -104,7 +117,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                 };
                 comparer.Compare(File.Create(outputFileName), compareOptions);
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -112,6 +125,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void CustomizeChangesStylesPath()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # CustomizeChangesStylesPath : how to customized change styles from path\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CustomizeChangesStylesPath"); 
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -150,7 +166,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
                 };
                 comparer.Compare(outputFileName, compareOptions);
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -158,7 +174,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void GetOnlySummaryPage()
         {
-	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "GetOnlySummaryPage");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # IgnoreHeaderFooter : how to ignore Header/Footer\n");
+
+            string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "GetOnlySummaryPage");
 	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
 	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
@@ -173,7 +192,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
 	        }
-	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -181,7 +200,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void GetExtendedSummaryPage()
         {
-	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "GetExtendedSummaryPage");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # Use Compare Options - GetExtendedSummaryPage : how to get extended comparison information\n");
+
+            string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "GetExtendedSummaryPage");
 	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
 	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
@@ -197,7 +219,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
 	        }
-	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
         
         /// <summary>
@@ -205,7 +227,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void CompareDocumentProperties()
         {
-	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CompareDocumentProperties");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # Use Compare Options - CompareDocumentProperties : how to activate compare Variable, Built and Custom properties\n");
+
+            string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CompareDocumentProperties");
 	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
 	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
@@ -219,7 +244,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
 	        }
-	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -227,7 +252,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void CompareBookmarks()
         {
-	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CompareBookmarks");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # Use Compare Options - CompareBookmarks : how to activate compare Bookmarks\n");
+
+            string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CompareBookmarks");
 	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
 	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
@@ -240,7 +268,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
 	        }
-	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -248,7 +276,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void DisableShowRevisions()
         {
-	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "DisableShowRevisions");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # Use Compare Options - DisableShowRevisions : how to disable show revision in the result document\n");
+
+            string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "DisableShowRevisions");
 	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
 	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
@@ -261,7 +292,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
 	        }
-	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -269,7 +300,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void LeaveGaps()
         {
-	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "LeaveGaps");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # Use Compare Options - LeaveGaps : how to replace changed content with empty lines in the result document\n");
+
+            string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "LeaveGaps");
 	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
 	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
@@ -284,7 +318,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
 	        }
-	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -292,7 +326,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         /// </summary>
         public static void WordTrackChanges()
         {
-	        string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "WordTrackChanges");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # Use Compare Options - WordTrackChanges : how to use the Microsoft Word \"Track Changes\" comparing\n");
+
+            string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "WordTrackChanges");
 	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
 	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
@@ -305,7 +342,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 		        };
 		        comparer.Compare(File.Create(outputFileName), compareOptions);
 	        }
-	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+	        Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

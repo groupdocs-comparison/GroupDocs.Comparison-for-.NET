@@ -3,6 +3,7 @@ using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
 {
+    using GroupDocs.Comparison;
     using GroupDocs.Comparison.Options;
 
     /// <summary>
@@ -13,7 +14,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
         public static void Run()
         {
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Basic Usage] # CompareDocumentsSettingsStream : Using some of compare settings\n");
+            Console.WriteLine("[Example Advanced Usage] # CompareDocumentsSettingsStream : Using some of compare settings\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);

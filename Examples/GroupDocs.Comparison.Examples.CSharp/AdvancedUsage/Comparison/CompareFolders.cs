@@ -3,6 +3,7 @@ using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
     using GroupDocs.Comparison.Options;
 
     internal class CompareFolders
@@ -13,7 +14,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         public static void CompareFolderSaveAsTxt()
         {
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Basic Usage] # CompareFolders-CompareFolderSaveAsTxt : How to compare folders and save result to TXT file\n");
+            Console.WriteLine("[Example Advanced Usage] # CompareFolders-CompareFolderSaveAsTxt : How to compare folders and save result to TXT file\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_FOLDER);

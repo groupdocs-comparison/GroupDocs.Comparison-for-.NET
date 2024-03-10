@@ -1,9 +1,11 @@
-﻿using GroupDocs.Comparison.Options;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This example demonstrates comparing of multi protected documents from stream
     /// </summary>
@@ -11,6 +13,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsProtectedStream : comparing of multi protected documents from stream\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 

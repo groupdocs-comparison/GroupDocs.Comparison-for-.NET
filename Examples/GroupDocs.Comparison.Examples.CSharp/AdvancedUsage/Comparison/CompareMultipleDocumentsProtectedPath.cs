@@ -3,6 +3,7 @@ using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
     using GroupDocs.Comparison.Options;
 
     /// <summary>
@@ -13,7 +14,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         public static void Run()
         {
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Basic Usage] # CompareMultipleDocumentsProtectedPath : Comparing multiple protected documents from path\n");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsProtectedPath : Comparing multiple protected documents from path\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
@@ -25,7 +26,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 comparer.Add(Constants.TARGET3_WORD_PROTECTED, new LoadOptions() { Password = "5678" });
                 comparer.Compare(outputFileName);
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

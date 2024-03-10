@@ -1,9 +1,11 @@
 ﻿using System;
 using System.IO;
-using GroupDocs.Comparison.Options;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This class demonstrates comparing of multi documents
     /// </summary>
@@ -15,7 +17,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         public static void CompareMultipleWordsDocuments()
         {
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Basic Usage] # CompareMultipleDocumentsPath-CompareMultipleWordsDocuments : Comparing of multiple words documents\n");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleWordsDocuments : Comparing of multiple words documents\n");
             
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
@@ -28,7 +30,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
                 comparer.Compare(outputFileName);
             }
-            Console.WriteLine($"\nWord Documents compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nWord Documents compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -37,7 +39,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         public static void CompareMultipleTxtDocuments()
         {
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Basic Usage] # CompareMultipleDocumentsPath-CompareMultipleTxtDocuments : Comparing of multiple text documents\n");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleTxtDocuments : Comparing of multiple text documents\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_TXT);
@@ -50,7 +52,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions());
             }
-            Console.WriteLine($"\nText documents compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nText documents compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -58,6 +60,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         /// </summary>
         public static void CompareMultipleEmailDocuments()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleEmailDocuments : Comparing of multiple email documents\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_EMAIL);
             
@@ -69,7 +74,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions());
             }
-            Console.WriteLine($"\nEmail documents compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nEmail documents compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -77,6 +82,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         /// </summary>
         public static void CompareMultiplePdfDocuments()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultiplePdfDocuments : Comparing of multiple Pdf documents\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_PDF);
 
@@ -88,7 +96,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions());
             }
-            Console.WriteLine($"\nPDF documents compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nPDF documents compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -96,6 +104,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         /// </summary>
         public static void CompareMultipleDiagramDocuments()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleDiagramDocuments : Comparing of multiple diagram documents\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_DIAGRAM);
 
@@ -107,7 +118,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions() { DiagramMasterSetting = new DiagramMasterSetting() { MasterPath = Constants.DIAGRAM_SETTINGS } });
             }
-            Console.WriteLine($"\nDiagram documents compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDiagram documents compared successfully.\nCheck output in {outputDirectory}.");
         }
 
     }
