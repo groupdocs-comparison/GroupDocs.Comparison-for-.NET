@@ -1,9 +1,11 @@
-﻿using GroupDocs.Comparison.Options;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This example demonstrates how to get document previews
     /// </summary>
@@ -11,6 +13,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # GetPagePreviewsForResultantDocument : how to get result document previews\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
             
@@ -29,7 +34,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 previewOptions.PageNumbers = new int[] { 1, 2 };
                 document.GeneratePreview(previewOptions);
             }
-            Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

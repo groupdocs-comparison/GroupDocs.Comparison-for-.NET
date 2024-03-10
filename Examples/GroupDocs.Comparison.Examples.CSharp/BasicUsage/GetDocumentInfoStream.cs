@@ -12,6 +12,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # GetDocumentInfoStream : document info extraction\n");
+
             using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
             {
                 IDocumentInfo info = comparer.Source.GetDocumentInfo();

@@ -1,9 +1,11 @@
-﻿using GroupDocs.Comparison.Options;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This example demonstrates using option for select user metadata
     /// </summary>
@@ -11,6 +13,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # SetDocumentMetadataUserDefined : using option for select user metadata\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -29,7 +34,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 };
                 comparer.Compare(outputFileName, saveOptions);
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

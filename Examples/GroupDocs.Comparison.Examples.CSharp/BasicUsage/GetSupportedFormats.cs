@@ -1,10 +1,12 @@
-﻿using GroupDocs.Comparison.Result;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Result;
+
     /// <summary>
     /// This example demonstrates file types support
     /// </summary>
@@ -12,6 +14,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # GetSupportedFormats : list of the file types support\n");
+
             IEnumerable<FileType> fileTypes = FileType
                     .GetSupportedFileTypes()
                     .OrderBy(fileType => fileType.Extension);

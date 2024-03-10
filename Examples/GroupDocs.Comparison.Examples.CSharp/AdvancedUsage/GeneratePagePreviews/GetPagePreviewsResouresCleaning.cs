@@ -1,9 +1,11 @@
-﻿using GroupDocs.Comparison.Options;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This example demonstrates how to get document previews with user memory clean code
     /// </summary>
@@ -22,6 +24,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # GetPagePreviewsResouresCleaning : how to get document previews with user memory clean code\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_SLIDES);
             
@@ -40,7 +45,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 previewOptions.ReleasePageStream = UserReleaseStreamMethod;
                 document.GeneratePreview(previewOptions);
             }
-            Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

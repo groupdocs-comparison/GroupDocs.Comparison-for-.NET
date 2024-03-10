@@ -10,6 +10,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # CompareDocumentsFromStream : comparing of two documents from stream\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -18,7 +21,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
                 comparer.Add(File.OpenRead(Constants.TARGET_WORD));
                 comparer.Compare(File.Create(outputFileName));
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

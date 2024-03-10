@@ -1,9 +1,11 @@
-﻿using GroupDocs.Comparison.Options;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This example demonstrates how to get document previews
     /// </summary>
@@ -11,6 +13,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # GetPagePreviewsForSourceDocument : how to get source document previews\n");
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>

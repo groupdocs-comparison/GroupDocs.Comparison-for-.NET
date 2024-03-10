@@ -1,9 +1,11 @@
-﻿using GroupDocs.Comparison.Options;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This example demonstrates how to get credit consumption quantity
     /// </summary>
@@ -11,6 +13,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # GetMeteredCreditsLimit : how to get credit consumption quantity\n");
+
             Console.WriteLine("Credits before using Comparer: {0}", Metered.GetConsumptionQuantity());
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {

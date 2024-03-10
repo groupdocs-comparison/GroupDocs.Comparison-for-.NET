@@ -1,21 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using GroupDocs.Comparison.Options;
+using System.Collections.Generic;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
 {
-	/// <summary>
-	/// This class demonstrates how to use LoadOptions
-	/// </summary>
-	class UseLoadOptions
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
+    /// <summary>
+    /// This class demonstrates how to use LoadOptions
+    /// </summary>
+    class UseLoadOptions
 	{
 		/// <summary>
 		/// This example demonstrates how to load custom font for comparison
 		/// </summary>
 		public static void LoadCustomFonts()
 		{
-			List<string> fontDirectories = new List<string>();
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # UseLoadOptions : how to load custom font for comparison\n");
+
+            List<string> fontDirectories = new List<string>();
 			// Need to set the directory of the file with the font
 			fontDirectories.Add(Constants.CUSTOM_FONT);
 

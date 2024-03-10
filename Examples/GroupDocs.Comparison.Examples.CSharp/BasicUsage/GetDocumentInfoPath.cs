@@ -10,6 +10,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # GetDocumentInfoPath : document info extraction\n");
+
             using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
             {
                 IDocumentInfo info = comparer.Source.GetDocumentInfo();

@@ -261,6 +261,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
             UseCompareOptions.LeaveGaps();
             #endregion
 
+            #region Use embedded Track Changes feature 
+            UseCompareOptions.WordTrackChanges();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("All done.");
             Console.ReadKey();

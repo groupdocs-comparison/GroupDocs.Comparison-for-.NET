@@ -1,9 +1,11 @@
 ﻿using System;
 using System.IO;
-using GroupDocs.Comparison.Options;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
 {
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Options;
+
     /// <summary>
     /// This example demonstrates comparing of two images without SummaryPage
     /// </summary>
@@ -11,6 +13,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # CompareImageFromPath : comparing of two images without SummaryPage\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_IMAGE);
 

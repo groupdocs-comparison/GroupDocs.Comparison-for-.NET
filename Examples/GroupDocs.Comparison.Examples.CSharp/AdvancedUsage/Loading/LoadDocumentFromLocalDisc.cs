@@ -10,6 +10,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # LoadDocumentFromLocalDisc : comparing of two documents loaded by file path\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -20,7 +23,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
                 comparer.Add(Constants.TARGET_WORD);
                 comparer.Compare(outputFileName);
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

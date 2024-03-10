@@ -1,22 +1,26 @@
-﻿using GroupDocs.Comparison.Options;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using GroupDocs.Comparison.Words.Revision;
+using System.Collections.Generic;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
-	/// <summary>
-	/// This class demonstrates how to get revisions from a document, process and save the result
-	/// </summary>
-	class AcceptRejectRevisions
+    using GroupDocs.Comparison;
+    using GroupDocs.Comparison.Words.Revision;
+
+    /// <summary>
+    /// This class demonstrates how to get revisions from a document, process and save the result
+    /// </summary>
+    class AcceptRejectRevisions
 	{
 		/// <summary>
 		/// This example demonstrates how to get revisions from document path
 		/// </summary>
 		public static void AcceptRejectRevisionsFromPath()
 		{
-			string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptRevisionsFromPath");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # AcceptRejectRevisionsFromPath : how to get revisions from document path\n");
+
+            string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptRevisionsFromPath");
 			string outputFileNameAccepted = Path.Combine(outputDirectoryAccepted, Constants.RESULT_REVISIONS);
 
 			string outputDirectoryRejected = Constants.GetOutputDirectoryPath(nameChildFolder: "RejectRevisionsFromPath");
@@ -58,7 +62,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 		/// </summary>
 		public static void AcceptRejectRevisionsFromStream()
 		{
-			Stream inputFileName = new FileStream(Constants.SOURCE_REVISIONS, FileMode.Open, FileAccess.ReadWrite);
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # AcceptRejectRevisionsFromStream : how to get revisions from document stream\n");
+
+            Stream inputFileName = new FileStream(Constants.SOURCE_REVISIONS, FileMode.Open, FileAccess.ReadWrite);
 			string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptRevisionsFromStream");
 			Stream outputFileNameAccepted = File.Create(Path.Combine(outputDirectoryAccepted, Constants.RESULT_REVISIONS));
 
@@ -105,7 +112,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 		/// </summary>
 		public static void AcceptRejectAllRevisions()
 		{
-			string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptAllRevisions");
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Advanced Usage] # AcceptRejectAllRevisions : how to optimally handle all revisions\n");
+
+            string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptAllRevisions");
 			string outputFileNameAccepted = Path.Combine(outputDirectoryAccepted, Constants.RESULT_REVISIONS);
 
 			string outputDirectoryRejected = Constants.GetOutputDirectoryPath(nameChildFolder: "RejectAllRevisions");
