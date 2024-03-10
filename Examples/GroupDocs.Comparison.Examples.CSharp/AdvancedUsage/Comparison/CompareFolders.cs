@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
-using GroupDocs.Comparison.Options;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison.Options;
+
     internal class CompareFolders
     {
         /// <summary>
@@ -13,6 +12,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         /// </summary>
         public static void CompareFolderSaveAsTxt()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # CompareFolders-CompareFolderSaveAsTxt : How to compare folders and save result to TXT file\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_FOLDER);
 
@@ -33,6 +35,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         /// </summary>
         public static void CompareFolderSaveAsHtml()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # CompareFolders-CompareFolderSaveAsHtml : How to compare folders and save result to HTML file\n");
+
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_FOLDER);
 

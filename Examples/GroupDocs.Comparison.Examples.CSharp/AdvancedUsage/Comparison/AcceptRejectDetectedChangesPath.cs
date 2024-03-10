@@ -1,10 +1,11 @@
-﻿using GroupDocs.Comparison.Options;
-using GroupDocs.Comparison.Result;
-using System;
+﻿using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Comparison.Result;
+    using GroupDocs.Comparison.Options;
+    
     /// <summary>
     /// This example demonstrates how to update changes from path
     /// </summary>
@@ -12,6 +13,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # AcceptRejectDetectedChangesPath : How to update changes from path\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileNameWithAcceptedChange = Path.Combine(outputDirectory, Constants.RESULT_WITH_ACCEPTED_CHANGE_WORD);
             string outputFileNameWithRejectedChange = Path.Combine(outputDirectory, Constants.RESULT_WITH_REJECTED_CHANGE_WORD);

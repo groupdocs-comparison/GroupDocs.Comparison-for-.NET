@@ -14,6 +14,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         /// </summary>
         public static void CompareMultipleWordsDocuments()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # CompareMultipleDocumentsPath-CompareMultipleWordsDocuments : Comparing of multiple words documents\n");
+            
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
 
@@ -33,6 +36,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
         /// </summary>
         public static void CompareMultipleTxtDocuments()
         {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # CompareMultipleDocumentsPath-CompareMultipleTxtDocuments : Comparing of multiple text documents\n");
+
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_TXT);
 

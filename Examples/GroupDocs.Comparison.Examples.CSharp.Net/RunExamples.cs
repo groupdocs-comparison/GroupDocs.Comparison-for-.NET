@@ -1,18 +1,19 @@
-﻿using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage;
-using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading;
-using GroupDocs.Comparison.Examples.CSharp.BasicUsage;
-using GroupDocs.Comparison.Examples.CSharp.QuickStart;
-using System;
-using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison;
+﻿using System;
 
 namespace GroupDocs.Comparison.Examples.CSharp
 {
+    using GroupDocs.Comparison.Examples.CSharp.QuickStart;
+    using GroupDocs.Comparison.Examples.CSharp.BasicUsage;
+    using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage;
+    using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading;
+    using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison;
+
     class RunExamples
     {
         static void Main(string[] args)
         {
             Console.WriteLine("=====================================================");
-            Console.WriteLine(".Net Framework 4.6.2 Examples");
+            Console.WriteLine(".Net 6.0 Examples");
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method uncomment the example that you want to run.");
             Console.WriteLine("=====================================================");
 
@@ -114,10 +115,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             #region Multicompare protected documents from stream
             CompareMultipleDocumentsProtectedStream.Run();
-            #endregion
-
-            #region Multicompare documents with settings
-            CompareMultipleDocumentsSettingsStream.Run();
             #endregion
 
             #region Multicompare documents with settings from stream
