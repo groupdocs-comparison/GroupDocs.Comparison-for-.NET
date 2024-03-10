@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataTarget.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataUserDefined.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetPasswordForResultantDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentInfoFromResultDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareCellsFromPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareCellsFromStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsFromPath.cs" />
