@@ -37,18 +37,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
             GetDocumentInfoStream.Run();
             #endregion
 
-            #region Get info from result document object
-            GetDocumentInfoFromResultDocument.Run();
-            #endregion
-
-            #region Compare cells files from path
-            CompareCellsFromPath.Run();
-            #endregion
-
-            #region Compare cells files from stream
-            CompareCellsFromStream.Run();
-            #endregion
-
             #region Compare documents from path
             CompareDocumentsFromPath.Run();
             #endregion
@@ -57,8 +45,8 @@ namespace GroupDocs.Comparison.Examples.CSharp
             CompareDocumentsFromStream.Run();
             #endregion
 
-            #region Compare image from path without SummaryPage
-            CompareImageFromPath.Run();
+            #region Compare documents with passwords
+            CompareProtectedDocuments.Run();
             #endregion
 
             #region Compare image from stream without SummaryPage
@@ -79,14 +67,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             #region Set author of changes name
             SetAuthorOfChanges.Run();
-            #endregion
-
-            #region Compare documents with passwords from path
-            CompareDocumentsProtectedPath.Run();
-            #endregion
-
-            #region Compare documents with passwords from stream
-            CompareDocumentsProtectedPath.Run();
             #endregion
 
             #region Get list of changes from path

@@ -8,7 +8,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     /// <summary>
     /// This example demonstrates comparing of two documents with passwords
     /// </summary>
-    class CompareDocumentsProtectedPath
+    class CompareProtectedDocuments
     {
         public static void Run()
         {

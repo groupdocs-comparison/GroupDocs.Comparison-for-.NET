@@ -14,11 +14,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("[Example Basic Usage] # CompareDocumentsFromStream : comparing of two documents from stream\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_PDF);
 
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_PDF)))
             {
-                comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+                comparer.Add(File.OpenRead(Constants.TARGET_PDF));
                 comparer.Compare(File.Create(outputFileName));
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");

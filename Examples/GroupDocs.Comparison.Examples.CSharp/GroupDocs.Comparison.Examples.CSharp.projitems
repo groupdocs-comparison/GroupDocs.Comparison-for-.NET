@@ -38,13 +38,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetDocumentMetadataUserDefined.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Saving\SetPasswordForResultantDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentInfoFromResultDocument.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareCellsFromPath.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareCellsFromStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsFromPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsFromStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsProtectedPath.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareDocumentsProtectedStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareImageFromPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareProtectedDocuments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\CompareImageFromStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentInfoPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentInfoStream.cs" />
