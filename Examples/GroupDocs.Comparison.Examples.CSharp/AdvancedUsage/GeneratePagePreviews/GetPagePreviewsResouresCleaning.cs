@@ -37,7 +37,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 Document document = new Document(File.OpenRead(outputFileName));
                 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
                 {
-                    var pagePath = Path.Combine(Constants.SamplesPath, $"result_{pageNumber}.png");
+                    var pagePath = Path.Combine(outputDirectory, $"result_{pageNumber}.png");
                     return File.Create(pagePath);
                 });
                 previewOptions.PreviewFormat = PreviewFormats.PNG;
