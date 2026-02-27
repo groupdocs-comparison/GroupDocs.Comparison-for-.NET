@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
@@ -20,13 +20,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleWordsDocuments : Comparing of multiple words documents\n");
             
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
-                comparer.Add(Constants.TARGET_WORD);
-                comparer.Add(Constants.TARGET2_WORD);
-                comparer.Add(Constants.TARGET3_WORD);
+                comparer.Add(Constants.TargetWord);
+                comparer.Add(Constants.Target2Word);
+                comparer.Add(Constants.Target3Word);
 
                 comparer.Compare(outputFileName);
             }
@@ -42,13 +42,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleTxtDocuments : Comparing of multiple text documents\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_TXT);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultTxt);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_TXT))
+            using (Comparer comparer = new Comparer(Constants.SourceTxt))
             {
-                comparer.Add(Constants.TARGET_TXT);
-                comparer.Add(Constants.TARGET2_TXT);
-                comparer.Add(Constants.TARGET3_TXT);
+                comparer.Add(Constants.TargetTxt);
+                comparer.Add(Constants.Target2Txt);
+                comparer.Add(Constants.Target3Txt);
 
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions());
             }
@@ -64,13 +64,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleEmailDocuments : Comparing of multiple email documents\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_EMAIL);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultEmail);
             
-            using (Comparer comparer = new Comparer(Constants.SOURCE_EMAIL))
+            using (Comparer comparer = new Comparer(Constants.SourceEmail))
             {
-                comparer.Add(Constants.TARGET_EMAIL);
-                comparer.Add(Constants.TARGET2_EMAIL);
-                comparer.Add(Constants.TARGET3_EMAIL);
+                comparer.Add(Constants.TargetEmail);
+                comparer.Add(Constants.Target2Email);
+                comparer.Add(Constants.Target3Email);
 
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions());
             }
@@ -86,13 +86,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultiplePdfDocuments : Comparing of multiple Pdf documents\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_PDF);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultPdf);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_PDF))
+            using (Comparer comparer = new Comparer(Constants.SourcePdf))
             {
-                comparer.Add(Constants.TARGET_PDF);
-                comparer.Add(Constants.TARGET2_PDF);
-                comparer.Add(Constants.TARGET3_PDF);
+                comparer.Add(Constants.TargetPdf);
+                comparer.Add(Constants.Target2Pdf);
+                comparer.Add(Constants.Target3Pdf);
 
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions());
             }
@@ -108,15 +108,15 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # CompareMultipleDocumentsPath-CompareMultipleDiagramDocuments : Comparing of multiple diagram documents\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_DIAGRAM);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultDiagram);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_DIAGRAM))
+            using (Comparer comparer = new Comparer(Constants.SourceDiagram))
             {
-                comparer.Add(Constants.TARGET_DIAGRAM);
-                comparer.Add(Constants.TARGET2_DIAGRAM);
-                comparer.Add(Constants.TARGET3_DIAGRAM);
+                comparer.Add(Constants.TargetDiagram);
+                comparer.Add(Constants.Target2Diagram);
+                comparer.Add(Constants.Target3Diagram);
 
-                comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions() { DiagramMasterSetting = new DiagramMasterSetting() { MasterPath = Constants.DIAGRAM_SETTINGS } });
+                comparer.Compare(File.Create(outputFileName), new SaveOptions(), new CompareOptions() { DiagramMasterSetting = new DiagramMasterSetting() { MasterPath = Constants.DiagramSettings } });
             }
             Console.WriteLine($"\nDiagram documents compared successfully.\nCheck output in {outputDirectory}.");
         }

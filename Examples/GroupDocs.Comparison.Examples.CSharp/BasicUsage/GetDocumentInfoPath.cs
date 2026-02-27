@@ -13,7 +13,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("[Example Basic Usage] # GetDocumentInfoPath : document info extraction\n");
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
                 IDocumentInfo info = comparer.Source.GetDocumentInfo();
                 Console.WriteLine("\nFile type: {0}\nNumber of pages: {1}\nDocument size: {2} bytes", info.FileType, info.PageCount, info.Size);

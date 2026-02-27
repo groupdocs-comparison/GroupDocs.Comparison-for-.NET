@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
@@ -17,7 +17,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
                 CompareOptions options = new CompareOptions()
                 {
@@ -26,8 +26,8 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                     RevisionAuthorName = "New author",
                 };
 
-                comparer.Add(Constants.TARGET_WORD);
-                comparer.Compare(Path.Combine(outputDirectory, Constants.RESULT_WITH_NEW_AUTHOR_WORD), options);
+                comparer.Add(Constants.TargetWord);
+                comparer.Compare(Path.Combine(outputDirectory, Constants.ResultWithNewAuthorWord), options);
             }
             Console.WriteLine($"\nChanges updated successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }

@@ -1,0 +1,29 @@
+{
+  "application": {
+    "name": "My Application",
+    "version": "1.1.0",
+    "description": "An updated application with enhanced features"
+  },
+  "settings": {
+    "debug": true,
+    "logLevel": "debug",
+    "timeout": 60,
+    "maxRetries": 3
+  },
+  "features": {
+    "featureA": true,
+    "featureB": true,
+    "featureC": true,
+    "featureD": true
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "mydb",
+    "ssl": true
+  },
+  "api": {
+    "endpoint": "https://api.example.com",
+    "key": "your-api-key"
+  }
+}

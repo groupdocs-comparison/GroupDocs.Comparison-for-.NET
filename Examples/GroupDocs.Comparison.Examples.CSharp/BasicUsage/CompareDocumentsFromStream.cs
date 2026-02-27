@@ -1,4 +1,5 @@
-﻿using System;
+using GroupDocs.Comparison.Options;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
@@ -14,12 +15,17 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("[Example Basic Usage] # CompareDocumentsFromStream : comparing of two documents from stream\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_PDF);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultPdf);
 
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_PDF)))
+            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourcePdf)))
             {
-                comparer.Add(File.OpenRead(Constants.TARGET_PDF));
-                comparer.Compare(File.Create(outputFileName));
+                comparer.Add(File.OpenRead(Constants.TargetPdf));
+                var options = new CompareOptions()
+                {
+                    GenerateSummaryPage = true
+                };
+
+                comparer.Compare(File.Create(outputFileName), options);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -21,13 +21,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # AcceptRejectRevisionsFromPath : how to get revisions from document path\n");
 
             string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptRevisionsFromPath");
-			string outputFileNameAccepted = Path.Combine(outputDirectoryAccepted, Constants.RESULT_REVISIONS);
+			string outputFileNameAccepted = Path.Combine(outputDirectoryAccepted, Constants.ResultRevisions);
 
 			string outputDirectoryRejected = Constants.GetOutputDirectoryPath(nameChildFolder: "RejectRevisionsFromPath");
-			string outputFileNameRejected = Path.Combine(outputDirectoryRejected, Constants.RESULT_REVISIONS);
+			string outputFileNameRejected = Path.Combine(outputDirectoryRejected, Constants.ResultRevisions);
 
 			// Example of accepting some changes
-			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SOURCE_REVISIONS))
+			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SourceRevisions))
 			{
 				List<RevisionInfo> revisionListForAccepted = revisionHandler.GetRevisions();
 				foreach (RevisionInfo revision in revisionListForAccepted)
@@ -40,7 +40,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 			}
 
 			// Example of rejecting some changes
-			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SOURCE_REVISIONS))
+			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SourceRevisions))
 			{
 				List<RevisionInfo> revisionListForRejected = revisionHandler.GetRevisions();
 				foreach (RevisionInfo revision in revisionListForRejected)
@@ -65,9 +65,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("[Example Advanced Usage] # AcceptRejectRevisionsFromStream : how to get revisions from document stream\n");
 
-            Stream inputFileName = new FileStream(Constants.SOURCE_REVISIONS, FileMode.Open, FileAccess.ReadWrite);
+            Stream inputFileName = new FileStream(Constants.SourceRevisions, FileMode.Open, FileAccess.ReadWrite);
 			string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptRevisionsFromStream");
-			Stream outputFileNameAccepted = File.Create(Path.Combine(outputDirectoryAccepted, Constants.RESULT_REVISIONS));
+			Stream outputFileNameAccepted = File.Create(Path.Combine(outputDirectoryAccepted, Constants.ResultRevisions));
 
 			// Example of accepting some changes
 			using (RevisionHandler revisionHandler = new RevisionHandler(inputFileName))
@@ -85,7 +85,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 			outputFileNameAccepted.Close();
 
 			string outputDirectoryRejected = Constants.GetOutputDirectoryPath(nameChildFolder: "RejectRevisionsFromStream");
-			Stream outputFileNameRejected = File.Create(Path.Combine(outputDirectoryRejected, Constants.RESULT_REVISIONS));
+			Stream outputFileNameRejected = File.Create(Path.Combine(outputDirectoryRejected, Constants.ResultRevisions));
 
 			// Example of rejecting some changes
 			using (RevisionHandler revisionHandler = new RevisionHandler(inputFileName))
@@ -116,20 +116,20 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # AcceptRejectAllRevisions : how to optimally handle all revisions\n");
 
             string outputDirectoryAccepted = Constants.GetOutputDirectoryPath(nameChildFolder: "AcceptAllRevisions");
-			string outputFileNameAccepted = Path.Combine(outputDirectoryAccepted, Constants.RESULT_REVISIONS);
+			string outputFileNameAccepted = Path.Combine(outputDirectoryAccepted, Constants.ResultRevisions);
 
 			string outputDirectoryRejected = Constants.GetOutputDirectoryPath(nameChildFolder: "RejectAllRevisions");
-			string outputFileNameRejected = Path.Combine(outputDirectoryRejected, Constants.RESULT_REVISIONS);
+			string outputFileNameRejected = Path.Combine(outputDirectoryRejected, Constants.ResultRevisions);
 
 			// Example of accepting all changes
-			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SOURCE_REVISIONS))
+			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SourceRevisions))
 			{
 				revisionHandler.ApplyRevisionChanges(outputFileNameAccepted,
 					new ApplyRevisionOptions() { CommonHandler = RevisionAction.Accept });
 			}
 
 			// Example of rejecting all changes
-			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SOURCE_REVISIONS))
+			using (RevisionHandler revisionHandler = new RevisionHandler(Constants.SourceRevisions))
 			{
 				revisionHandler.ApplyRevisionChanges(outputFileNameRejected,
 					new ApplyRevisionOptions() { CommonHandler = RevisionAction.Reject });

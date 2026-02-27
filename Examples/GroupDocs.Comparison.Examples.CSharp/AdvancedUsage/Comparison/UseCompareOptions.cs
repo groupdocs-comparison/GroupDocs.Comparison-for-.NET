@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
@@ -20,14 +20,14 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # IgnoreHeaderFooter : how to ignore Header/Footer\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "IgnoreHeaderFooter");
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WITH_FOOTER))
+            using (Comparer comparer = new Comparer(Constants.SourceWithFooter))
             {
                 CompareOptions compareOptions = new CompareOptions();
                 compareOptions.HeaderFootersComparison = false;
 
-                comparer.Add(Constants.TARGET_WITH_FOOTER);
+                comparer.Add(Constants.TargetWithFooter);
                 comparer.Compare(File.Create(outputFileName), new SaveOptions(), compareOptions);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
@@ -42,11 +42,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # SetOutputPaperSize : how to set output paper size\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "SetOutputPaperSize");
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_COMPARE_OPTIONS))
+            using (Comparer comparer = new Comparer(Constants.SourceCompareOptions))
             {
-                comparer.Add(Constants.TARGET_COMPARE_OPTIONS);
+                comparer.Add(Constants.TargetCompareOptions);
                 comparer.Compare(File.Create(outputFileName), new CompareOptions() { PaperSize = PaperSize.A6 });
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
@@ -61,11 +61,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # AdjustComparisonSensitivity : comparing of two documents using sensitivity option\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "AdjustComparisonSensitivity");
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_COMPARE_OPTIONS))
+            using (Comparer comparer = new Comparer(Constants.SourceCompareOptions))
             {
-                comparer.Add(Constants.TARGET_COMPARE_OPTIONS);
+                comparer.Add(Constants.TargetCompareOptions);
                 comparer.Compare(File.Create(outputFileName), new CompareOptions() { SensitivityOfComparison = 100 });
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
@@ -80,11 +80,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # CustomizeChangesStylesStream : how to customized change styles from path\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CustomizeChangesStylesStream");
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
             {
-                comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+                comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
                 CompareOptions compareOptions = new CompareOptions()
                 {
                     InsertedItemStyle = new StyleSettings()
@@ -129,11 +129,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # CustomizeChangesStylesPath : how to customized change styles from path\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CustomizeChangesStylesPath"); 
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_COMPARE_OPTIONS))
+            using (Comparer comparer = new Comparer(Constants.SourceCompareOptions))
             {
-                comparer.Add(Constants.TARGET_COMPARE_OPTIONS);
+                comparer.Add(Constants.TargetCompareOptions);
                 CompareOptions compareOptions = new CompareOptions()
                 {
                     InsertedItemStyle = new StyleSettings()
@@ -178,11 +178,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # IgnoreHeaderFooter : how to ignore Header/Footer\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "GetOnlySummaryPage");
-	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+	        string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
 	        {
-		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+		        comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
 
 		        //To get only the SummaryPage, the GenerateSummaryPage property must be set to true
 		        CompareOptions compareOptions = new CompareOptions()
@@ -204,11 +204,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # Use Compare Options - GetExtendedSummaryPage : how to get extended comparison information\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "GetExtendedSummaryPage");
-	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+	        string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
 	        {
-		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+		        comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
 
 		        //To get extended information about comparison, the GenerateSummaryPage property must be set to true
 		        CompareOptions compareOptions = new CompareOptions()
@@ -231,11 +231,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # Use Compare Options - CompareDocumentProperties : how to activate compare Variable, Built and Custom properties\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CompareDocumentProperties");
-	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+	        string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
 	        {
-		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+		        comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
 
 		        CompareOptions compareOptions = new CompareOptions()
 		        {
@@ -256,11 +256,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # Use Compare Options - CompareBookmarks : how to activate compare Bookmarks\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "CompareBookmarks");
-	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+	        string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
 	        {
-		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+		        comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
 
 		        CompareOptions compareOptions = new CompareOptions()
 		        {
@@ -280,11 +280,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # Use Compare Options - DisableShowRevisions : how to disable show revision in the result document\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "DisableShowRevisions");
-	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+	        string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
 	        {
-		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+		        comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
 
 		        CompareOptions compareOptions = new CompareOptions()
 		        {
@@ -304,11 +304,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # Use Compare Options - LeaveGaps : how to replace changed content with empty lines in the result document\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "LeaveGaps");
-	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+	        string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
 	        {
-		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+		        comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
 
 		        CompareOptions compareOptions = new CompareOptions()
 		        {
@@ -330,11 +330,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("[Example Advanced Usage] # Use Compare Options - WordTrackChanges : how to use the Microsoft Word \"Track Changes\" comparing\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath(nameChildFolder: "WordTrackChanges");
-	        string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+	        string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_COMPARE_OPTIONS)))
+	        using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceCompareOptions)))
 	        {
-		        comparer.Add(File.OpenRead(Constants.TARGET_COMPARE_OPTIONS));
+		        comparer.Add(File.OpenRead(Constants.TargetCompareOptions));
 
 		        CompareOptions compareOptions = new CompareOptions()
 		        {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
@@ -16,13 +16,23 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("[Example Basic Usage] # CompareDocumentsProtectedPath : comparing of two documents with passwords\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD_PROTECTED, new LoadOptions(){ Password = "1234" }))
+            using (Comparer comparer = new Comparer(Constants.SourceWordProtected, 
+                new LoadOptions(){ Password = "1234" }))
             {
-                comparer.Add(Constants.TARGET_WORD_PROTECTED, new LoadOptions() { Password = "5678" });
-                comparer.Compare(outputFileName);
+                comparer.Add(Constants.TargetWordProtected, 
+                    new LoadOptions() { Password = "5678" });
+
+                var options = new WordCompareOptions()
+                {
+                    DisplayMode = WordCompareOptions.ComparisonDisplayMode.Revisions,
+                    DetectStyleChanges = true
+                };
+
+                comparer.Compare(outputFileName, options);
             }
+
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
         }
     }

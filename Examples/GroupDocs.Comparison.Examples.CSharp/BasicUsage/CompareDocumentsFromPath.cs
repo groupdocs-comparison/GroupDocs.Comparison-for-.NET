@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
@@ -14,11 +14,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("[Example Basic Usage] # CompareDocumentsFromPath : comparing of two documents from path\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_CELLS);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultCells);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_CELLS))
+            using (Comparer comparer = new Comparer(Constants.SourceCells))
             {
-                comparer.Add(Constants.TARGET_CELLS);
+                comparer.Add(Constants.TargetCells);
                 comparer.Compare(outputFileName);
             }
 

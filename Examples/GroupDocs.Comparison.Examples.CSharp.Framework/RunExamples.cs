@@ -233,7 +233,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Load custom font for comparison
-            UseLoadOptions.LoadCustomFonts();
+            LoadCustomFonts.Run();
             #endregion
 
             #region Disable show revision

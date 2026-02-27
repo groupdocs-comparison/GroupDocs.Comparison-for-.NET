@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
@@ -14,10 +14,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
             Console.WriteLine("[Example Advanced Usage] # LoadDocumentFromStream : comparing of two documents loaded by file stream\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Stream sourceStream = File.OpenRead(Constants.SOURCE_WORD))
-            using (Stream targetStream = File.OpenRead(Constants.TARGET_WORD))
+            using (Stream sourceStream = File.OpenRead(Constants.SourceWord))
+            using (Stream targetStream = File.OpenRead(Constants.TargetWord))
             {
                 using (Comparer comparer = new Comparer(sourceStream))
                 {

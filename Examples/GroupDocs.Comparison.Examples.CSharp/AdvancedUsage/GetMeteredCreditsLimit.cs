@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
@@ -17,10 +17,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # GetMeteredCreditsLimit : how to get credit consumption quantity\n");
 
             Console.WriteLine("Credits before using Comparer: {0}", Metered.GetConsumptionQuantity());
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
-                comparer.Add(Constants.TARGET_WORD);
-                comparer.Compare(File.Create(Constants.RESULT_WORD), new SaveOptions(), new CompareOptions());
+                comparer.Add(Constants.TargetWord);
+                comparer.Compare(File.Create(Constants.ResultWord), new SaveOptions(), new CompareOptions());
             }
             Console.WriteLine("Credits after using Comparer: {0}", Metered.GetConsumptionQuantity());
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");

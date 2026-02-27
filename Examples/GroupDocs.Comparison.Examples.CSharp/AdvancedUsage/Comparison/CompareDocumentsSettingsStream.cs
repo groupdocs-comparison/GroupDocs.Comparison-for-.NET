@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
@@ -17,11 +17,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("[Example Advanced Usage] # CompareDocumentsSettingsStream : Using some of compare settings\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceWord)))
             {
-                comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+                comparer.Add(File.OpenRead(Constants.TargetWord));
                 CompareOptions compareOptions = new CompareOptions()
                 {
                     InsertedItemStyle = new StyleSettings()

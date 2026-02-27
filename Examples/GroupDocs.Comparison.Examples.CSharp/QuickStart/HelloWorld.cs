@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.QuickStart
@@ -10,10 +10,10 @@ namespace GroupDocs.Comparison.Examples.CSharp.QuickStart
     {
         public static void Run()
         {
-            string sourceDocumentPath = Constants.SOURCE_WORD;
-            string targetDocumentPath = Constants.TARGET_WORD;
+            string sourceDocumentPath = Constants.SourceWord;
+            string targetDocumentPath = Constants.TargetWord;
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
             using (Comparer comparer = new Comparer(sourceDocumentPath))
             {
@@ -21,7 +21,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.QuickStart
                 comparer.Compare(outputFileName);
             }
 
-            Console.WriteLine($"\nSource document rendered successfully.\nCheck output in {outputFileName}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputFileName}.");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
@@ -19,11 +19,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
 
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
-                comparer.Add(Constants.TARGET_WORD);
+                comparer.Add(Constants.TargetWord);
                 CompareOptions compareOptions = new CompareOptions() { CalculateCoordinates = true };
                 comparer.Compare(File.Create(outputFileName), compareOptions);
                 ChangeInfo[] changes = comparer.GetChanges();
@@ -41,9 +41,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("[Example Advanced Usage] # GetListOfChangesPath : how to get changes from path\n");
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
-                comparer.Add(Constants.TARGET_WORD);
+                comparer.Add(Constants.TargetWord);
                 comparer.Compare();
                 ChangeInfo[] changes = comparer.GetChanges();
             }
@@ -58,9 +58,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("[Example Advanced Usage] # GetListOfChangesStream : how to get changes from stream\n");
 
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceWord)))
             {
-                comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+                comparer.Add(File.OpenRead(Constants.TargetWord));
                 comparer.Compare();
                 ChangeInfo[] changes = comparer.GetChanges();
             }
@@ -75,9 +75,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("[Example Advanced Usage] # GetSourceAndTargetTexts : how to get source and target texts\n");
             
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
-                comparer.Add(Constants.TARGET_WORD);
+                comparer.Add(Constants.TargetWord);
                 comparer.Compare();
 
                 ChangeInfo[] changes = comparer.GetChanges();

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
@@ -17,15 +17,17 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("[Example Basic Usage] # CompareImageFromStream : comparing of two images without SummaryPage\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_IMAGE);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultImage);
 
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_IMAGE)))
+            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceImage)))
             {
-	            //If you set the GenerateSummaryPage property to true then the result will be saved in PDF format
-                CompareOptions options = new CompareOptions();
-	            options.GenerateSummaryPage = false;
+                //If you set the GenerateSummaryPage property to true then the result will be saved in PDF format
+                CompareOptions options = new CompareOptions()
+                {
+                    GenerateSummaryPage = false
+                };
 
-                comparer.Add(File.OpenRead(Constants.TARGET_IMAGE));
+                comparer.Add(File.OpenRead(Constants.TargetImage));
                 comparer.Compare(outputFileName, options);
             }
             Console.WriteLine($"\nImages compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");

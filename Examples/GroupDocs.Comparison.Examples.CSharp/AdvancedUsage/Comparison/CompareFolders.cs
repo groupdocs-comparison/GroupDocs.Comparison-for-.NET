@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
@@ -17,15 +17,15 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # CompareFolders-CompareFolderSaveAsTxt : How to compare folders and save result to TXT file\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_FOLDER);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultFolder);
 
             Options.CompareOptions compareOptions = new Options.CompareOptions
             {
                 DirectoryCompare = true,
                 FolderComparisonExtension = FolderComparisonExtension.TXT
             };
-            Comparer comparer = new Comparer(Constants.SOURCE_FOLDER, compareOptions);
-            comparer.Add(Constants.TARGET_FOLDER, compareOptions);
+            Comparer comparer = new Comparer(Constants.SourceFolder, compareOptions);
+            comparer.Add(Constants.TargetFolder, compareOptions);
             comparer.Compare(outputFileName, compareOptions);
 
             Console.WriteLine($"\nFolders compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
@@ -41,15 +41,15 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_FOLDER);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultFolder);
 
             Options.CompareOptions compareOptions = new Options.CompareOptions
             {
                 DirectoryCompare = true,
                 FolderComparisonExtension = FolderComparisonExtension.HTML
             };
-            Comparer comparer = new Comparer(Constants.SOURCE_FOLDER, compareOptions);
-            comparer.Add(Constants.TARGET_FOLDER, compareOptions);
+            Comparer comparer = new Comparer(Constants.SourceFolder, compareOptions);
+            comparer.Add(Constants.TargetFolder, compareOptions);
             comparer.Compare(outputFileName, compareOptions);
 
             Console.WriteLine($"\nFolders compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");

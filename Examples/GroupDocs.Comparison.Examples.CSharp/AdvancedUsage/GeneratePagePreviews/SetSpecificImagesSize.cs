@@ -1,4 +1,4 @@
-﻿ using System;
+ using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
@@ -17,11 +17,11 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # SetSpecificImagesSize : how to get document specific size previews\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_SLIDES);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultSlides);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_SLIDES))
+            using (Comparer comparer = new Comparer(Constants.SourceSlide))
             {
-                comparer.Add(Constants.TARGET_SLIDES);
+                comparer.Add(Constants.TargetSlide);
                 comparer.Compare(File.Create(outputFileName));
                 Document document = new Document(File.OpenRead(outputFileName));
                 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>

@@ -17,7 +17,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # GetPagePreviewsForSourceDocument : how to get source document previews\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
                 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
                 {

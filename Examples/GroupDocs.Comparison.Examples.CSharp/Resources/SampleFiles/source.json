@@ -1,0 +1,22 @@
+{
+  "application": {
+    "name": "My Application",
+    "version": "1.0.0",
+    "description": "A sample application for demonstration"
+  },
+  "settings": {
+    "debug": false,
+    "logLevel": "info",
+    "timeout": 30
+  },
+  "features": {
+    "featureA": true,
+    "featureB": false,
+    "featureC": true
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "mydb"
+  }
+}

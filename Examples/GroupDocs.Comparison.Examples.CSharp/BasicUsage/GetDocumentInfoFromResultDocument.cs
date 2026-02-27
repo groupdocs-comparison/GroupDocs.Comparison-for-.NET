@@ -17,9 +17,9 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("[Example Basic Usage] # GetDocumentInfoFromResultDocument : result document object info extraction\n");
 
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SOURCE_WORD)))
+            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceWord)))
             {
-                comparer.Add(File.OpenRead(Constants.TARGET_WORD));
+                comparer.Add(File.OpenRead(Constants.TargetWord));
                 IDocumentInfo info = comparer.Targets.FirstOrDefault().GetDocumentInfo();
                 Console.WriteLine("\nFile type: {0}\nNumber of pages: {1}\nDocument size: {2} bytes", info.FileType, info.PageCount, info.Size);
             }

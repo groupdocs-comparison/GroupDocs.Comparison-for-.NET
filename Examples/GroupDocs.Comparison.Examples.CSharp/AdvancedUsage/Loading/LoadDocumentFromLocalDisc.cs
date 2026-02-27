@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
@@ -14,13 +14,13 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading
             Console.WriteLine("[Example Advanced Usage] # LoadDocumentFromLocalDisc : comparing of two documents loaded by file path\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_WORD);
+            string outputFileName = Path.Combine(outputDirectory, Constants.ResultWord);
 
-            string sourcePath = Constants.SOURCE_WORD;
+            string sourcePath = Constants.SourceWord;
             using (Comparer comparer = new Comparer(sourcePath))
             {
-                string targetPath = Constants.SOURCE_WORD;
-                comparer.Add(Constants.TARGET_WORD);
+                string targetPath = Constants.SourceWord;
+                comparer.Add(Constants.TargetWord);
                 comparer.Compare(outputFileName);
             }
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");

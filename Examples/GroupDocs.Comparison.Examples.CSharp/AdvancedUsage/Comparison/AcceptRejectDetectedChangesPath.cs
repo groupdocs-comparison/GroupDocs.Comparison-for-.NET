@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
@@ -18,12 +18,12 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             Console.WriteLine("[Example Advanced Usage] # AcceptRejectDetectedChangesPath : How to update changes from path\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
-            string outputFileNameWithAcceptedChange = Path.Combine(outputDirectory, Constants.RESULT_WITH_ACCEPTED_CHANGE_WORD);
-            string outputFileNameWithRejectedChange = Path.Combine(outputDirectory, Constants.RESULT_WITH_REJECTED_CHANGE_WORD);
+            string outputFileNameWithAcceptedChange = Path.Combine(outputDirectory, Constants.ResultWithAcceptedChangeWord);
+            string outputFileNameWithRejectedChange = Path.Combine(outputDirectory, Constants.ResultWithRejectedChangeWord);
 
-            using (Comparer comparer = new Comparer(Constants.SOURCE_WORD))
+            using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
-                comparer.Add(Constants.TARGET_WORD);
+                comparer.Add(Constants.TargetWord);
                 comparer.Compare();
                 ChangeInfo[] changes = comparer.GetChanges();
                 // inserted word "Cool" was not be added to result document

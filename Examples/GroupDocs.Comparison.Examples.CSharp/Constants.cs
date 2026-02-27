@@ -26,76 +26,78 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
         public static string SamplesPath { get; private set; }
 
-        public static string SOURCE_CELLS => GetSampleFilePath("source.xlsx");
-        public static string TARGET_CELLS => GetSampleFilePath("target.xlsx");
+        public static string SourceCells => GetSampleFilePath("source.xlsx");
+        public static string TargetCells => GetSampleFilePath("target.xlsx");
 
-        public static string SOURCE_WORD => GetSampleFilePath("source.docx");
-        public static string SOURCE_WORD_FONT => GetSampleFilePath("source_font.docx");
-        public static string TARGET_WORD => GetSampleFilePath("target.docx");
-        public static string TARGET_WORD_FONT => GetSampleFilePath("target_font.docx");
-        public static string TARGET2_WORD => GetSampleFilePath("target2.docx");
-        public static string TARGET3_WORD => GetSampleFilePath("target3.docx");
-        public static string SOURCE_WORD_PROTECTED => GetSampleFilePath("source_protected.docx");
-        public static string TARGET_WORD_PROTECTED => GetSampleFilePath("target_protected.docx");
-        public static string TARGET2_WORD_PROTECTED => GetSampleFilePath("target2_protected.docx");
-        public static string TARGET3_WORD_PROTECTED => GetSampleFilePath("target3_protected.docx");
+        public static string SourceJson => GetSampleFilePath("source.json");
+        public static string TargetJson => GetSampleFilePath("target.json");
+        public static string SourceWord => GetSampleFilePath("source.docx");
+        public static string SourceWordFont => GetSampleFilePath("source_font.docx");
+        public static string TargetWord => GetSampleFilePath("target.docx");
+        public static string TargetWordFont => GetSampleFilePath("target_font.docx");
+        public static string Target2Word => GetSampleFilePath("target2.docx");
+        public static string Target3Word => GetSampleFilePath("target3.docx");
+        public static string SourceWordProtected => GetSampleFilePath("source_protected.docx");
+        public static string TargetWordProtected => GetSampleFilePath("target_protected.docx");
+        public static string Target2WordProtected => GetSampleFilePath("target2_protected.docx");
+        public static string Target3WordProtected => GetSampleFilePath("target3_protected.docx");
 
-        public static string SOURCE_SLIDES => GetSampleFilePath("source.pptx");
-        public static string TARGET_SLIDES => GetSampleFilePath("target.pptx");
+        public static string SourceSlide => GetSampleFilePath("source.pptx");
+        public static string TargetSlide => GetSampleFilePath("target.pptx");
 
-        public static string SOURCE_TXT => GetSampleFilePath("source.txt");
-        public static string TARGET_TXT => GetSampleFilePath("target.txt");
-        public static string TARGET2_TXT => GetSampleFilePath("target2.txt");
-        public static string TARGET3_TXT => GetSampleFilePath("target3.txt");
+        public static string SourceTxt => GetSampleFilePath("source.txt");
+        public static string TargetTxt => GetSampleFilePath("target.txt");
+        public static string Target2Txt => GetSampleFilePath("target2.txt");
+        public static string Target3Txt => GetSampleFilePath("target3.txt");
 
-        public static string SOURCE_EMAIL => GetSampleFilePath("source.eml");
-        public static string TARGET_EMAIL => GetSampleFilePath("target.eml");
-        public static string TARGET2_EMAIL => GetSampleFilePath("target2.eml");
-        public static string TARGET3_EMAIL => GetSampleFilePath("target3.eml");
+        public static string SourceEmail => GetSampleFilePath("source.eml");
+        public static string TargetEmail => GetSampleFilePath("target.eml");
+        public static string Target2Email => GetSampleFilePath("target2.eml");
+        public static string Target3Email => GetSampleFilePath("target3.eml");
 
-        public static string SOURCE_PDF => GetSampleFilePath("source.pdf");
-        public static string TARGET_PDF => GetSampleFilePath("target.pdf");
-        public static string TARGET2_PDF => GetSampleFilePath("target2.pdf");
-        public static string TARGET3_PDF => GetSampleFilePath("target3.pdf");
+        public static string SourcePdf => GetSampleFilePath("source.pdf");
+        public static string TargetPdf => GetSampleFilePath("target.pdf");
+        public static string Target2Pdf => GetSampleFilePath("target2.pdf");
+        public static string Target3Pdf => GetSampleFilePath("target3.pdf");
 
-        public static string SOURCE_DIAGRAM => GetSampleFilePath("source.vsdx");
-        public static string TARGET_DIAGRAM => GetSampleFilePath("target.vsdx");
-        public static string TARGET2_DIAGRAM => GetSampleFilePath("target2.vsdx");
-        public static string TARGET3_DIAGRAM => GetSampleFilePath("target3.vsdx");
+        public static string SourceDiagram => GetSampleFilePath("source.vsdx");
+        public static string TargetDiagram => GetSampleFilePath("target.vsdx");
+        public static string Target2Diagram => GetSampleFilePath("target2.vsdx");
+        public static string Target3Diagram => GetSampleFilePath("target3.vsdx");
 
-        public static string SOURCE_IMAGE => GetSampleFilePath("source.png");
-        public static string TARGET_IMAGE => GetSampleFilePath("target.png");
+        public static string SourceImage => GetSampleFilePath("source.png");
+        public static string TargetImage => GetSampleFilePath("target.png");
 
-        public static string SOURCE_WITH_FOOTER => GetSampleFilePath("sourceWithFooter.docx");
-        public static string TARGET_WITH_FOOTER => GetSampleFilePath("targetWithFooter.docx");
+        public static string SourceWithFooter => GetSampleFilePath("sourceWithFooter.docx");
+        public static string TargetWithFooter => GetSampleFilePath("targetWithFooter.docx");
 
-        public static string SOURCE_COMPARE_OPTIONS => GetSampleFilePath("source_compare_options.docx");
-        public static string TARGET_COMPARE_OPTIONS => GetSampleFilePath("target_compare_options.docx");
+        public static string SourceCompareOptions => GetSampleFilePath("source_compare_options.docx");
+        public static string TargetCompareOptions => GetSampleFilePath("target_compare_options.docx");
 
-        public static string SOURCE_REVISIONS => GetSampleFilePath("revision.docx");
+        public static string SourceRevisions => GetSampleFilePath("revision.docx");
 
-        public static string SOURCE_FOLDER => GetSampleFilePath("SourceFolder");
-        public static string TARGET_FOLDER => GetSampleFilePath("TargetFolder");
+        public static string SourceFolder => GetSampleFilePath("SourceFolder");
+        public static string TargetFolder => GetSampleFilePath("TargetFolder");
 
 
-        public static string RESULT_WORD => "result.docx";
-        public static string RESULT_WITH_NEW_AUTHOR_WORD => "resultWithNewAuthor.docx";
-        public static string RESULT_WITH_ACCEPTED_CHANGE_WORD => "resultWithAcceptedChange.docx";
-        public static string RESULT_WITH_REJECTED_CHANGE_WORD => "resultWithRejectedChange.docx";
-        public static string RESULT_WORD_FONT => "result_font.docx";
+        public static string ResultWord => "result.docx";
+        public static string ResultWithNewAuthorWord => "resultWithNewAuthor.docx";
+        public static string ResultWithAcceptedChangeWord => "resultWithAcceptedChange.docx";
+        public static string ResultWithRejectedChangeWord => "resultWithRejectedChange.docx";
+        public static string ResultWordFont => "result_font.docx";
 
-        public static string RESULT_CELLS => "result.xlsx";
-        public static string RESULT_SLIDES => "result.pptx";
-        public static string RESULT_TXT => "result.txt";
-        public static string RESULT_EMAIL => "result.eml";
-        public static string RESULT_PDF => "result.pdf";
-        public static string RESULT_DIAGRAM => "result.vsdx";
-        public static string RESULT_IMAGE => "result.png";
-        public static string RESULT_REVISIONS => "result.docx";
-        public static string RESULT_FOLDER => "ResultFolderCompare";
+        public static string ResultCells => "result.xlsx";
+        public static string ResultSlides => "result.pptx";
+        public static string ResultTxt => "result.txt";
+        public static string ResultEmail => "result.eml";
+        public static string ResultPdf => "result.pdf";
+        public static string ResultDiagram => "result.vsdx";
+        public static string ResultImage => "result.png";
+        public static string ResultRevisions => "result.docx";
+        public static string ResultFolder => "ResultFolderCompare";
 
-        public static string DIAGRAM_SETTINGS => GetSampleFilePath("basicShapes.vssx");
-        public static string CUSTOM_FONT => GetSampleFilePath("");
+        public static string DiagramSettings => GetSampleFilePath("basicShapes.vssx");
+        public static string CustomFont => GetSampleFilePath("");
         private static string GetSampleFilePath(string filePath) => Path.Combine(SamplesPath, filePath);
 
         public static string GetOutputDirectoryPath([CallerFilePath] string callerFilePath = null, string nameChildFolder = null)
