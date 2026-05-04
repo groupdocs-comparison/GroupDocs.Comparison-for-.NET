@@ -51,23 +51,6 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison
         }
 
         /// <summary>
-        /// This example demonstrates how to get changes from stream
-        /// </summary>
-        public static void GetListOfChangesStream()
-        {
-            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Advanced Usage] # GetListOfChangesStream : how to get changes from stream\n");
-
-            using (Comparer comparer = new Comparer(File.OpenRead(Constants.SourceWord)))
-            {
-                comparer.Add(File.OpenRead(Constants.TargetWord));
-                comparer.Compare();
-                ChangeInfo[] changes = comparer.GetChanges();
-            }
-            Console.WriteLine($"\nChanges received successfully.");
-        }
-
-        /// <summary>
         /// This example demonstrates how to get source and target texts 
         /// </summary>
         public static void GetSourceAndTargetTexts()

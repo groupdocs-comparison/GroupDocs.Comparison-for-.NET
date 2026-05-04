@@ -9,7 +9,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     /// <summary>
     /// This example demonstrates comparing of two images without SummaryPage
     /// </summary>
-    public class CompareImageFromStream
+    public class CompareImage
     {
         public static void Run()
         {

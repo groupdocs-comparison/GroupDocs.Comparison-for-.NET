@@ -6,12 +6,12 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
     /// <summary>
     /// This example demonstrates comparing of two documents
     /// </summary>
-    class CompareDocumentsFromPath
+    class CompareDocuments
     {
         public static void Run()
         {
             Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("[Example Basic Usage] # CompareDocumentsFromPath : comparing of two documents from path\n");
+            Console.WriteLine("[Example Basic Usage] # CompareDocuments : comparing of two documents from path\n");
 
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.ResultCells);

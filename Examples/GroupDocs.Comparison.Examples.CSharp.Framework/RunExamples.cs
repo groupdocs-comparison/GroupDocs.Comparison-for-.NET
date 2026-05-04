@@ -1,12 +1,13 @@
-﻿using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage;
-using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading;
-using GroupDocs.Comparison.Examples.CSharp.BasicUsage;
-using GroupDocs.Comparison.Examples.CSharp.QuickStart;
-using System;
-using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison;
+﻿using System;
 
 namespace GroupDocs.Comparison.Examples.CSharp
 {
+    using GroupDocs.Comparison.Examples.CSharp.QuickStart;
+    using GroupDocs.Comparison.Examples.CSharp.BasicUsage;
+    using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage;
+    using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Loading;
+    using GroupDocs.Comparison.Examples.CSharp.AdvancedUsage.Comparison;
+
     class RunExamples
     {
         static void Main(string[] args)
@@ -22,6 +23,9 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //SetLicenseFromStream.Run();
             //SetMeteredLicense.Run();
             HelloWorld.Run();
+            PdfComparisonSample.Run();
+            WordComparisonSample.Run();
+
             #endregion
 
             #region Get supported file formats
@@ -29,19 +33,11 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Get document info
-            GetDocumentInfoPath.Run();
-            #endregion
-
-            #region Get document info
-            GetDocumentInfoStream.Run();
+            GetDocumentInfo.Run();
             #endregion
 
             #region Compare documents from path
-            CompareDocumentsFromPath.Run();
-            #endregion
-
-            #region Compare documents from stream
-            CompareDocumentsFromStream.Run();
+            CompareDocuments.Run();
             #endregion
 
             #region Compare documents with passwords
@@ -49,7 +45,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
             #endregion
 
             #region Compare image from stream without SummaryPage
-            CompareImageFromStream.Run();
+            CompareImage.Run();
             #endregion
 
             #region Compare documents from path with customized change styles from path
@@ -70,10 +66,6 @@ namespace GroupDocs.Comparison.Examples.CSharp
 
             #region Get list of changes from path
             GetChanges.GetListOfChangesPath();
-            #endregion
-
-            #region Get list of changes from stream
-            GetChanges.GetListOfChangesStream();
             #endregion
 
             #region Update changes from path
