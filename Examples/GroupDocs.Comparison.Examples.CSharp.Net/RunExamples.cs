@@ -13,7 +13,7 @@ namespace GroupDocs.Comparison.Examples.CSharp
         static void Main(string[] args)
         {
             Console.WriteLine("=====================================================");
-            Console.WriteLine(".Net 6.0 Examples");
+            Console.WriteLine(".Net 10.0 Examples");
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method uncomment the example that you want to run.");
             Console.WriteLine("=====================================================");
 

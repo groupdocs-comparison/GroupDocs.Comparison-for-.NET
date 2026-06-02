@@ -70,7 +70,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 			Stream outputFileNameAccepted = File.Create(Path.Combine(outputDirectoryAccepted, Constants.ResultRevisions));
 
 			// Example of accepting some changes
-			using (RevisionHandler revisionHandler = new RevisionHandler(inputFileName))
+			using (RevisionHandler revisionHandler = new RevisionHandler(inputFileName, leaveOpen: true))
 			{
 				List<RevisionInfo> revisionListForAccepted = revisionHandler.GetRevisions();
 				foreach (RevisionInfo revision in revisionListForAccepted)

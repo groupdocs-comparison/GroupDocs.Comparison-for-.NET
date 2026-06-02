@@ -55,6 +55,9 @@ namespace GroupDocs.Comparison.Examples.CSharp
         public static string Target2Email => GetSampleFilePath("target2.eml");
         public static string Target3Email => GetSampleFilePath("target3.eml");
 
+        public static string SourcePdfNew => GetSampleFilePath("source_new.pdf");
+        public static string TargetPdfNew => GetSampleFilePath("target_new.pdf");
+
         public static string SourcePdf => GetSampleFilePath("source.pdf");
         public static string TargetPdf => GetSampleFilePath("target.pdf");
         public static string Target2Pdf => GetSampleFilePath("target2.pdf");

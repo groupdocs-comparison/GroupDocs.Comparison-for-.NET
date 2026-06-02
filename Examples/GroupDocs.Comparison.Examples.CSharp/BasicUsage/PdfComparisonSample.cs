@@ -1,3 +1,4 @@
+using GroupDocs.Comparison.Options;
 using System;
 using System.IO;
 
@@ -16,10 +17,16 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
             string outputDirectory = Constants.GetOutputDirectoryPath();
             string outputFileName = Path.Combine(outputDirectory, Constants.ResultPdf);
 
-            using (Comparer comparer = new Comparer(Constants.SourcePdf))
+            using (Comparer comparer = new Comparer(Constants.SourcePdfNew))
             {
-                comparer.Add(Constants.TargetPdf);
-                comparer.Compare(outputFileName);
+                comparer.Add(Constants.TargetPdfNew);
+
+                var options = new PdfCompareOptions()
+                {
+                    DisplayMode = PdfCompareOptions.ComparisonDisplayMode.SideBySide,
+                };
+
+                comparer.Compare(outputFileName, options);
             }
 
             Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
