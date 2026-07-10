@@ -1,0 +1,24 @@
+# GroupDocs.Comparison for .NET
+
+> GroupDocs.Comparison for .NET is a document comparison API that programmatically compares 50+ document formats (Word, PDF, Excel, PowerPoint and more), detects changes, and produces a result document with highlighted differences.
+
+This repository contains the official C# examples, demo web applications, and Visual Studio plugins for the on-premise GroupDocs.Comparison for .NET SDK (NuGet package `GroupDocs.Comparison`). It is the local SDK — not the separate GroupDocs.Comparison Cloud REST API.
+
+## Docs
+
+- [Documentation](https://docs.groupdocs.com/comparison/net/): developer guide for GroupDocs.Comparison for .NET
+- [API Reference](https://reference.groupdocs.com/comparison/net/): full class and method reference
+- [Supported Document Formats](https://docs.groupdocs.com/comparison/net/supported-document-formats/): all formats the API can compare
+
+## Examples
+
+- [Examples folder](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Examples): C# source code examples and sample files to quickly get started
+- [Demos folder](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Demos): demo web projects (MVC, WebForms) that demonstrate product features
+- [Plugins folder](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET/tree/master/Plugins): Visual Studio plugins that download examples and the library
+
+## Optional
+
+- [NuGet Package](https://www.nuget.org/packages/GroupDocs.Comparison): install with `Install-Package GroupDocs.Comparison`
+- [Releases](https://releases.groupdocs.com/comparison/net/): downloadable builds
+- [Free Support Forum](https://forum.groupdocs.com/c/comparison/12): ask questions and get help
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/): free 30-day license for evaluation
