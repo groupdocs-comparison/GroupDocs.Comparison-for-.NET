@@ -30,7 +30,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
                 comparer.Add(File.OpenRead(Constants.TargetImage));
                 comparer.Compare(outputFileName, options);
             }
-            Console.WriteLine($"\nImages compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nImages compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

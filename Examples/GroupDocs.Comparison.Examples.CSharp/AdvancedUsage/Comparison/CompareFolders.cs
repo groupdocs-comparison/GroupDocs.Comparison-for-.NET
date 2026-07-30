@@ -28,7 +28,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             comparer.Add(Constants.TargetFolder, compareOptions);
             comparer.Compare(outputFileName, compareOptions);
 
-            Console.WriteLine($"\nFolders compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nFolders compared successfully.\nCheck output in {outputDirectory}.");
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
             comparer.Add(Constants.TargetFolder, compareOptions);
             comparer.Compare(outputFileName, compareOptions);
 
-            Console.WriteLine($"\nFolders compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nFolders compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

@@ -26,7 +26,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
                 comparer.Add(File.OpenRead(Constants.Target3WordProtected), new LoadOptions() { Password = "5678" });
                 comparer.Compare(File.Create(outputFileName));
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

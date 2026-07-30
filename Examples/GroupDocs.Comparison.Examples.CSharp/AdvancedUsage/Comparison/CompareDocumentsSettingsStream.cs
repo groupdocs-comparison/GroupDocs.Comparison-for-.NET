@@ -33,7 +33,7 @@ namespace GroupDocs.Comparison.Examples.CSharp.BasicUsage
                 };
                 comparer.Compare(File.Create(outputFileName), compareOptions);
             }
-            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }

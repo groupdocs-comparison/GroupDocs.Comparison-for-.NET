@@ -5,6 +5,8 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 {
     using GroupDocs.Comparison;
     using GroupDocs.Comparison.Options;
+    using static GroupDocs.Comparison.Options.WordCompareOptions;
+
     /// <summary>
     /// This example demonstrates how to set author of changes
     /// </summary>
@@ -19,17 +21,17 @@ namespace GroupDocs.Comparison.Examples.CSharp.AdvancedUsage
 
             using (Comparer comparer = new Comparer(Constants.SourceWord))
             {
-                CompareOptions options = new CompareOptions()
+                var options = new WordCompareOptions()
                 {
                     ShowRevisions = true,
-                    WordTrackChanges = true,
+                    DisplayMode = ComparisonDisplayMode.Revisions,
                     RevisionAuthorName = "New author",
                 };
 
                 comparer.Add(Constants.TargetWord);
                 comparer.Compare(Path.Combine(outputDirectory, Constants.ResultWithNewAuthorWord), options);
             }
-            Console.WriteLine($"\nChanges updated successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
+            Console.WriteLine($"\nChanges updated successfully.\nCheck output in {outputDirectory}.");
         }
     }
 }
