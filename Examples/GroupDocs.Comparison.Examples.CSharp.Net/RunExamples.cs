@@ -240,6 +240,10 @@ namespace GroupDocs.Comparison.Examples.CSharp
             UseCompareOptions.WordTrackChanges();
             #endregion
 
+            #region Skip external resources while comparing
+            SkipExternalResources.Run();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("All done.");
             Console.ReadKey();

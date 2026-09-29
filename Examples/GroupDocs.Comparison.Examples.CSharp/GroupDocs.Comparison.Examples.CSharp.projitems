@@ -22,6 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsSettingsStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\CompareMultipleDocumentsStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\GetChanges.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\SkipExternalResources.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\Comparison\UseCompareOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForResultantDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\GeneratePagePreviews\GetPagePreviewsForSourceDocument.cs" />
