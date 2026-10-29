@@ -23,9 +23,14 @@ namespace GroupDocs.Comparison.Examples.CSharp
             //SetLicenseFromStream.Run();
             //SetMeteredLicense.Run();
             HelloWorld.Run();
-            PdfComparisonSample.Run();
-            WordComparisonSample.Run();
+            PdfComparisonSample.DisplayMode_SideBySide();
+            PdfComparisonSample.DisplayMode_Inline();
 
+            WordComparisonSample.DisplayMode_Revisions();
+            WordComparisonSample.DisplayMode_Highlight();
+
+            OcrComparison.DisplayMode_SideBySide();
+            OcrComparison.DisplayMode_Text();
             #endregion
 
             #region Get supported file formats
